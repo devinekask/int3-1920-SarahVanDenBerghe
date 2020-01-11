@@ -1,0 +1,42 @@
+.webshop__items {
+  margin-top: var(--spacerBig);
+  display: grid;
+  grid-template: auto / repeat(4, 15.3rem);
+  grid-gap: var(--spacerRegular);
+}
+
+.webshop__item {
+  display: flex;
+  flex-direction: column;
+
+  & .item__img {
+    order: 1;
+    height: 10.6rem;
+    width: 100%;
+    background-color: var(--colorGrey);
+    margin-bottom: var(--spacerRegular);
+  }
+
+  & .item__price {
+    order: 2;
+    color: var(--colorRed);
+    text-transform: uppercase;
+    font-size: var(--fontSmall);
+  }
+
+  & .item__title {
+    order: 3;
+    font-family: var(--fontTitle);
+    font-size: var(--fontMedium);
+    margin-bottom: .7rem;
+  }
+
+  & .item__info {
+    order: 4;
+  }
+}
+
+
+
+
+

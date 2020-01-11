@@ -36,7 +36,57 @@
     </section>
 
     <section>
+      <h2 class="hidden">Webshop items</h2>
+      <ul class="webshop__items">
+        <li class="webshop__item__wrapper">
+          <a class="webshop__item" href="#">
+            <h3 class="item__title">Digitaal abonnement</h3>
+            <span class="item__price">Vanaf € 15,95 / maand</span>
+            <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
+            <img class="item__img" src="" alt="">
+          </a>
+        </li>
 
+
+
+        <li class="webshop__item">
+          <h3 class="item__title">Digitaal abonnement</h3>
+          <span class="item__price">Vanaf € 15,95 / maand</span>
+          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
+          <img class="item__img" src="" alt="">
+        </li>
+        <li class="webshop__item">
+          <h3 class="item__title">Digitaal abonnement</h3>
+          <span class="item__price">Vanaf € 15,95 / maand</span>
+          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
+          <img class="item__img" src="" alt="">
+        </li>
+
+                <li class="webshop__item">
+          <h3 class="item__title">Digitaal abonnement</h3>
+          <span class="item__price">Vanaf € 15,95 / maand</span>
+          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
+          <img class="item__img" src="" alt="">
+        </li>
+        <li class="webshop__item">
+          <h3 class="item__title">Digitaal abonnement</h3>
+          <span class="item__price">Vanaf € 15,95 / maand</span>
+          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
+          <img class="item__img" src="" alt="">
+        </li>
+                <li class="webshop__item">
+          <h3 class="item__title">Digitaal abonnement</h3>
+          <span class="item__price">Vanaf € 15,95 / maand</span>
+          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
+          <img class="item__img" src="" alt="">
+        </li>
+        <li class="webshop__item">
+          <h3 class="item__title">Digitaal abonnement</h3>
+          <span class="item__price">Vanaf € 15,95 / maand</span>
+          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
+          <img class="item__img" src="" alt="">
+        </li>
+      </ul>
     </section>
   </article>
 </div>

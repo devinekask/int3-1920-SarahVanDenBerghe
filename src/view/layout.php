@@ -44,6 +44,7 @@
           </ul>
       </nav>
     </header>
+
     <main>
       <?php
         if(!empty($_SESSION['error'])) {
@@ -55,6 +56,102 @@
       ?>
       <?php echo $content;?>
     </main>
+
+    <footer class="footer">
+      <nav class="footer__nav container">
+        <ul class="footer__columns">
+
+          <li class="footer__column">
+            <span class="column__title">Actua</span>
+            <ul class="column__list">
+              <li class="list__item"><a href="#">Nu in Humo</a></li>
+              <li class="list__item"><a href="#">De Columns</a></li>
+              <li class="list__item"><a href="#">Dossiers</a></li>
+              <li class="list__item"><a href="#">Politiek</a></li>
+              <li class="list__item"><a href="#">Sport</a></li>
+              <li class="list__item"><a href="#">Onze Man/Vrouw</a></li>
+              <li class="list__item"><a href="#">Eerder in Humo</a></li>
+              <li class="list__item"><a href="#">De eindejaarsvragen</a></li>
+            </ul>
+          </li>
+
+          <li class="footer__column">
+            <span class="column__title">Humor</span>
+            <ul class="column__list">
+              <li class="list__item"><a href="#">Fotospecials</a></li>
+              <li class="list__item"><a href="#">Cartoons</a></li>
+              <li class="list__item"><a href="#">Uitlaat</a></li>
+              <li class="list__item"><a href="#">(Bulderlacht)</a></li>
+              <li class="list__item"><a href="#">Doe het zelf</a></li>
+              <li class="list__item"><a href="#">Humo's Comedy Cup</a></li>
+            </ul>
+          </li>
+
+          <li class="footer__column">
+            <span class="column__title">Tv/Film</span>
+            <ul class="column__list">
+              <li class="list__item"><a href="#">TV-gids</a></li>
+              <li class="list__item"><a href="#">TV-tips</a></li>
+              <li class="list__item"><a href="#">TV-reviews</a></li>
+              <li class="list__item"><a href="#">Filmreviews</a></li>
+              <li class="list__item"><a href="#">De 100% beste films volgens (es)</a></li>
+            </ul>
+          </li>
+
+          <li class="footer__column">
+            <span class="column__title">Muziek</span>
+            <ul class="column__list">
+              <li class="list__item"><a href="#">Concertreviews</a></li>
+              <li class="list__item"><a href="#">CD-reviews</a></li>
+              <li class="list__item"><a href="#">Humo's Rock Rally</a></li>
+              <li class="list__item"><a href="#">Festivalitis</a></li>
+            </ul>
+          </li>
+
+          <li class="footer__column">
+            <span class="column__title">Boeken</span>
+            <ul class="column__list">
+              <li class="list__item"><a href="#">Reviews</a></li>
+              <li class="list__item"><a href="#">Fictie</a></li>
+              <li class="list__item"><a href="#">Non-fictie</a></li>
+              <li class="list__item"><a href="#">Het lezen zoals het is</a></li>
+              <li class="list__item"><a href="#">De grootste schrijvers van deze tijd</a></li>
+            </ul>
+
+            <span class="column__title">Ga naar</span>
+            <ul class="column__list">
+              <li class="list__item"><a href="#">Video</a></li>
+              <li class="list__item"><a href="#">Foto's</a></li>
+              <li class="list__item"><a href="#">Wedstrijden</a></li>
+              <li class="list__item"><a href="#">Zoekertjes</a></li>
+              <li class="list__item"><a href="#">Apps</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <section class="footer__info">
+        <div class="container">
+          <h2 class="hidden">Footer</h2>
+          <ul class="info__items">
+            <li class="info__item">Privacybeleid</li>
+            <li class="info__item">Wedstrijdreglement</li>
+            <li class="info__item">Adverteren</li>
+            <li class="info__item">Gebruiksvoorwaarden</li>
+            <li class="info__item">Cookiebeleid</li>
+            <li class="info__item">Cookie instellingen</li>
+            <li class="info__item">Contact</li>
+            <li class="info__item">Colofon</li>
+          </ul>
+          <ul class="info__copyright">
+            <li class="info__item">DPG</li>
+            <li class="info__item">&copy; 2020 DPG Media</li>
+            <li class="info__item">Naar de mobiele site</li>
+          </ul>
+      </div>
+      </section>
+    </footer>
+
     <?php echo $js; ?>
+
   </body>
 </html>
