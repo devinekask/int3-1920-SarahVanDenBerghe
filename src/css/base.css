@@ -30,6 +30,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  margin-bottom: 7rem;
+}
+
 @font-face {
   font-family: 'Swiss Condensed';
   src: url(./../assets/fonts/Swiss/Swiss-Condensed.woff2) format('woff2'), url(./../assets/fonts/Swiss/Swiss-Condensed.woff) format('woff');
