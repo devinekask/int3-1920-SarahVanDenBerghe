@@ -5,4 +5,11 @@
   --spacerRegular: .94rem;
   --spacerBig: 1.9rem;
 
+  --fontLabel: .75rem;
+  --fontSmall: .9rem;
+  --fontRegular: 1rem;
+  --fontMedium: 1.3rem;
+  --fontBig: 1.5rem;
+  --fontBody: 'News Gothic', sans-serif;
+  --fontTitle: 'Swiss Condensed', sans-serif;
 }

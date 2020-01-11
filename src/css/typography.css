@@ -1,3 +1,20 @@
+body {
+  font-size: var(--fontRegular);
+  font-family: var(--fontBody);
+  line-height: 1.4rem;
+  letter-spacing: .5px;
+}
+
+h2 {
+  font-size: var(--fontBig);
+  font-family: var(--fontTitle);
+  margin-bottom: var(--spacerRegular);
+}
+
+p {
+  margin-bottom: var(--spacerRegular);
+}
+
 /* body {
   font-size: var(--fontRegular);
   font-family: var(--font);

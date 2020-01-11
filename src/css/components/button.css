@@ -1,0 +1,29 @@
+.button {
+  padding: .7rem 1.5rem .6rem;
+  font-family: var(--fontTitle);
+  text-transform: uppercase;
+  font-size: var(--fontMedium);
+  display: inline-block;
+  margin-top: calc (var(--spacerRegular))/2;
+}
+
+.button--primary {
+  background-color: var(--colorYellow);
+  color: black;
+  padding-left: 3rem;
+
+  & span:before {
+    content: '';
+    position: absolute;
+    height: 1.25rem;
+    width: 2rem;
+    background-image: url(./../../assets/img/icons/arrow.svg);
+    background-repeat: no-repeat;
+     transform: translateX(-2rem)
+  }
+}
+
+.button--secondary {
+  background-color: var(--colorRed);
+  color: white;
+}

@@ -9,11 +9,6 @@
 .menu__item {
   transition: 0.2s ease-in-out color;
 
-  & a {
-    text-decoration: none;
-    color: black;
-  }
-
   &:hover, & a:hover {
     color: var(--colorRed);
   }
@@ -25,7 +20,6 @@
   height: 2.5rem;
   font-size: 0.7rem;
   font-family: Arial, 'Helvetica Neue', sans-serif;
-  letter-spacing: .5px;
 
   & .menu__items .menu__item {
     padding: 0.7rem;
@@ -51,7 +45,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 4rem;
   & .menu__items .menu__item {
     padding: 0 1.25rem;
     display: flex;
@@ -59,7 +52,7 @@
   }
 
   & .menu__items {
-    justify-content: center;
+    justify-content: flex-end;
   }
 }
 

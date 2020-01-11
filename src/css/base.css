@@ -20,6 +20,11 @@ header {
   margin-bottom: var(--spacerBig);
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'Swiss Condensed';
   src: url(./../assets/fonts/Swiss/Swiss-Condensed.woff2) format('woff2'), url(./../assets/fonts/Swiss/Swiss-Condensed.woff) format('woff');

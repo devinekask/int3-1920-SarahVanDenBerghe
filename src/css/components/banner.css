@@ -1,0 +1,25 @@
+.banner__wrapper {
+  background-color: var(--colorGrey);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.banner {
+  padding: var(--spacerBig);
+  width: 25rem;
+}
+
+.banner__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  font-size: var(--fontLabel);
+  font-family: 'Swiss Condensed';
+  color: white;
+  padding: .2rem .5rem .1rem;
+  margin: 1rem;
+  text-transform: uppercase;
+}
