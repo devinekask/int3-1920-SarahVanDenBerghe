@@ -20,13 +20,17 @@ class PagesController extends Controller {
 
     $todos = $this->todoDAO->selectAll();
     $this->set('todos', $todos);
-    $this->set('title', 'Overview');
+    $this->set('title', 'Humo');
 
     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
       header('Content-Type: application/json');
       echo json_encode($todos);
       exit();
     }
+  }
+
+  public function webshop() {
+    $this->set('title', 'Webshop - Humo');
   }
 
   private function handleInsertTodo() {

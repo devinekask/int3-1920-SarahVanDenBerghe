@@ -18,10 +18,10 @@
             <li class="menu__item">Abonnement nemen</li>
           </ul>
           <ul class="menu__items">
-            <li class="menu__item">Webshop</li>
             <li class="menu__item">Nu in Humo</li>
             <li class="menu__item">Login</li>
             <li class="menu__item">Registreer</li>
+            <li class="menu__item menu__item--webshop"><a href="index.php?page=webshop">Webshop</a></li>
           </ul>
         </nav>
       </div>

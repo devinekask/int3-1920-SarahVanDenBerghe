@@ -9,7 +9,12 @@
 .menu__item {
   transition: 0.2s ease-in-out color;
 
-  &:hover {
+  & a {
+    text-decoration: none;
+    color: black;
+  }
+
+  &:hover, & a:hover {
     color: var(--colorRed);
   }
 }
@@ -27,6 +32,15 @@
     display: flex;
     align-items: center;
   }
+
+  & .menu__item--webshop {
+    background-color: var(--colorRed);
+    margin-left: .8rem;
+  }
+
+  & .menu__item--webshop a {
+    color: white;
+  }
 }
 
 .menu--primary {
@@ -37,6 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 4rem;
   & .menu__items .menu__item {
     padding: 0 1.25rem;
     display: flex;
