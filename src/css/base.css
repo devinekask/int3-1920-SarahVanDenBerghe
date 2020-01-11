@@ -4,6 +4,11 @@
 }
 /* stylelint-enable */
 
+::selection {
+  color: white;
+  background: var(--colorRed);
+}
+
 html {
   box-sizing: inherit;
   height: 100%

@@ -1,0 +1,75 @@
+.filter {
+  display: flex;
+  margin-top: 4rem;
+  background-image: linear-gradient(to right, #000 40%, rgba(255, 255, 255, 0) 20%);
+  background-position: bottom;
+  background-size: 3px 1px;
+  background-repeat: repeat-x;
+}
+
+.filter__title {
+  font-size: var(--fontBig);
+  font-weight: bold;
+  font-family: var(--fontTitle);
+  color: var(--colorRed);
+  margin-right: var(--spacerBig);
+}
+
+.filter__label {
+  margin-right: var(--spacerBig);
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.filter__delete {
+  margin-left: auto;
+  font-weight: bold;
+
+    &:before {
+    position: absolute;
+    content: '';
+    height: .8rem;
+    width: .8rem;
+    background-image: url(./../../assets/img/icons/refresh.svg);
+    transform: translate(-1.5rem,.2rem);
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: var(--colorRed);
+    }
+}
+
+.filter__input {
+  visibility: hidden;
+}
+
+.checkbox__mark {
+  width: .75rem;
+  height: .75rem;
+  display: block;
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  border: .01rem solid var(--colorGreyDark);
+  transform: translate(-.6rem, -.6rem)
+}
+
+.checkbox__mark:before {
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  background-color: black;
+  transform: scale(0);
+}
+
+input[type='checkbox']:checked + .checkbox__mark:before {
+    transform: scale(.5);
+}
