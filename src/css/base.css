@@ -1,0 +1,21 @@
+/* stylelint-disable */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+/* stylelint-enable */
+
+html {
+  box-sizing: inherit;
+  /* font-size: 62.5%; */
+  height: 100%
+}
+
+body {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
