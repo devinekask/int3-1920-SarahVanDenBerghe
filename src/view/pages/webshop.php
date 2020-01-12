@@ -39,7 +39,7 @@
       <h2 class="hidden">Webshop items</h2>
       <ul class="webshop__items">
         <li class="webshop__item__wrapper">
-          <a class="webshop__item" href="#">
+          <a class="webshop__item" href="index.php?page=shopitem">
             <h3 class="item__title">Digitaal abonnement</h3>
             <span class="item__price">Vanaf € 15,95 / maand</span>
             <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>

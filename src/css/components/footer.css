@@ -5,14 +5,14 @@
   font-size: var(--fontSmall);
 }
 
-footer:after {
+footer:before {
   background-color: #000;
   content: "";
   display: block;
   height: 1px;
   left: 0;
-  position: absolute;
-  bottom: -20.2rem;
+  position: relative;
+  bottom: .5rem;
   width: 100%;
 }
 

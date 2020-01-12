@@ -1,0 +1,125 @@
+.shopitem {
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  grid-gap: calc(var(--spacerRegular)*3);
+  margin: var(--spacerRegular) 0 var(--spacerBig);
+}
+
+/* Info */
+
+.shopitem__info {
+  & .info__wrapper {
+    display: flex;
+  }
+
+  & .info__title {
+    color: var(--colorRed);
+  }
+
+  & .info__price {
+    margin-left: var(--spacerRegular);
+  }
+}
+
+/* Form */
+
+.form--shopitem {
+  & p {
+    font-weight: bold;
+    margin-top: var(--spacerBig);
+  }
+
+  & .shopitem__options {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .shopitem__option {
+    margin-bottom: calc(var(--spacerRegular)/2);
+  }
+
+  & .shopitem__cart {
+    display: flex;
+  }
+}
+
+.shopitem__option {
+  display: flex;
+}
+
+.shopitem__option input {
+  visibility: hidden;
+}
+
+.radio__mark {
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  border: .01rem solid var(--colorGreyDark);
+  transform: translate(-.6rem, .1rem)
+}
+
+.radio__mark:before {
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 50%;
+  margin: auto;
+  background-color: black;
+  transform: scale(0);
+}
+
+input[type='radio']:checked + .radio__mark:before {
+    transform: scale(.5);
+}
+
+
+/* Images */
+
+.images__wrapper{
+	position: relative;
+}
+
+/* Grote img */
+.images__wrapper>img{
+	position: absolute;
+  left: 6.68rem;
+  top: 0;
+  width: 23.5rem;
+}
+
+/* Hide circles */
+.images__wrapper input[name='slide_switch'] {
+	display: none;
+}
+
+/* Kleine img */
+.images__wrapper label {
+	margin-bottom: var(--spacerRegular);
+  display: flex; /* float: left */
+	cursor: pointer;
+	opacity: 0.4;
+}
+
+/* Actieve kleine img */
+.images__wrapper input[name='slide_switch']:checked+label {
+  opacity: 1;
+  /* border: .1rem solid var(--colorRed); */
+}
+
+/* Grote images hiden */
+.images__wrapper input[name='slide_switch'] ~ img {
+	opacity: 0;
+}
+
+/* Actieve grote image tonen */
+.images__wrapper input[name='slide_switch']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}

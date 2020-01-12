@@ -33,6 +33,11 @@ class PagesController extends Controller {
     $this->set('title', 'Webshop - Humo');
   }
 
+  public function shopitem() {
+    $this->set('title', 'Webshop - Humo');
+  }
+
+
   private function handleInsertTodo() {
     $data = array(
       'created' => date('Y-m-d H:i:s'),

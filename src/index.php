@@ -19,6 +19,10 @@ $routes = array(
   'webshop' => array(
     'controller' => 'Pages',
     'action' => 'webshop'
+  ),
+  'shopitem' => array(
+    'controller' => 'Pages',
+    'action' => 'shopitem'
   )
 );
 

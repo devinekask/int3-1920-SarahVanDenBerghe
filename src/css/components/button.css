@@ -5,6 +5,10 @@
   font-size: var(--fontMedium);
   display: inline-block;
   margin-top: calc (var(--spacerRegular))/2;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .button--primary {
