@@ -23,6 +23,10 @@ $routes = array(
   'shopitem' => array(
     'controller' => 'Pages',
     'action' => 'shopitem'
+  ),
+  'winkelmand' => array(
+    'controller' => 'Cart',
+    'action' => 'winkelmand'
   )
 );
 

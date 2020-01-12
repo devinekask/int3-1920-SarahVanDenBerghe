@@ -39,7 +39,7 @@
             <li class="menu__item">Boeken</li>
             <div class="menu__icons">
               <li class="menu__item menu__item--icon menu__item--search"><span class="hidden">Zoek</span></li>
-              <li class="menu__item menu__item--icon menu__item--cart"><span class="hidden">Winkelmand</span></li>
+              <a href="index.php?page=winkelmand" class="icon__wrapper"><li class="menu__item menu__item--icon menu__item--cart"><span class="hidden">Winkelmand</span></li></a>
             </div>
           </ul>
       </nav>

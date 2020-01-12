@@ -73,3 +73,7 @@
 input[type='checkbox']:checked + .checkbox__mark:before {
     transform: scale(.5);
 }
+
+.icon__wrapper {
+  display: flex;
+}

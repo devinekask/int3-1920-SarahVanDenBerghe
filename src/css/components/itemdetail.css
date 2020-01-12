@@ -26,6 +26,13 @@
     margin-top: var(--spacerRegular);
     display: block;
   }
+
+  & .info__description--book {
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-size: var(--fontExtraSmall);
+
+  }
 }
 
 /* Form */

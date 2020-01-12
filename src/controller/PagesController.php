@@ -7,6 +7,7 @@ require_once __DIR__ . '/../dao/ImageDAO.php';
 class PagesController extends Controller {
 
   private $itemDAO;
+  private $imageDAO;
 
   function __construct() {
     $this->itemDAO = new ItemDAO();
