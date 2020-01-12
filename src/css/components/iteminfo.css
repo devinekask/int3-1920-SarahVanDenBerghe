@@ -93,53 +93,7 @@ input[type='radio']:checked + .radio__mark:before {
     transform: scale(.5);
 }
 
-
-/* Images */
-
-.images__wrapper{
-  position: relative;
-  height: 36rem;
-  overflow: scroll;
+.button--addtocart {
+  margin-left: var(--spacerRegular);
 }
 
-.image__small {
-  width: 87px;
-}
-
-/* Grote img */
-.images__wrapper>img{
-	position: absolute;
-  left: 6.68rem;
-  top: 0;
-  width: 23.5rem;
-}
-
-/* Hide circles */
-.images__wrapper input[name='slide_switch'] {
-	display: none;
-}
-
-/* Kleine img */
-.images__wrapper label {
-	margin-bottom: var(--spacerRegular);
-  display: flex; /* float: left */
-	cursor: pointer;
-	opacity: 0.4;
-}
-
-/* Actieve kleine img */
-.images__wrapper input[name='slide_switch']:checked+label {
-  opacity: 1;
-  /* border: .1rem solid var(--colorRed); */
-}
-
-/* Grote images hiden */
-.images__wrapper input[name='slide_switch'] ~ img {
-	opacity: 0;
-}
-
-/* Actieve grote image tonen */
-.images__wrapper input[name='slide_switch']:checked+label+img {
-	opacity: 1;
-	transform: scale(1);
-}

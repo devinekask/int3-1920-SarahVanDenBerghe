@@ -5,10 +5,6 @@
   font-size: var(--fontMedium);
   display: inline-block;
   margin-top: calc (var(--spacerRegular))/2;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .button--primary {
@@ -23,11 +19,29 @@
     width: 2rem;
     background-image: url(./../../assets/img/icons/arrow.svg);
     background-repeat: no-repeat;
-     transform: translateX(-2rem)
+    transform: translate(-2rem, .3rem);
   }
 }
 
 .button--secondary {
   background-color: var(--colorRed);
   color: white;
+}
+
+.back {
+  display: block;
+  transform: translateX(2rem);
+
+  &:before {
+  position: absolute;
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../../assets/img/icons/back.svg);
+  transform: translateX(-2rem)
+  }
+
+  &:hover {
+    color: var(--colorRed)
+  }
 }

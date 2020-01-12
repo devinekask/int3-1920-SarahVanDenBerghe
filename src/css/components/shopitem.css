@@ -37,25 +37,6 @@
   }
 }
 
-.back {
-  margin-top: var(--spacerBig);
-  display: block;
-  transform: translateX(2rem);
-
-  &:before {
-  position: absolute;
-  content: '';
-  width: 1rem;
-  height: 1rem;
-  background-image: url(../../assets/img/icons/back.svg);
-  transform: translateX(-2rem)
-  }
-
-  &:hover {
-    color: var(--colorRed)
-  }
-}
-
 .form--shopitem {
   background-image: linear-gradient(to right, #000 40%, rgba(255, 255, 255, 0) 20%);
   background-position: top;
@@ -63,6 +44,10 @@
   background-repeat: repeat-x;
   padding-top: .2rem;
   margin-top: 2.5rem;
+}
+
+.back--webshop {
+  margin-top: var(--spacerBig);
 }
 
 

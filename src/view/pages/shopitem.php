@@ -1,5 +1,5 @@
 <div class="container">
-<a class="back" href="index.php?page=webshop">Keer terug naar de webshop</a>
+<a class="back back--webshop" href="index.php?page=webshop">Keer terug naar de webshop</a>
 <article class="shopitem">
   <h1 class="hidden">Item</h1>
 
@@ -24,25 +24,25 @@
     <?php echo $item['description']; ?>
 
     <form action="" class="form form--shopitem">
-    <?php if(!empty($item['optioninfo'])): ?>
-    <p><?php echo $item['optioninfo']; ?></p>
-    <div class="shopitem__options">
+      <?php if(!empty($item['optioninfo'])): ?>
+      <p><?php echo $item['optioninfo']; ?></p>
+      <div class="shopitem__options">
 
-      <?php foreach($options as $option): ?>
-        <label class="shopitem__option"><input type="radio" name="option" value="<?php echo $option['id']; ?>"><span class="radio__mark"></span><?php echo $option['name']; ?></label>
-      <?php endforeach; ?>
-    </div>
-    <?php endif; ?>
+        <?php foreach($options as $option): ?>
+          <label class="label shopitem__option"><input type="radio" name="option" value="<?php echo $option['id']; ?>"><span class="radio__mark"></span><?php echo $option['name']; ?></label>
+        <?php endforeach; ?>
+      </div>
+      <?php endif; ?>
 
-    <p>Aantal</p>
-    <div class="shopitem__cart">
-    <label class="label label--quantity"><span class="hidden">Aantal</span>
-      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;"></button>
-      <input class="input input--number" type="number" min="1" max="99" value="1" required>
-      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;" class="plus"></button>
-    </label>
-    <button class="button button--secondary">Voeg toe aan winkelmand</button>
-    </div>
+      <p>Aantal</p>
+      <div class="shopitem__cart">
+      <label class="label label--quantity"><span class="hidden">Aantal</span>
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;"></button>
+        <input class="input input--number" type="number" min="1" max="99" value="1" required>
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;" class="plus"></button>
+      </label>
+      <button class="button button--secondary button--addtocart">Voeg toe aan winkelmand</button>
+      </div>
     </form>
 
   </section>

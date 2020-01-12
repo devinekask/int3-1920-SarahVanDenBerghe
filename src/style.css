@@ -7,11 +7,13 @@
 @import './css/typography.css';
 
 @import './css/components/navbar.css';
+@import './css/components/footer.css';
 @import './css/components/button.css';
 @import './css/components/banner.css';
 @import './css/components/filter.css';
 @import './css/components/shopitem.css';
-@import './css/components/itemdetail.css';
+@import './css/components/imageslider.css';
+@import './css/components/iteminfo.css';
 @import './css/components/form.css';
-@import './css/components/footer.css';
+@import './css/components/cart.css';
 

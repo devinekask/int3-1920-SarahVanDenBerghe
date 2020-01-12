@@ -18,10 +18,6 @@
 .filter__label {
   margin-right: var(--spacerBig);
   display: flex;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .filter__delete {
@@ -38,7 +34,6 @@
     }
 
     &:hover {
-      cursor: pointer;
       color: var(--colorRed);
     }
 }

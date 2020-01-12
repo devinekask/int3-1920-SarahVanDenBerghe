@@ -15,7 +15,7 @@ class CartController extends Controller {
   }
 
   public function winkelmand() {
-
+    $this->set('title', 'Winkelmand');
   }
 
 }

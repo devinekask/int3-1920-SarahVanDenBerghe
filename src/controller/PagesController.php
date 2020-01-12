@@ -46,7 +46,7 @@ class PagesController extends Controller {
     }
 
     $this->set('items', $items);
-    $this->set('title', 'Webshop - Humo');
+    $this->set('title', 'Webshop');
   }
 
 
@@ -62,7 +62,7 @@ class PagesController extends Controller {
     $this->set('item',$item);
     $this->set('options',$options);
     $this->set('images',$images);
-    $this->set('title', 'Webshop - Humo');
+    $this->set('title', 'Webshop');
   }
 
 

@@ -1,8 +1,12 @@
 body {
   font-size: var(--fontRegular);
   font-family: var(--fontBody);
-  line-height: 1.4rem;
+  line-height: 1.5;
   letter-spacing: .5px;
+}
+
+h1 {
+  font-family: var(--fontTitle);
 }
 
 h2 {

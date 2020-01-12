@@ -1,8 +1,8 @@
-label:hover {
+.label:hover {
   cursor: pointer;
 }
 
-.input--number {
+.input {
   background-color: var(--colorGrey);
   border: none;
   height: 3rem;
@@ -12,6 +12,8 @@ label:hover {
   font-weight: bold;
 }
 
+/* INPUT NUMBER */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -20,7 +22,6 @@ input::-webkit-inner-spin-button {
 
 .label--quantity {
   display: flex;
-  margin-right: var(--spacerRegular);
 }
 
 .label--quantity button {
@@ -29,7 +30,6 @@ input::-webkit-inner-spin-button {
   border: none;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   margin: 0;
   position: relative;
   background-color: var(--colorGrey);
@@ -48,10 +48,39 @@ input::-webkit-inner-spin-button {
   content: '';
   width: .6rem;
   height: .1rem;
-  background-color: rgb(197, 197, 197);
+  background-color: var(--colorGreyBorder);
   transform: translate(-50%, -50%);
 }
 
 .label--quantity button.plus:after {
   transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* INPUT TEXT */
+
+.label--text {
+  display: flex;
+  flex-direction: column;
+    font-weight: bold;
+}
+
+.label--text--secondary {
+  font-size: var(--fontSmall);
+  font-weight: regular;
+  text-transform: uppercase;
+  letter-spacing: .07rem;
+}
+
+.input--text {
+  width: 100%;
+  margin-top: .5rem;
+  font-weight: normal;
+  text-align: left;
+  padding-left: 1rem;
+  font-family: var(--fontBody);
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--colorGreyBorder);
+  }
 }
