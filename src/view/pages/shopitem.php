@@ -5,37 +5,34 @@
 
   <section class="shopitem__images">
     <h2 class="hidden">Item images</h2>
-    <div class="image__small__wrapper images__wrapper">
-      <input type="radio" name="slide_switch" id="id1" checked />
-	    <label for="id1">
-		    <img src="https://placeimg.com/87/130/any" width="87"/>
-	    </label>
-      <img src="https://placeimg.com/87/130/any"/>
-
-      <input type="radio" name="slide_switch" id="id2" />
-	    <label for="id2">
-		    <img src="https://placeimg.com/87/131/any" width="87"/>
-	    </label>
-      <img src="https://placeimg.com/87/131/any"/>
+    <div class="images__wrapper">
+      <?php foreach($images as $index => $image): ?>
+        <input type="radio" name="slide_switch" id="<?php echo $index; ?>" <?php if ($index == 0) { echo 'checked'; }?> />
+        <label for="<?php echo $index; ?>">
+          <img class="image__small" src="assets/img/webshop/<?php echo $image['path']; ?>" />
+        </label>
+        <img src="assets/img/webshop/<?php echo $image['path']; ?>"/>
+      <?php endforeach; ?>
     </div>
   </section>
 
   <section class="shopitem__info">
     <div class="info__wrapper">
-      <h2 class="info__title">Retro leeslicht</h2>
-      <span class="info__price">€ 18,50</span>
+      <h2 class="info__title"><?php echo $item['title']; ?></h2>
+      <span class="info__price"><?php echo $item['priceinfo']; ?></span>
     </div>
-    <p class="info__description">
-      Een boekenlichtje met een vormgeving van vroeger en een gebruiksgemak van nu.  Dit leeslampje kan perfect bevestigd worden op elk boek. De richtbare led lamp zorgt voor optimaal leescomfort.
-    </p>
-    <p>Als je The Booklamp niet gebruikt, laat je’m eenvoudigweg achter in de verzwaarde voet. Je leukt er ook nog eens je bureau, tafel of schoorsteenmantel mee op. Wordt geleverd inclusief batterijen.</p>
+    <?php echo $item['description']; ?>
 
     <form action="" class="form form--shopitem">
-    <p>Kies je kleur</p>
+    <?php if(!empty($item['optioninfo'])): ?>
+    <p><?php echo $item['optioninfo']; ?></p>
     <div class="shopitem__options">
-      <label class="shopitem__option"><input type="radio" name="x" value="1"><span class="radio__mark"></span>Rood</label>
-      <label class="shopitem__option"><input type="radio" name="x" value="2"><span class="radio__mark"></span>Blauw</label>
+
+      <?php foreach($options as $option): ?>
+        <label class="shopitem__option"><input type="radio" name="option" value="<?php echo $option['id']; ?>"><span class="radio__mark"></span><?php echo $option['name']; ?></label>
+      <?php endforeach; ?>
     </div>
+    <?php endif; ?>
 
     <p>Aantal</p>
     <div class="shopitem__cart">

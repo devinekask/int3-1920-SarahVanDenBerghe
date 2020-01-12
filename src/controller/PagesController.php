@@ -1,76 +1,103 @@
 <?php
 
 require_once __DIR__ . '/Controller.php';
-require_once __DIR__ . '/../dao/TodoDAO.php';
+require_once __DIR__ . '/../dao/ItemDAO.php';
+require_once __DIR__ . '/../dao/ImageDAO.php';
 
 class PagesController extends Controller {
 
-  private $todoDAO;
+  private $itemDAO;
 
   function __construct() {
-    $this->todoDAO = new TodoDAO();
+    $this->itemDAO = new ItemDAO();
+    $this->imageDAO = new ImageDAO();
   }
 
   public function index() {
-    if (!empty($_POST['action'])) {
-      if ($_POST['action'] == 'insertTodo') {
-        $this->handleInsertTodo();
-      }
-    }
+    // if (!empty($_POST['action'])) {
+    //   if ($_POST['action'] == 'insertTodo') {
+    //     $this->handleInsertTodo();
+    //   }
+    // }
 
-    $todos = $this->todoDAO->selectAll();
-    $this->set('todos', $todos);
+    $items = $this->itemDAO->selectAllItems();
+    $this->set('items', $items);
     $this->set('title', 'Humo');
 
-    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-      header('Content-Type: application/json');
-      echo json_encode($todos);
-      exit();
-    }
+    // if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+    //   header('Content-Type: application/json');
+    //   echo json_encode($items);
+    //   exit();
+    // }
   }
+
+
 
   public function webshop() {
+    $categories = false;
+    if (!empty($_GET['categories'])) {
+      $categories = $_GET['categories'];
+    }
+
+    $items = $this->itemDAO->selectAllItemsByCategory($categories);
+    if(empty($items)){
+      $items = $this->itemDAO->selectAllItems();
+    }
+
+    $this->set('items', $items);
     $this->set('title', 'Webshop - Humo');
   }
+
+
 
   public function shopitem() {
+
+  if(!empty($_GET['id'])){
+   $item = $this->itemDAO->selectById($_GET['id']);
+   $options = $this->itemDAO->selectOptionsById($_GET['id']);
+   $images = $this->imageDAO->selectImagesById($_GET['id']);
+  }
+
+    $this->set('item',$item);
+    $this->set('options',$options);
+    $this->set('images',$images);
     $this->set('title', 'Webshop - Humo');
   }
 
 
-  private function handleInsertTodo() {
-    $data = array(
-      'created' => date('Y-m-d H:i:s'),
-      'modified' => date('Y-m-d H:i:s'),
-      'checked' => 0,
-      'text' => $_POST['text']
-    );
-    $insertTodoResult = $this->todoDAO->insert($data);
-    if (!$insertTodoResult) {
-      $errors = $this->todoDAO->validate($data);
-      $this->set('errors', $errors);
-      if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-        header('Content-Type: application/json');
-        echo json_encode(array(
-          'result' => 'error',
-          'errors' => $errors
-        ));
-        exit();
-      }
-      $_SESSION['error'] = 'De todo kon niet toegevoegd worden!';
-    } else {
-      if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-        header('Content-Type: application/json');
-        echo json_encode(array(
-          'result' => 'ok',
-          'todo' => $insertTodoResult
-        ));
-        exit();
-      }
-      $_SESSION['info'] = 'De todo is toegevoegd!';
-      header('Location: index.php');
-      exit();
-    }
-  }
+  // private function handleInsertTodo() {
+  //   $data = array(
+  //     'created' => date('Y-m-d H:i:s'),
+  //     'modified' => date('Y-m-d H:i:s'),
+  //     'checked' => 0,
+  //     'text' => $_POST['text']
+  //   );
+  //   $insertTodoResult = $this->todoDAO->insert($data);
+  //   if (!$insertTodoResult) {
+  //     $errors = $this->todoDAO->validate($data);
+  //     $this->set('errors', $errors);
+  //     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+  //       header('Content-Type: application/json');
+  //       echo json_encode(array(
+  //         'result' => 'error',
+  //         'errors' => $errors
+  //       ));
+  //       exit();
+  //     }
+  //     $_SESSION['error'] = 'De todo kon niet toegevoegd worden!';
+  //   } else {
+  //     if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+  //       header('Content-Type: application/json');
+  //       echo json_encode(array(
+  //         'result' => 'ok',
+  //         'todo' => $insertTodoResult
+  //       ));
+  //       exit();
+  //     }
+  //     $_SESSION['info'] = 'De todo is toegevoegd!';
+  //     header('Location: index.php');
+  //     exit();
+  //   }
+  // }
 
 }

@@ -1,8 +1,8 @@
 .webshop__items {
   margin-top: var(--spacerBig);
   display: grid;
-  grid-template: auto / repeat(4, 15.3rem);
-  grid-gap: var(--spacerRegular);
+  grid-template: auto / repeat(4, 1fr);
+  grid-gap: var(--spacerBig);
 }
 
 .webshop__item {
@@ -15,6 +15,7 @@
     width: 100%;
     background-color: var(--colorGrey);
     margin-bottom: var(--spacerRegular);
+    object-fit: cover
   }
 
   & .item__price {
@@ -53,6 +54,15 @@
   &:hover {
     color: var(--colorRed)
   }
+}
+
+.form--shopitem {
+  background-image: linear-gradient(to right, #000 40%, rgba(255, 255, 255, 0) 20%);
+  background-position: top;
+  background-size: 3px 1px;
+  background-repeat: repeat-x;
+  padding-top: .2rem;
+  margin-top: 2.5rem;
 }
 
 

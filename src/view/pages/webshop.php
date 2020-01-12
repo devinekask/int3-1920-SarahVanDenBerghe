@@ -12,24 +12,25 @@
   <article>
     <section class="form__wrapper">
       <h2 class="hidden">Filter webshop items</h2>
-      <form action="index.php?page=webshop">
+      <form action="index.php?page=webshop" method="get">
         <div class="filter">
           <p class="filter__title">Categorieën</p>
           <label for="abonnementen" class="filter__label">
-            <input class="filter__input" type="checkbox" id="abonnementen" name="categories[]" value="abonnementen">
+            <input class="filter__input" type="checkbox" id="abonnementen" name="categories" value="abonnementen"> <!-- categories[] -->
             <span class="checkbox__mark"></span>
             Abonnementen
           </label>
           <label for="gadgets" class="filter__label">
-            <input class="filter__input" type="checkbox" id="gadgets" name="categories[]" value="gadgets">
+            <input class="filter__input" type="checkbox" id="gadgets" name="categories" value="gadgets">
             <span class="checkbox__mark"></span>
             Gadgets
           </label>
           <label for="boeken" class="filter__label">
-            <input class="filter__input" type="checkbox" id="boeken" name="categories[]" value="boeken">
+            <input class="filter__input" type="checkbox" id="boeken" name="categories" value="boeken">
             <span class="checkbox__mark"></span>
             Boeken
           </label>
+          <input type="submit" class="button" value="filter">
           <p class="filter__delete">Filter wissen</p>
         </div>
       </form>
@@ -37,55 +38,17 @@
 
     <section>
       <h2 class="hidden">Webshop items</h2>
-      <ul class="webshop__items">
+        <ul class="webshop__items">
+        <?php foreach($items as $item): ?>
         <li class="webshop__item__wrapper">
-          <a class="webshop__item" href="index.php?page=shopitem">
-            <h3 class="item__title">Digitaal abonnement</h3>
-            <span class="item__price">Vanaf € 15,95 / maand</span>
-            <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
-            <img class="item__img" src="" alt="">
+          <a class="webshop__item" href="index.php?page=shopitem&id=<?php echo $item['id'] ?>">
+            <h3 class="item__title"><?php echo $item['title'] ?></h3>
+            <span class="item__price"><?php echo $item['priceinfo'] ?></span>
+            <p class="item__info"><?php echo $item['intro'] ?></p>
+            <img class="item__img" src="assets/img/thumbnails/<?php echo $item['thumbnail'] ?>" alt="<?php echo $item['title'] ?>">
           </a>
         </li>
-
-
-
-        <li class="webshop__item">
-          <h3 class="item__title">Digitaal abonnement</h3>
-          <span class="item__price">Vanaf € 15,95 / maand</span>
-          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
-          <img class="item__img" src="" alt="">
-        </li>
-        <li class="webshop__item">
-          <h3 class="item__title">Digitaal abonnement</h3>
-          <span class="item__price">Vanaf € 15,95 / maand</span>
-          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
-          <img class="item__img" src="" alt="">
-        </li>
-
-                <li class="webshop__item">
-          <h3 class="item__title">Digitaal abonnement</h3>
-          <span class="item__price">Vanaf € 15,95 / maand</span>
-          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
-          <img class="item__img" src="" alt="">
-        </li>
-        <li class="webshop__item">
-          <h3 class="item__title">Digitaal abonnement</h3>
-          <span class="item__price">Vanaf € 15,95 / maand</span>
-          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
-          <img class="item__img" src="" alt="">
-        </li>
-                <li class="webshop__item">
-          <h3 class="item__title">Digitaal abonnement</h3>
-          <span class="item__price">Vanaf € 15,95 / maand</span>
-          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
-          <img class="item__img" src="" alt="">
-        </li>
-        <li class="webshop__item">
-          <h3 class="item__title">Digitaal abonnement</h3>
-          <span class="item__price">Vanaf € 15,95 / maand</span>
-          <p class="item__info">Krijg wekelijks de digitale Humo magazine per mail, gedurende 1, 2 of 3 jaar.</p>
-          <img class="item__img" src="" alt="">
-        </li>
+        <?php endforeach; ?>
       </ul>
     </section>
   </article>

@@ -2,7 +2,7 @@
   display: grid;
   grid-template: 1fr / repeat(2, 1fr);
   grid-gap: calc(var(--spacerRegular)*3);
-  margin: var(--spacerRegular) 0 var(--spacerBig);
+  margin-top: var(--spacerRegular);
 }
 
 /* Info */
@@ -10,14 +10,21 @@
 .shopitem__info {
   & .info__wrapper {
     display: flex;
+    flex-wrap: wrap
   }
 
   & .info__title {
     color: var(--colorRed);
+    margin-right: var(--spacerRegular);
   }
 
   & .info__price {
-    margin-left: var(--spacerRegular);
+    margin-bottom: var(--spacerBig);
+  }
+
+  & .info__description span {
+    margin-top: var(--spacerRegular);
+    display: block;
   }
 }
 
@@ -83,7 +90,13 @@ input[type='radio']:checked + .radio__mark:before {
 /* Images */
 
 .images__wrapper{
-	position: relative;
+  position: relative;
+  height: 36rem;
+  overflow: scroll;
+}
+
+.image__small {
+  width: 87px;
 }
 
 /* Grote img */
