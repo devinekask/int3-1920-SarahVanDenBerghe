@@ -9,19 +9,17 @@
 
 .shopitem__info {
 
-  & .info__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-  }
-
   & .info__title {
     color: var(--colorRed);
-    margin-right: var(--spacerRegular);
+    margin-bottom: .5rem;
   }
 
   & .info__price {
     margin-bottom: var(--spacerBig);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    opacity: .7;
+    font-weight: bold;
   }
 
   & .info__description {
@@ -35,9 +33,9 @@
 
   & .info__description--book {
     text-transform: uppercase;
-    letter-spacing: .05rem;
+    letter-spacing: .1rem;
     font-size: var(--fontExtraSmall);
-
+    opacity: .5;
   }
 }
 

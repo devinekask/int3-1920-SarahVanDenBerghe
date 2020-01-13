@@ -17,10 +17,8 @@
   </section>
 
   <section class="shopitem__info">
-    <div class="info__wrapper">
       <h2 class="info__title"><?php echo $item['title']; ?></h2>
-      <span class="info__price"><?php echo $item['priceinfo']; ?></span>
-    </div>
+      <p class="info__price"><?php echo $item['priceinfo']; ?></p>
     <?php echo $item['description']; ?>
 
     <form action="index.php?page=winkelmand" method="POST" class="form form--shopitem">
@@ -46,7 +44,7 @@
     </form>
 
     <?php if (!empty($_SESSION['add'])): ?>
-	    <p><?php echo $_SESSION['add']; ?></p>
+	    <p class="addedtocart"><?php echo $_SESSION['add']; ?></p>
     <?php endif; ?>
 
   </section>

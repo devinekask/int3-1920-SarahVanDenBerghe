@@ -49,8 +49,6 @@ class PagesController extends Controller {
     $this->set('title', 'Webshop');
   }
 
-
-
   public function shopitem() {
 
   if(!empty($_GET['id'])){
