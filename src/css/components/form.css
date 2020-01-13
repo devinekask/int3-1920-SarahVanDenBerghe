@@ -36,13 +36,13 @@ input::-webkit-inner-spin-button {
   height: 3rem;
   width: 1.8rem;
 
-  &:hover:before, &:hover:after {
+  &:hover::before, &:hover::after {
     background-color: black;
   }
 }
 
-.label--quantity button:before,
-.label--quantity button:after {
+.label--quantity button::before,
+.label--quantity button::after {
   display: inline-block;
   position: absolute;
   content: '';
@@ -52,7 +52,7 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, -50%);
 }
 
-.label--quantity button.plus:after {
+.label--quantity .plus::after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
@@ -61,7 +61,7 @@ input::-webkit-inner-spin-button {
 .label--text {
   display: flex;
   flex-direction: column;
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .label--text--secondary {

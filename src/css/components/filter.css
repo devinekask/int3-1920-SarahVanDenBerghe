@@ -1,7 +1,7 @@
 .filter {
   display: flex;
   margin-top: 4rem;
-  background-image: linear-gradient(to right, #000 40%, rgba(255, 255, 255, 0) 20%);
+  background-image: linear-gradient(to right, black 40%, rgba(255, 255, 255, 0) 20%);
   background-position: bottom;
   background-size: 3px 1px;
   background-repeat: repeat-x;
@@ -24,18 +24,18 @@
   margin-left: auto;
   font-weight: bold;
 
-    &:before {
+  &::before {
     position: absolute;
     content: '';
     height: .8rem;
     width: .8rem;
     background-image: url(./../../assets/img/icons/refresh.svg);
-    transform: translate(-1.5rem,.2rem);
-    }
+    transform: translate(-1.5rem, .2rem);
+  }
 
-    &:hover {
-      color: var(--colorRed);
-    }
+  &:hover {
+    color: var(--colorRed);
+  }
 }
 
 .filter__input {
@@ -50,10 +50,10 @@
   margin: auto;
   box-sizing: border-box;
   border: .01rem solid var(--colorGreyDark);
-  transform: translate(-.6rem, -.6rem)
+  transform: translate(-.6rem, -.6rem);
 }
 
-.checkbox__mark:before {
+.checkbox__mark::before {
   content: '';
   top: 0;
   left: 0;
@@ -65,8 +65,8 @@
   transform: scale(0);
 }
 
-input[type='checkbox']:checked + .checkbox__mark:before {
-    transform: scale(.5);
+input[type='checkbox']:checked + .checkbox__mark::before {
+  transform: scale(.5);
 }
 
 .icon__wrapper {

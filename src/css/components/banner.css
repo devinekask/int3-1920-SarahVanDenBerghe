@@ -17,7 +17,7 @@
   left: 0;
   background-color: red;
   font-size: var(--fontLabel);
-  font-family: 'Swiss Condensed';
+  font-family: 'Swiss Condensed', sans-serif;
   color: white;
   padding: .2rem .5rem .1rem;
   margin: 1rem;

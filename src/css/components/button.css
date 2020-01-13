@@ -12,7 +12,7 @@
   color: black;
   padding-left: 3rem;
 
-  & span:before {
+  & span::before {
     content: '';
     position: absolute;
     height: 1.25rem;
@@ -32,16 +32,16 @@
   display: block;
   transform: translateX(2rem);
 
-  &:before {
-  position: absolute;
-  content: '';
-  width: 1rem;
-  height: 1rem;
-  background-image: url(../../assets/img/icons/back.svg);
-  transform: translateX(-2rem)
+  &::before {
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-image: url(../../assets/img/icons/back.svg);
+    transform: translateX(-2rem);
   }
 
   &:hover {
-    color: var(--colorRed)
+    color: var(--colorRed);
   }
 }

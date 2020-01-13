@@ -2,6 +2,10 @@
   <form action="" class="form form--cartoverview">
     <h1 class="cart__title">Winkelmand</h1>
 
+    <?php foreach($_SESSION['cart'] as $item): ?>
+      test
+    <?php endforeach; ?>
+
     <section class="cart__items">
     <section class="cart__item">
       <img class="item__info item__info--img" src="assets/img/thumbnails/agenda.jpg" alt="">

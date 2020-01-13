@@ -15,7 +15,7 @@
     width: 100%;
     background-color: var(--colorGrey);
     margin-bottom: var(--spacerRegular);
-    object-fit: cover
+    object-fit: cover;
   }
 
   & .item__price {
@@ -38,7 +38,7 @@
 }
 
 .form--shopitem {
-  background-image: linear-gradient(to right, #000 40%, rgba(255, 255, 255, 0) 20%);
+  background-image: linear-gradient(to right, black 40%, rgba(255, 255, 255, 0) 20%);
   background-position: top;
   background-size: 3px 1px;
   background-repeat: repeat-x;
@@ -49,7 +49,3 @@
 .back--webshop {
   margin-top: var(--spacerBig);
 }
-
-
-
-

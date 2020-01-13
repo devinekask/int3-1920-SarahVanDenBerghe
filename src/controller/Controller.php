@@ -10,10 +10,19 @@ class Controller {
     if (basename(dirname(dirname(__FILE__))) != 'src') {
       $this->env = 'production';
     }
+    if(!isset($_SESSION['cart'])) {
+      $_SESSION['cart'] = array();
+    }
     call_user_func(array($this, $this->route['action']));
   }
 
   public function render() {
+    $numItems = 0;
+    foreach ($_SESSION['cart'] as $itemId => $info) {
+      $numItems += $info['quantity'];
+    }
+    $this->set('numItems', $numItems);
+
     // set js variable according to environment (development / production)
     $this->set('js', '<script src="http://localhost:8080/script.js"></script>'); // webpack dev server
     // NEW : CSS
@@ -26,6 +35,9 @@ class Controller {
     $this->renderInLayout();
     if (!empty($_SESSION['info'])) {
       unset($_SESSION['info']);
+    }
+    if (!empty($_SESSION['add'])) {
+    unset($_SESSION['add']);
     }
     if (!empty($_SESSION['error'])) {
       unset($_SESSION['error']);

@@ -1,16 +1,17 @@
 .shopitem {
   display: grid;
   grid-template: 1fr / repeat(2, 1fr);
-  grid-gap: calc(var(--spacerRegular)*3);
+  grid-gap: calc(var(--spacerRegular) * 3);
   margin-top: var(--spacerRegular);
 }
 
 /* Info */
 
 .shopitem__info {
+
   & .info__wrapper {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
   }
 
   & .info__title {
@@ -38,6 +39,7 @@
 /* Form */
 
 .form--shopitem {
+
   & p {
     font-weight: bold;
     margin-top: var(--spacerBig);
@@ -49,16 +51,13 @@
   }
 
   & .shopitem__option {
-    margin-bottom: calc(var(--spacerRegular)/2);
+    display: flex;
+    margin-bottom: calc(var(--spacerRegular) / 2);
   }
 
   & .shopitem__cart {
     display: flex;
   }
-}
-
-.shopitem__option {
-  display: flex;
 }
 
 .shopitem__option input {
@@ -73,10 +72,10 @@
   position: relative;
   box-sizing: border-box;
   border: .01rem solid var(--colorGreyDark);
-  transform: translate(-.6rem, .1rem)
+  transform: translate(-.6rem, .1rem);
 }
 
-.radio__mark:before {
+.radio__mark::before {
   content: '';
   top: 0;
   left: 0;
@@ -89,11 +88,10 @@
   transform: scale(0);
 }
 
-input[type='radio']:checked + .radio__mark:before {
-    transform: scale(.5);
+input[type='radio']:checked + .radio__mark::before {
+  transform: scale(.5);
 }
 
 .button--addtocart {
   margin-left: var(--spacerRegular);
 }
-

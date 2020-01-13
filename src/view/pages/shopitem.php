@@ -23,11 +23,11 @@
     </div>
     <?php echo $item['description']; ?>
 
-    <form action="" class="form form--shopitem">
+    <form action="index.php?page=winkelmand" class="form form--shopitem">
+      <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>" />
       <?php if(!empty($item['optioninfo'])): ?>
       <p><?php echo $item['optioninfo']; ?></p>
       <div class="shopitem__options">
-
         <?php foreach($options as $option): ?>
           <label class="label shopitem__option"><input type="radio" name="option" value="<?php echo $option['id']; ?>"><span class="radio__mark"></span><?php echo $option['name']; ?></label>
         <?php endforeach; ?>
@@ -36,14 +36,17 @@
 
       <p>Aantal</p>
       <div class="shopitem__cart">
-      <label class="label label--quantity"><span class="hidden">Aantal</span>
+      <label class="label label--quantity" for="quantity"><span class="hidden">Aantal</span>
         <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;"></button>
-        <input class="input input--number" type="number" min="1" max="99" value="1" required>
+        <input class="input input--number" id="quantity" name="quantity" type="number" min="1" max="99" value="1" required>
         <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;" class="plus"></button>
       </label>
-      <button class="button button--secondary button--addtocart">Voeg toe aan winkelmand</button>
+      <button class="button button--secondary button--addtocart" type="submit" name="action" value="add">Voeg toe aan winkelmand</button>
       </div>
     </form>
+    <?php if (!empty($_SESSION['add'])): ?>
+	    <p><?php echo $_SESSION['add']; ?></p>
+    <?php endif; ?>
 
   </section>
 

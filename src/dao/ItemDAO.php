@@ -55,8 +55,6 @@ class ItemDAO extends DAO {
 
 
 
-
-
   public function selectById($id){
     $sql = "SELECT * FROM `int3`.`items`
       LEFT JOIN `int3`.`options`

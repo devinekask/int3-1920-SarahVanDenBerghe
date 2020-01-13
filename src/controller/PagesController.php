@@ -59,6 +59,11 @@ class PagesController extends Controller {
    $images = $this->imageDAO->selectImagesById($_GET['id']);
   }
 
+    if(empty($item)){
+      header('Location:index.php?page=webshop'); ;
+      exit();
+    }
+
     $this->set('item',$item);
     $this->set('options',$options);
     $this->set('images',$images);
