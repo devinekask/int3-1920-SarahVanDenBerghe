@@ -1,3 +1,15 @@
+.label {
+  display: block;
+}
+
+.label:not(:first-of-type) {
+  margin-top: var(--spacerRegular);
+}
+
+.label:last-of-type .input--text{
+  margin-bottom: var(--spacerBig);
+}
+
 .label:hover {
   cursor: pointer;
 }

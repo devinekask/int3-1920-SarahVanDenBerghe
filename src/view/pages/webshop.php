@@ -5,7 +5,7 @@
     <div class="banner">
       <h2 class="banner__title">Fahrenheit 451</h2>
       <p class="banner__info">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-      <a class="button button--primary" href="#"><span>Ontdek</span></a>
+      <a class="button button--primary button--inline" href="#"><span>Ontdek</span></a>
     </div>
   </article>
 

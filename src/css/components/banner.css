@@ -11,6 +11,10 @@
   width: 25rem;
 }
 
+.banner__info {
+  margin-bottom: var(--spacerRegular);
+}
+
 .banner__label {
   position: absolute;
   top: 0;

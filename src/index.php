@@ -28,6 +28,10 @@ $routes = array(
   'winkelmand' => array(
     'controller' => 'Cart',
     'action' => 'winkelmand'
+  ),
+  'login' => array(
+    'controller' => 'Cart',
+    'action' => 'login'
   )
 );
 

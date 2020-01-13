@@ -1,0 +1,48 @@
+.steps__wrapper {
+  margin-top: var(--spacerBig);
+
+  &::before {
+    content: '';
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    border-top: .05rem solid var(--colorGreyBorder);
+    top: 2.3rem;
+    z-index: -1;
+  }
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+
+  & .step__item {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  & .step__number {
+    border: .05rem solid var(--colorRed);
+    background-color: white;;
+    color: var(--colorRed);
+    font-family: var(--fontTitle);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacerRegular) auto;
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  & .step__number--active {
+    background-color: var(--colorRed);
+    color: white;
+  }
+
+  & .step__title {
+    font-weight: regular;
+  }
+}

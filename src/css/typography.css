@@ -15,10 +15,6 @@ h2 {
   margin-bottom: var(--spacerRegular);
 }
 
-p {
-  margin-bottom: var(--spacerRegular);
-}
-
 /* body {
   font-size: var(--fontRegular);
   font-family: var(--font);

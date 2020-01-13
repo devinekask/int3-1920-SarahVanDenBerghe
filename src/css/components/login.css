@@ -1,0 +1,29 @@
+.account {
+  margin-top: calc(var(--spacerBig) * 2);
+  display: grid;
+  grid-template: 1fr / 2fr 1fr;
+  grid-gap: calc(var(--spacerBig) * 2);
+}
+
+.login {
+  background-color: var(--colorGrey);
+  padding: calc(var(--spacerRegular) * 2) 4rem;
+
+  & .input--text {
+    background-color: white;
+  }
+}
+
+.registreer {
+  padding-top: calc(var(--spacerRegular) * 2);
+
+  & .button {
+    margin-top: var(--spacerBig);
+  }
+
+  & .guest {
+    display: inline-block;
+    margin-top: var(--spacerRegular);
+    border-bottom: 1px dotted black;
+  }
+}

@@ -90,7 +90,7 @@
 }
 
 .menu__item--cart {
-  padding-left: .7rem !important;
+  padding-left: .8rem !important;
 
   &::before {
     height: 1.6rem;

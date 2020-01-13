@@ -48,4 +48,9 @@ class CartController extends Controller {
     }
     $_SESSION['cart'][$_POST['item_id']]['quantity'];
   }
+
+  public function login() {
+
+    $this->set('title', 'Log in of registreer');
+  }
 }

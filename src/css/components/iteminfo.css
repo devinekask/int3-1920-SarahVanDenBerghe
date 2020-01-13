@@ -23,6 +23,10 @@
     margin-bottom: var(--spacerBig);
   }
 
+  & .info__description {
+    margin-bottom: var(--spacerRegular);
+  }
+
   & .info__description span {
     margin-top: var(--spacerRegular);
     display: block;

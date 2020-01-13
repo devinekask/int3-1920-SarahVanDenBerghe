@@ -3,8 +3,17 @@
   font-family: var(--fontTitle);
   text-transform: uppercase;
   font-size: var(--fontMedium);
+  display: block;
+  margin-top: calc (var(--spacerRegular)) / 2;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button--inline {
   display: inline-block;
-  margin-top: calc (var(--spacerRegular))/2;
 }
 
 .button--primary {
