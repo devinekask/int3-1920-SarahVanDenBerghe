@@ -44,6 +44,7 @@
       <button class="button button--secondary button--addtocart" type="submit" name="action" value="add">Voeg toe aan winkelmand</button>
       </div>
     </form>
+
     <?php if (!empty($_SESSION['add'])): ?>
 	    <p><?php echo $_SESSION['add']; ?></p>
     <?php endif; ?>
