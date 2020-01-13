@@ -37,17 +37,28 @@
   color: white;
 }
 
+.button--filter {
+  font-size: var(--fontExtraSmall);
+  font-family: var(--fontBody);
+  padding: .3rem .5rem .1rem;
+  letter-spacing: .1rem;
+  border: 1px solid var(--colorGreyDark);
+  border-radius: .3rem;
+}
+
 .back {
-  display: block;
-  transform: translateX(2rem);
+  display: inline-block;
+  transform: translateX(1.7rem);
+  border-bottom: 1px dotted black;
+  font-size: var(--fontSmall);
 
   &::before {
     position: absolute;
     content: '';
-    width: 1rem;
-    height: 1rem;
+    width: .8rem;
+    height: .8rem;
     background-image: url(../../assets/img/icons/back.svg);
-    transform: translateX(-2rem);
+    transform: translate(-1.7rem, .1rem);
   }
 
   &:hover {

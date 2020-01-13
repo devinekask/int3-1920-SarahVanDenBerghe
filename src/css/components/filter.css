@@ -5,6 +5,8 @@
   background-position: bottom;
   background-size: 3px 1px;
   background-repeat: repeat-x;
+  align-items: center;
+  padding-bottom: calc(var(--spacerRegular) / 2);
 }
 
 .filter__title {
@@ -18,6 +20,10 @@
 .filter__label {
   margin-right: var(--spacerBig);
   display: flex;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .filter__delete {
@@ -50,7 +56,7 @@
   margin: auto;
   box-sizing: border-box;
   border: .01rem solid var(--colorGreyDark);
-  transform: translate(-.6rem, -.6rem);
+  transform: translate(-.6rem,-.1rem);
 }
 
 .checkbox__mark::before {

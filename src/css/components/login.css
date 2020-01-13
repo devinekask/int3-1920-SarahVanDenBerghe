@@ -25,5 +25,9 @@
     display: inline-block;
     margin-top: var(--spacerRegular);
     border-bottom: 1px dotted black;
+
+    &:hover {
+      color: var(--colorRed);
+    }
   }
 }

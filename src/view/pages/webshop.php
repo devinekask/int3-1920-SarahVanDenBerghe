@@ -30,7 +30,7 @@
             <span class="checkbox__mark"></span>
             Boeken
           </label>
-          <input type="submit" class="button" value="filter">
+          <input type="submit" class="button button--filter" value="filter">
           <p class="filter__delete">Filter wissen</p>
         </div>
       </form>

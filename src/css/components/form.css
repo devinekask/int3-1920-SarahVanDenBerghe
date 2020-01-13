@@ -1,5 +1,8 @@
 .label {
   display: block;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .label:not(:first-of-type) {
@@ -8,10 +11,6 @@
 
 .label:last-of-type .input--text{
   margin-bottom: var(--spacerBig);
-}
-
-.label:hover {
-  cursor: pointer;
 }
 
 .input {

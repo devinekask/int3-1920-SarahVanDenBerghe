@@ -64,8 +64,8 @@
     <article class="cart__info">
       <h2 class="hidden">Promocode</h2>
       <p>Gratis verzending binnen<br> 3 à 4 werkdagen</p>
-      <label class="label label--text">Promocode
-        <input class="input input--text" type="text">
+      <label class="label label--text" for="promocode">Promocode
+        <input class="input input--text" id="promocode" type="text">
       </label>
     </article>
 
@@ -74,7 +74,7 @@
       <a class="back" href="index.php?page=webshop">Keer terug naar de webshop</a>
       <div class="navigate__checkout">
         <p><span class="totalprice">€ 54,39</span></p>
-        <a class="button button--primary" href="index.php?page=login"><span>Afrekenen</span></a>
+        <a class="button button--primary" href="index.php?page=login"><span>Bestellen</span></a>
       </div>
     </article>
 

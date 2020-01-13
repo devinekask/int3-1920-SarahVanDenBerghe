@@ -120,6 +120,10 @@
   & .label--text {
     width: 20rem;
   }
+
+  & #promocode {
+    margin-bottom: 0;
+  }
 }
 
 .cart__navigate {
