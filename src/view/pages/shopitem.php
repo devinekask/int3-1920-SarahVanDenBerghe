@@ -23,7 +23,7 @@
     </div>
     <?php echo $item['description']; ?>
 
-    <form action="index.php?page=winkelmand" class="form form--shopitem">
+    <form action="index.php?page=winkelmand" method="POST" class="form form--shopitem">
       <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>" />
       <?php if(!empty($item['optioninfo'])): ?>
       <p><?php echo $item['optioninfo']; ?></p>

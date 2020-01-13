@@ -50,7 +50,7 @@
   display: inline-block;
   transform: translateX(1.7rem);
   border-bottom: 1px dotted black;
-  font-size: var(--fontSmall);
+  font-size: var(--fontSmall); 
 
   &::before {
     position: absolute;

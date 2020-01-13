@@ -33,24 +33,29 @@ class ItemDAO extends DAO {
 
 
   public function selectAllItemsByCategory($categories = false){
-    $sql = "SELECT DISTINCT FROM `int3`.`items`
+    $sql = "SELECT `int3`.`items`.`id`, `int3`.`items`.`title`, `int3`.`items`.`priceinfo`, `int3`.`items`.`intro`,`int3`.`items`.`category_id`, `int3`.`items`.`thumbnail`, `int3`.`categories`.`name`
+    FROM `int3`.`items`
+    LEFT JOIN `int3`.`categories`
+    ON `int3`.`items`.`category_id` = `int3`.`items`.`id`
     WHERE 1";
-    // `category` = :option1 OR `category`= :option2 , .... afhankelijk van alle GETS
-    // page=webshop&categories=abonnementen&categories=gadgets
 
     $bindValues = array();
 
-    if (!empty($categories)) {
-        foreach($categories as $index => $value) {
-          $bindValues[$index] = $value;
-          $sql .= "`category` = $value OR";
-        }
+    if (!empty($categories)) {  // controleren of er category meegegeven wordt
+
+      $categoryParams = "";
+      foreach($categories as $index => $value){  // invalid argument foreach
+          $categoryParams .= ":category_id_".$index.","; // ??
+          $bindValues[":category_id_".$index] = $value; // (array)
+      }
+      $categoryParams = rtrim($categoryParams,",");
+      $sql .= " AND `items`.`category_id` IN ($categoryParams)"; // kijken of het in array zit?
+    }
 
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute($bindValues);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
-}
 
 
 

@@ -46,6 +46,7 @@ class CartController extends Controller {
         'quantity' => $_POST['quantity']
       );
     }
+    // ik denk dat er hier nog ++ bij moet
     $_SESSION['cart'][$_POST['item_id']]['quantity'];
   }
 

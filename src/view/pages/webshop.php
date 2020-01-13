@@ -13,24 +13,25 @@
     <section class="form__wrapper">
       <h2 class="hidden">Filter webshop items</h2>
       <form action="index.php?page=webshop" method="get">
+        <input type="hidden" name="page" value="webshop" />
         <div class="filter">
-          <p class="filter__title">Categorieën</p>
+          <p class="filter__title">Categorieën</p> <!-- nog foreach doen! -->
           <label for="abonnementen" class="filter__label">
-            <input class="filter__input" type="checkbox" id="abonnementen" name="categories" value="abonnementen"> <!-- categories[] -->
+            <input class="filter__input" type="checkbox" id="abonnementen" name="categories[]" value="1"> <!-- categories[] -->
             <span class="checkbox__mark"></span>
             Abonnementen
           </label>
           <label for="gadgets" class="filter__label">
-            <input class="filter__input" type="checkbox" id="gadgets" name="categories" value="gadgets">
+            <input class="filter__input" type="checkbox" id="gadgets" name="categories[]" value="2">
             <span class="checkbox__mark"></span>
             Gadgets
           </label>
           <label for="boeken" class="filter__label">
-            <input class="filter__input" type="checkbox" id="boeken" name="categories" value="boeken">
+            <input class="filter__input" type="checkbox" id="boeken" name="categories[]" value="3">
             <span class="checkbox__mark"></span>
             Boeken
           </label>
-          <input type="submit" class="button button--filter" value="filter">
+          <button type="submit" class="button button--filter" value="filter">Filter</button>
           <p class="filter__delete">Filter wissen</p>
         </div>
       </form>
