@@ -27,7 +27,11 @@
       <p><?php echo $item['optioninfo']; ?></p>
       <div class="shopitem__options">
         <?php foreach($options as $option): ?>
-          <label class="label shopitem__option"><input type="radio" name="option" value="<?php echo $option['id']; ?>"><span class="radio__mark"></span><?php echo $option['name']; ?></label>
+          <input type="radio" name="option" value="<?php echo $option['id']; ?>" class="shopitem__input hidden" id="<?php echo $option['name']; ?>">
+          <label class="shopitem__label" for="<?php echo $option['name']; ?>"><!--<span class="radio__mark"></span>-->
+            <?php echo $option['name']; ?>
+            <span class="price">&euro; <?php echo $item['price']; ?></span>
+          </label>
         <?php endforeach; ?>
       </div>
       <?php endif; ?>
