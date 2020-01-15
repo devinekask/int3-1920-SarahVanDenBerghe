@@ -61,12 +61,12 @@
         </label>
         <label class="label label--housenumber" for="number"><div><span>Huisnummer</span>
           <span class="errors"><?php if(!empty($errorsOrder['number'])){ echo $errorsOrder['number'];} ?></span></div>
-          <input class="input input--text <?php if(!empty($errorsOrder['number'])){ echo 'input--error';} ?>" type="text" name="number" id="number"
+          <input class="input input--text <?php if(!empty($errorsOrder['number'])){ echo 'input--error';} ?>" type="number" name="number" id="number"
           value="<?php if(!empty($_POST['number'])){ echo $_POST['number']; } ?>" required>
         </label>
         <label class="label label--postalcode" for="postalcode"><div><span>Postcode</span>
           <span class="errors"><?php if(!empty($errorsOrder['postalcode'])){ echo $errorsOrder['postalcode'];} ?></span></div>
-          <input class="input input--text <?php if(!empty($errorsOrder['postalcode'])){ echo 'input--error';} ?>" type="text" name="postalcode" id="postalcode"
+          <input class="input input--text <?php if(!empty($errorsOrder['postalcode'])){ echo 'input--error';} ?>" type="number" name="postalcode" id="postalcode"
           value="<?php if(!empty($_POST['postalcode'])){ echo $_POST['postalcode']; } ?>" required>
         </label>
         <label class="label label--city" for="city"><div><span>Woonplaats</span>
@@ -103,8 +103,6 @@
             <span class="hidden">Bancontact</span>
           </label>
         </div>
-
-
           </section>
 
         <input class="button button--secondary" type="submit" value="Betalen">

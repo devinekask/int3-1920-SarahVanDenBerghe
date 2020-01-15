@@ -23,14 +23,11 @@
 
     <form action="index.php?page=cart" method="POST" class="form form--shopitem">
       <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
-      <?php if(!empty($item['optioninfo'])): ?>
+
+      <?php if(!empty($item['optioninfo'])) { ?>
       <p><?php echo $item['optioninfo']; ?></p>
       <div class="shopitem__options">
-
-        <!-- nog een item_idtest aanmaken voor items die GEEN verschillende opties hebben!!!! -->
-
         <?php foreach($options as $option): ?>
-
           <!-- NIEUW - WERKT NIET ? -->
           <!-- Unieke combinatie item+option, hiermee kijk je of item al in cart zit -->
           <input type="hidden" name="item_idtest" value="<?php echo $item['title'] . '-' . $option['id']; ?>">
@@ -43,7 +40,9 @@
         <?php endforeach; ?>
 
       </div>
-      <?php endif; ?>
+      <?php } else { ?>
+        <input type="hidden" name="option_name" value="no option">
+      <?php }?>
 
       <p>Aantal</p>
       <div class="shopitem__cart">
