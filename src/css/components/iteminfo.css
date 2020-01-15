@@ -12,6 +12,8 @@
   & .info__title {
     color: var(--colorRed);
     margin-bottom: .5rem;
+    font-family: var(--fontTitle);
+    font-size: var(--fontBig);
   }
 
   & .info__price {

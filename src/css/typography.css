@@ -5,11 +5,7 @@ body {
   letter-spacing: .5px;
 }
 
-h1 {
-  font-family: var(--fontTitle);
-}
-
-h2 {
+h1, h2, h3 {
   font-size: var(--fontBig);
   font-family: var(--fontTitle);
   margin-bottom: var(--spacerRegular);

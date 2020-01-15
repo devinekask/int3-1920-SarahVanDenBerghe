@@ -1,5 +1,4 @@
 <div class="container">
-  <h1 class="hidden">Webshop</h1>
   <article class="banner__wrapper">
     <span class="banner__label">Weekly special</span>
     <div class="banner">
@@ -9,7 +8,7 @@
     </div>
   </article>
 
-  <article>
+  <div>
     <section class="form__wrapper">
       <h2 class="hidden">Filter webshop items</h2>
       <form action="index.php?page=webshop" method="get">
@@ -52,5 +51,5 @@
         <?php endforeach; ?>
       </ul>
     </section>
-  </article>
+  </div>
 </div>

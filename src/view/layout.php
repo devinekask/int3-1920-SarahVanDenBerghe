@@ -8,26 +8,11 @@
     <?php echo $css;?>
   </head>
   <body>
-
+    <h1 class="hidden"><?php echo $title ?></h1>
     <header>
-      <div class="container">
-        <nav class="menu menu--secondary">
-          <ul class="menu__items">
-            <li class="menu__item">Video</li>
-            <li class="menu__item">TV-gids</li>
-            <li class="menu__item">Zoekertjes</li>
-            <li class="menu__item">Abonnement nemen</li>
-          </ul>
-          <ul class="menu__items">
-            <li class="menu__item">Nu in Humo</li>
-            <li class="menu__item">Login</li>
-            <li class="menu__item">Registreer</li>
-            <li class="menu__item menu__item--webshop"><a href="index.php?page=webshop">Webshop</a></li>
-          </ul>
-        </nav>
-      </div>
-
+      <div class="menu__wrapper">
       <nav class="menu menu--primary">
+        <h2 class="hidden">Hoofdnavigatie</h2>
           <ul class="menu__items container">
             <li class="menu__item">Home</li>
             <li class="menu__item">Actua</li>
@@ -44,15 +29,29 @@
             </div>
           </ul>
       </nav>
+      <nav class="menu menu--secondary container">
+        <h2 class="hidden">Subnavigatie</h2>
+          <ul class="menu__items">
+            <li class="menu__item">Video</li>
+            <li class="menu__item">TV-gids</li>
+            <li class="menu__item">Zoekertjes</li>
+            <li class="menu__item">Abonnement nemen</li>
+          </ul>
+          <ul class="menu__items">
+            <li class="menu__item">Nu in Humo</li>
+            <li class="menu__item">Login</li>
+            <li class="menu__item">Registreer</li>
+            <li class="menu__item menu__item--webshop"><a href="index.php?page=webshop">Webshop</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-
     <?php if($title === 'Login' || $title === 'Gegevens' || $title === 'Bevestiging'): ?>
     <section class="steps__wrapper container">
       <h1 class="hidden">Progress</h1>
       <div class="steps">
-        <h2 class="hidden">Stappen</h2>
         <div class="step__item">
           <p class="step__title">Inloggen</p>
           <p class="step__number <?php if($title === 'Login') echo 'step__number--active' ?>">1</p>
@@ -90,8 +89,8 @@
 
     <footer class="footer">
       <nav class="footer__nav container">
+        <h2 class="hiddeen">Footer navigatie</h2>
         <ul class="footer__columns">
-
           <li class="footer__column">
             <span class="column__title">Actua</span>
             <ul class="column__list">

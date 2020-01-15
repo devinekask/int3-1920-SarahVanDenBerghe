@@ -1,10 +1,9 @@
 <div class="container">
 <a class="back back--webshop" href="index.php?page=webshop">Keer terug naar de webshop</a>
 <article class="shopitem">
-  <h1 class="hidden">Item</h1>
-
+  <h2 class="hidden"><?php echo $item['title']; ?></h2>
   <section class="shopitem__images">
-    <h2 class="hidden">Item images</h2>
+    <h2 class="hidden">Afbeeldingen</h2>
     <div class="images__wrapper">
       <?php foreach($images as $index => $image): ?>
         <input type="radio" name="slide_switch" id="<?php echo $index; ?>" <?php if ($index == 0) { echo 'checked'; }?> />
@@ -17,7 +16,8 @@
   </section>
 
   <section class="shopitem__info">
-      <h2 class="info__title"><?php echo $item['title']; ?></h2>
+      <h2 class="hidden">Infosectie</h2>
+      <p class="info__title"><?php echo $item['title']; ?></p>
       <p class="info__price"><?php echo $item['priceinfo']; ?></p>
     <?php echo $item['description']; ?>
 

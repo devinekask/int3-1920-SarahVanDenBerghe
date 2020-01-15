@@ -150,7 +150,7 @@ class CartController extends Controller {
   }
 
     public function confirmation() {
-    $this->set('title', 'confirmation');
+    $this->set('title', 'Bevestiging');
   }
 
 }

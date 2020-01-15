@@ -47,6 +47,12 @@
 
   & .item__title {
     grid-column: 2 / 3;
+
+    & h3 {
+      font-size: var(--fontRegular);
+      font-family: var(--fontBody);
+      margin-bottom: .2rem;
+    }
   }
 
   & .item__quantity {
@@ -168,4 +174,16 @@
 .input--payment:checked + label {
   border: 1px solid var(--colorGreyBorder);
   background-color: var(--colorGrey);
+}
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(var(--spacerBig) * 3);
+
+  & .button {
+    margin-top: var(--spacerBig);
+  }
 }

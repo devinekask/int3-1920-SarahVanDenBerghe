@@ -10,7 +10,7 @@
   <?php } else { ?>
   <form action="index.php?page=cart" method="post" class="form form--cartoverview">
 
-    <article class="cart__items">
+    <div class="cart__items">
       <?php
         $total = 0;
         foreach($_SESSION['cart'] as $item) {
@@ -46,7 +46,7 @@
 
 
       <?php }?>
-    </article>
+        </div>
 
     <button type="submit" name="action" value="update" class="update hidden-js"><span class="update__text">Bijwerken</span></button>
 
