@@ -21,7 +21,7 @@
         <!-- MOET NOG ACHTER TITEL -->
         <img class="item__info item__info--img" src="assets/img/thumbnails/<?php echo $item['item']['thumbnail'];?>" alt="<?php echo $item['item']['title'];?>">
         <div class="item__info item__info--item">
-          <h2 class="info__title"><?php echo $item['item']['title'];?></h2>
+          <h2 class="info__title"><?php echo $item['item']['title'] . ' | ' . $item['item']['name'];?></h2>
           <p><?php echo $item['item']['intro'];?></p>
         </div>
         <!--<div class="item__info item__info--price">
@@ -32,7 +32,7 @@
           <p>Aantal</p>
           <label class="label label--quantity"><span class="hidden">Aantal</span>
           <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;"></button>
-          <input class="input input--number" name="quantity[<?php echo $item['item']['id'];?>]" type="number" min="0" max="99" value="<?php echo $item['quantity'];?>" required>
+          <input class="input input--number" name="quantity[<?php echo $item['item']['id'] . '-' . $item['option'];?>]" type="number" min="0" max="99" value="<?php echo $item['quantity'];?>" required>
           <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;" class="plus"></button>
         </label>
         </div>
@@ -41,7 +41,7 @@
           <p>&euro; <?php echo $itemTotal;?></p>
         </div>
         <!-- MOET AANGEPAST WORDEN BIJ NIEUWE METHODE -->
-        <button class="item__info item__info--remove" type="submit" name="remove" value="<?php echo $item['item']['id'];?>"><span class="hidden">Verwijder</span></button>
+        <button class="item__info item__info--remove" type="submit" name="remove" value="<?php echo $item['item']['id'] . '-' . $item['option'];?>"><span class="hidden">Verwijder</span></button>
       </section>
 
 

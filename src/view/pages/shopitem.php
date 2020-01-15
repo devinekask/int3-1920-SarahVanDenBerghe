@@ -28,12 +28,8 @@
       <p><?php echo $item['optioninfo']; ?></p>
       <div class="shopitem__options">
         <?php foreach($options as $option): ?>
-          <!-- NIEUW - WERKT NIET ? -->
-          <!-- Unieke combinatie item+option, hiermee kijk je of item al in cart zit -->
-          <input type="hidden" name="item_idtest" value="<?php echo $item['title'] . '-' . $option['id']; ?>">
-
-          <input type="radio" name="option_name" value="<?php echo $option['name']; ?>" class="shopitem__input hidden" id="<?php echo $option['name']; ?>">
-          <label class="shopitem__label" for="<?php echo $option['name']; ?>">
+          <input type="radio" name="option_id" value="<?php echo $option['id']; ?>" class="shopitem__input hidden" id="<?php echo $option['id']; ?>">
+          <label class="shopitem__label" for="<?php echo $option['id']; ?>">
             <?php echo $option['name']; ?>
             <span class="price">&euro; <?php echo $option['price']; ?></span>
           </label>
@@ -41,7 +37,7 @@
 
       </div>
       <?php } else { ?>
-        <input type="hidden" name="option_name" value="no option">
+        <input type="hidden" name="option_id" value="<?php echo $options[0]['id']; ?>">
       <?php }?>
 
       <p>Aantal</p>

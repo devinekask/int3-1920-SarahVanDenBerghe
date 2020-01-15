@@ -51,31 +51,31 @@ class CartController extends Controller {
 
 
   private function _handleAdd() {
-    // hidden input 'item_idtest' gemaakt met title + option zodat deze uniek is voor item / option combo
-    if (empty($_SESSION['cart'][$_POST['item_id']])) {
-      $item = $this->itemDAO->selectById($_POST['item_id']);   // Deze moet nog uniek gemaakt worden!
-      // $item = $this->itemDAO->selectItemByOption($_POST['item_id'],$_POST['option_id']);   // Nieuwe DAO
+     // zo houdt ie rekening met zowel item + option
+    if (empty($_SESSION['cart'][$_POST['item_id'] . '-' . $_POST['option_id']])) {
+      // $item = $this->itemDAO->selectById($_POST['item_id']);
+      $item = $this->itemDAO->selectItemByOption($_POST['item_id'],$_POST['option_id']);   // Nieuwe DAO
       if (empty($item)) {
         return;
       }
-      $_SESSION['cart'][$_POST['item_id']] = array(
+      $_SESSION['cart'][$_POST['item_id'] . '-' . $_POST['option_id']] = array(
         'item' => $item,
-        'option' => $_POST['option_name'],
+        'option' => $_POST['option_id'],
         'quantity' => $_POST['quantity']
       );
       } else {
-        $_SESSION['cart'][$_POST['item_id']]['quantity']++;
+        $_SESSION['cart'][$_POST['item_id'] . '-' . $_POST['option_id']]['quantity']++;
       }
   }
 
   private function _handleRemove() {
-    if (isset($_SESSION['cart'][$_POST['remove']])) {  // hidden input overeenkomen met item_idtest
+    if (isset($_SESSION['cart'][$_POST['remove']])) {
       unset($_SESSION['cart'][$_POST['remove']]);
     }
   }
 
   private function _handleUpdate() {
-    foreach ($_POST['quantity'] as $itemId => $quantity) {
+    foreach ($_POST['quantity'] as $itemId => $quantity) { // In cart.php quantity value aangepast
       if (!empty($_SESSION['cart'][$itemId])) {
         $_SESSION['cart'][$itemId]['quantity'] = $quantity;
       }
@@ -91,14 +91,9 @@ class CartController extends Controller {
     }
   }
 
-
-
-
   public function login() {
     $this->set('title', 'Login');
   }
-
-
 
   public function checkout() {
       if(!empty($_POST['action'])){
@@ -134,7 +129,7 @@ class CartController extends Controller {
         array_push($data, array(
           'order_id' => $gegevensId['id'],
           'item_name' => $quantity['item']['title'],
-          'option_name' => $quantity['option'],      // Extra kolom, ook bij lijn 63
+          'option_name' => $quantity['item']['name'],      // Extra kolom, ook bij lijn 63
           'quantity' => $quantity['quantity']
         ));
       }

@@ -41,6 +41,7 @@
 
   &:hover {
     color: var(--colorRed);
+    cursor: pointer;
   }
 }
 

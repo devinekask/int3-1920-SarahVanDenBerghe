@@ -74,8 +74,9 @@ class ItemDAO extends DAO {
 
 
   // ITEM & OPTION -> VOOR CART
+  // PAS OP: MAAR 1 ID TEGELIJKERTIJD OPHALEN!
   public function selectItemByOption($item, $option){
-    $sql = "SELECT `items`.`title`, `items`.`intro`, `items`.`thumbnail`,`item_options`.`id`,`item_options`.`price`,`item_options`.`name`
+    $sql = "SELECT `items`.`title`, `items`.`intro`, `items`.`thumbnail`,`items`.`id`,`item_options`.`price`,`item_options`.`name`
     FROM `items`
     LEFT JOIN `options`
     ON `items`.`option_id` = `options`.`id`
@@ -87,6 +88,6 @@ class ItemDAO extends DAO {
     $stmt->bindValue(':item',$item);
     $stmt->bindValue(':option',$option);
     $stmt->execute();
-  return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 }

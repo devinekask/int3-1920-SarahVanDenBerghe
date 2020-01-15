@@ -31,7 +31,7 @@
             Boeken
           </label>
           <button type="submit" class="button button--filter" value="filter">Filter</button>
-          <p class="filter__delete">Filter wissen</p>
+          <a class="filter__delete" href="index.php?page=webshop">Filter wissen</a>
         </div>
       </form>
     </section>
