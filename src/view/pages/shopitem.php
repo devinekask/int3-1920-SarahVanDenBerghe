@@ -21,18 +21,27 @@
       <p class="info__price"><?php echo $item['priceinfo']; ?></p>
     <?php echo $item['description']; ?>
 
-    <form action="index.php?page=winkelmand" method="POST" class="form form--shopitem">
-      <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>" />
+    <form action="index.php?page=cart" method="POST" class="form form--shopitem">
+      <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
       <?php if(!empty($item['optioninfo'])): ?>
       <p><?php echo $item['optioninfo']; ?></p>
       <div class="shopitem__options">
+
+        <!-- nog een item_idtest aanmaken voor items die GEEN verschillende opties hebben!!!! -->
+
         <?php foreach($options as $option): ?>
-          <input type="radio" name="option" value="<?php echo $option['id']; ?>" class="shopitem__input hidden" id="<?php echo $option['name']; ?>">
-          <label class="shopitem__label" for="<?php echo $option['name']; ?>"><!--<span class="radio__mark"></span>-->
+
+          <!-- NIEUW - WERKT NIET ? -->
+          <!-- Unieke combinatie item+option, hiermee kijk je of item al in cart zit -->
+          <input type="hidden" name="item_idtest" value="<?php echo $item['title'] . '-' . $option['id']; ?>">
+
+          <input type="radio" name="option_name" value="<?php echo $option['name']; ?>" class="shopitem__input hidden" id="<?php echo $option['name']; ?>">
+          <label class="shopitem__label" for="<?php echo $option['name']; ?>">
             <?php echo $option['name']; ?>
-            <span class="price">&euro; <?php echo $item['price']; ?></span>
+            <span class="price">&euro; <?php echo $option['price']; ?></span>
           </label>
         <?php endforeach; ?>
+
       </div>
       <?php endif; ?>
 

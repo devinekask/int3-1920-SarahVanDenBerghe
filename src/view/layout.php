@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name=“viewport” content=“initial-scale=1.0, width=device width” />
     <title><?php echo $title; ?></title>
     <?php /* NEW */ ?>
     <?php echo $css;?>
@@ -39,13 +40,41 @@
             <li class="menu__item">Boeken</li>
             <div class="menu__icons">
               <li class="menu__item menu__item--icon menu__item--search"><span class="hidden">Zoek</span></li>
-              <a href="index.php?page=winkelmand" class="icon__wrapper"><li class="menu__item menu__item--icon menu__item--cart"><span class="hidden">Winkelmand</span></li></a>
+              <a href="index.php?page=cart" class="icon__wrapper"><li class="menu__item menu__item--icon menu__item--cart"><span class="hidden">Winkelmand</span></li></a>
             </div>
           </ul>
       </nav>
     </header>
 
     <main>
+
+    <?php if($title === 'Login' || $title === 'Gegevens' || $title === 'Bevestiging'): ?>
+    <section class="steps__wrapper container">
+      <h1 class="hidden">Progress</h1>
+      <div class="steps">
+        <h2 class="hidden">Stappen</h2>
+        <div class="step__item">
+          <p class="step__title">Inloggen</p>
+          <p class="step__number <?php if($title === 'Login') echo 'step__number--active' ?>">1</p>
+        </div>
+        <div class="step__item">
+          <p class="step__title">Gegevens</p>
+          <p class="step__number <?php if($title === 'Gegevens') echo 'step__number--active' ?>">2</p>
+        </div>
+        <div class="step__item">
+          <p class="step__title">Betalen</p>
+          <p class="step__number">3</p>
+        </div>
+        <div class="step__item">
+          <p class="step__title">Afronden</p>
+          <p class="step__number <?php if($title === 'Bevestiging') echo 'step__number--active' ?>">4</p>
+        </div>
+      </div>
+    </section>
+    <?php endif; ?>
+
+
+      <!-- weg? -->
       <?php
         if(!empty($_SESSION['error'])) {
           echo '<div class="error box">' . $_SESSION['error'] . '</div>';
@@ -54,6 +83,8 @@
           echo '<div class="info box">' . $_SESSION['info'] . '</div>';
         }
       ?>
+
+
       <?php echo $content;?>
     </main>
 

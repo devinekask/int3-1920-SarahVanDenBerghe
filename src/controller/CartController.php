@@ -3,18 +3,20 @@
 require_once __DIR__ . '/Controller.php';
 require_once __DIR__ . '/../dao/ItemDAO.php';
 require_once __DIR__ . '/../dao/ImageDAO.php';
+require_once __DIR__ . '/../dao/OrderDAO.php';
 
 class CartController extends Controller {
-
   private $itemDAO;
   private $imageDAO;
+  private $orderDAO;
 
   function __construct() {
     $this->itemDAO = new ItemDAO();
     $this->imageDAO = new ImageDAO();
+    $this->orderDAO = new OrderDAO();
   }
 
-  public function winkelmand() {
+  public function cart() {
     if (!empty($_POST['action'])) {
 
       // ADD
@@ -34,36 +36,40 @@ class CartController extends Controller {
       if ($_POST['action'] == 'update') {
         $this->_handleUpdate();
       }
-      header('Location: index.php?page=winkelmand');
+      header('Location: index.php?page=cart');
       exit();
     }
 
     if (!empty($_POST['remove'])) {
       $this->_handleRemove();
-      header('Location: index.php?page=winkelmand');
+      header('Location: index.php?page=cart');
       exit();
     }
 
     $this->set('title', 'Winkelmand');
   }
 
-    private function _handleAdd() {
+
+  private function _handleAdd() {
+    // hidden input 'item_idtest' gemaakt met title + option zodat deze uniek is voor item / option combo
     if (empty($_SESSION['cart'][$_POST['item_id']])) {
-      $item = $this->itemDAO->selectById($_POST['item_id']);
+      $item = $this->itemDAO->selectById($_POST['item_id']);   // Deze moet nog uniek gemaakt worden!
+      // $item = $this->itemDAO->selectItemByOption($_POST['item_id'],$_POST['option_id']);   // Nieuwe DAO
       if (empty($item)) {
         return;
       }
       $_SESSION['cart'][$_POST['item_id']] = array(
         'item' => $item,
+        'option' => $_POST['option_name'],
         'quantity' => $_POST['quantity']
       );
-    }
-    // ik denk dat er hier nog ++ bij moet
-    $_SESSION['cart'][$_POST['item_id']]['quantity'];
+      } else {
+        $_SESSION['cart'][$_POST['item_id']]['quantity']++;
+      }
   }
 
   private function _handleRemove() {
-    if (isset($_SESSION['cart'][$_POST['remove']])) {
+    if (isset($_SESSION['cart'][$_POST['remove']])) {  // hidden input overeenkomen met item_idtest
       unset($_SESSION['cart'][$_POST['remove']]);
     }
   }
@@ -86,8 +92,65 @@ class CartController extends Controller {
   }
 
 
-  public function login() {
 
-    $this->set('title', 'Log in of registreer');
+
+  public function login() {
+    $this->set('title', 'Login');
   }
+
+
+
+  public function checkout() {
+      if(!empty($_POST['action'])){
+
+        if($_POST['action'] == 'checkoutOrder'){
+          // USER INSERTEN
+          $order = $this->orderDAO->insertUser($_POST);
+          if($gegevensId = $order){
+          $this->_handleCheckout($gegevensId);
+        }
+
+        // ERRORS
+        if (!$order){
+          $errorsOrder;
+          $errorsOrder = $this->orderDAO->validateOrder($_POST); // $_POST is data
+          $this->set('errorsOrder',$errorsOrder);
+          // exit();
+        } else {
+          header('location: index.php?page=confirmation');
+          exit();
+        }
+      }
+    }
+
+      $this->set('title', 'Gegevens');
+  }
+
+
+  private function _handleCheckout($gegevensId) {
+    $data = array();
+    if(!empty($_SESSION['cart'])){
+      foreach ($_SESSION['cart'] as $itemId => $quantity) {
+        array_push($data, array(
+          'order_id' => $gegevensId['id'],
+          'item_name' => $quantity['item']['title'],
+          'option_name' => $quantity['option'],      // Extra kolom, ook bij lijn 63
+          'quantity' => $quantity['quantity']
+        ));
+      }
+
+      foreach($data as $order) {
+        $this->orderDAO->insertOrder($order);
+      }
+
+      header('Location: index.php?page=confirmation');
+      unset($_SESSION['cart']);
+      exit();
+    }
+  }
+
+    public function confirmation() {
+    $this->set('title', 'confirmation');
+  }
+
 }

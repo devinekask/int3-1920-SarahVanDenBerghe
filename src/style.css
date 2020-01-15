@@ -2,12 +2,9 @@
 @import './css/reset.css';
 @import './css/vars.css';
 @import './css/base.css';
-@import './css/layout.css';
-@import './css/helpers.css';
 @import './css/typography.css';
 @import './css/components/navbar.css';
 @import './css/components/footer.css';
-@import './css/components/button.css';
 @import './css/components/banner.css';
 @import './css/components/form.css';
 @import './css/components/filter.css';
@@ -17,3 +14,5 @@
 @import './css/components/progressbar.css';
 @import './css/components/login.css';
 @import './css/components/cart.css';
+@import './css/components/checkout.css';
+@import './css/helpers.css';

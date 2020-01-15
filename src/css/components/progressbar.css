@@ -1,5 +1,5 @@
 .steps__wrapper {
-  margin-top: var(--spacerBig);
+  margin: var(--spacerBig) auto calc(var(--spacerBig) * 2);
 
   &::before {
     content: '';

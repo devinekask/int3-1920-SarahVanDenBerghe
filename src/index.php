@@ -25,13 +25,21 @@ $routes = array(
     'controller' => 'Pages',
     'action' => 'shopitem'
   ),
-  'winkelmand' => array(
+  'cart' => array(
     'controller' => 'Cart',
-    'action' => 'winkelmand'
+    'action' => 'cart'
   ),
   'login' => array(
     'controller' => 'Cart',
     'action' => 'login'
+  ),
+  'checkout' => array(
+    'controller' => 'Cart',
+    'action' => 'checkout'
+  ),
+  'confirmation' => array(
+    'controller' => 'Cart',
+    'action' => 'confirmation'
   )
 );
 

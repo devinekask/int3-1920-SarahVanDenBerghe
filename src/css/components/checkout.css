@@ -1,0 +1,165 @@
+
+.order {
+  display: grid;
+  grid-template: 1fr / 26rem auto;
+  /* grid-gap: var(--spacerRegular); */
+}
+
+.order__overview {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1rem;
+
+    transform: translateX(25rem);
+    background-image: linear-gradient(to bottom, black 40%, rgba(255, 255, 255, 0) 20%);
+    background-position: top;
+    background-size: 1px 3px;
+    background-repeat: repeat-y;
+  }
+}
+
+.overview__title {
+  margin-bottom: var(--spacerBig);
+}
+
+.order__form .button {
+  margin-left: auto;
+}
+
+.overview__item {
+  display: grid;
+  grid-template: 1fr / 5.4rem auto 1rem;
+  padding-right: var(--spacerBig);
+  margin-bottom: var(--spacerRegular);
+  margin-right: 3rem; /* NIET ZO GOED, OVERVIEW PRICE MOET OOK NOG MARGIN RIGHT KIJKEN HERHALING */
+  grid-gap: var(--spacerRegular);
+  align-items: center;
+
+  & .item__img {
+    grid-column: 1 / 2;
+    width: 5.4rem;
+  }
+
+  & .item__title {
+    grid-column: 2 / 3;
+  }
+
+  & .item__quantity {
+    grid-column: 3 / 4;
+    justify-self: end;
+
+    &::before {
+      content: '\000D7';
+      padding-right: var(--spacerRegular);
+    }
+  }
+}
+
+.overview__price {
+  margin-right: 3rem;
+  background-color: var(--colorGrey);
+  padding: var(--spacerBig);
+
+  & .price__title {
+    margin-bottom: .5rem;
+    font-family: var(--fontTitle);
+    font-size: var(--fontBig);
+  }
+}
+
+.order__wrapper {
+  margin-left: calc(var(--spacerBig) * 2);
+}
+
+/* .input__group {
+  display: flex;
+  align-items: baseline;
+} */
+
+.order__information {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--spacerRegular);
+
+  & .label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .label--firstname {
+    grid-column: 1 / span 2;
+  }
+
+  & .label--lastname {
+    grid-column: 3 / span 2;
+  }
+
+  & .label--email {
+    grid-column: 1 / span 4;
+  }
+
+  & .label--street {
+    grid-column: 1 / span 3;
+  }
+
+  & .label--housenumber {
+    grid-column: 4 / span 1;
+  }
+
+  & .label--postalcode {
+    grid-column: 1 / span 1;
+  }
+
+  & .label--city {
+    grid-column: 2 / span 3;
+  }
+}
+
+.label--payment {
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgb(226, 226, 226);
+}
+
+.label--paypal {
+  background-image: url(../../assets/img/payment/paypal.png);
+  background-size: 3rem;
+}
+
+.label--visa {
+  background-image: url(../../assets/img/payment/visa.png);
+  background-size: 3.2rem;
+}
+
+.label--maestro {
+  background-image: url(../../assets/img/payment/maestro.png);
+  background-size: 3.2rem;
+}
+
+.label--bancontact {
+  background-image: url(../../assets/img/payment/bancontact.svg);
+  background-size: 3.2rem;
+}
+
+.payment__wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  justify-items: center;
+  margin-bottom: calc(var(--spacerBig) * 2);
+}
+
+.input--payment:checked + label {
+  border: 1px solid var(--colorGreyBorder);
+  background-color: var(--colorGrey);
+}

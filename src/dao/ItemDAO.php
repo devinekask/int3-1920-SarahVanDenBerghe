@@ -4,18 +4,22 @@ require_once( __DIR__ . '/DAO.php');
 
 class ItemDAO extends DAO {
 
+
+  // ALL ITEMS
   public function selectAllItems(){
-    $sql = "SELECT * FROM `int3`.`items`";
+    $sql = "SELECT * FROM `items`";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+
+  // ITEMS FILTEREN
   public function selectAllItemsByCategory($categories = false){
-    $sql = "SELECT `int3`.`items`.`id`, `int3`.`items`.`title`, `int3`.`items`.`priceinfo`, `int3`.`items`.`intro`, `int3`.`items`.`thumbnail`
-    FROM `int3`.`items`
-    INNER JOIN `int3`.`categories`
-    ON `int3`.`items`.`category_id` = `int3`.`categories`.`id`
+    $sql = "SELECT `items`.`id`, `items`.`title`, `items`.`priceinfo`, `items`.`intro`, `items`.`thumbnail`
+    FROM `items`
+    INNER JOIN `categories`
+    ON `items`.`category_id` = `categories`.`id`
     WHERE 1";
 
     $bindValues = array();
@@ -36,29 +40,52 @@ class ItemDAO extends DAO {
   }
 }
 
+
+// ITEM DETAIL
   public function selectById($id){
-    $sql = "SELECT `int3`.`items`.`id`, `int3`.`items`.`title`, `int3`.`items`.`priceinfo`, `int3`.`items`.`description`,
-      `int3`.`options`.`optioninfo`, `int3`.`item_options`.`name`, `int3`.`item_options`.`price`, `int3`.`items`.`thumbnail`, `int3`.`items`.`intro`
-      FROM `int3`.`items`
-      LEFT JOIN `int3`.`options`
-      ON `int3`.`items`.`option_id` = `int3`.`options`.`id`
-      LEFT JOIN `int3`.`item_options`
-      ON `int3`.`item_options`.`option_id` = `int3`.`options`.`id` WHERE `items`.`id` = :id";
+    $sql = "SELECT `items`.`id`, `items`.`title`, `items`.`priceinfo`, `items`.`description`,
+      `options`.`optioninfo`, `item_options`.`name`, `item_options`.`price`, `items`.`thumbnail`, `items`.`intro`
+      FROM `items`
+      LEFT JOIN `options`
+      ON `items`.`option_id` = `options`.`id`
+      LEFT JOIN `item_options`
+      ON `item_options`.`option_id` = `options`.`id` WHERE `items`.`id` = :id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id',$id);
     $stmt->execute();
   return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
+
+  // OPTIES VOOR ITEM
   public function selectOptionsById($id){
-    $sql = "SELECT `int3`.`item_options`.`name`,`int3`.`item_options`.`price`, `int3`.`item_options`.`id` FROM `int3`.`items`
-    LEFT JOIN `int3`.`options`
-    ON `int3`.`items`.`option_id` = `int3`.`options`.`id`
-    LEFT JOIN `int3`.`item_options`
-    ON `int3`.`item_options`.`option_id` = `int3`.`options`.`id`
+    $sql = "SELECT `item_options`.`name`,`item_options`.`price`, `item_options`.`id`
+    FROM `items`
+    LEFT JOIN `options`
+    ON `items`.`option_id` = `options`.`id`
+    LEFT JOIN `item_options`
+    ON `item_options`.`option_id` = `options`.`id`
     WHERE `items`.`id` = :id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id',$id);
+    $stmt->execute();
+  return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
+
+  // ITEM & OPTION -> VOOR CART
+  public function selectItemByOption($item, $option){
+    $sql = "SELECT `items`.`title`, `items`.`intro`, `items`.`thumbnail`,`item_options`.`id`,`item_options`.`price`,`item_options`.`name`
+    FROM `items`
+    LEFT JOIN `options`
+    ON `items`.`option_id` = `options`.`id`
+    LEFT JOIN `item_options`
+    ON `item_options`.`option_id` = `options`.`id`
+    WHERE `items`.`id` = :item
+    AND `item_options`.`id` = :option";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':item',$item);
+    $stmt->bindValue(':option',$option);
     $stmt->execute();
   return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }

@@ -17,7 +17,7 @@
         <div class="filter">
           <p class="filter__title">Categorieën</p> <!-- nog foreach doen! -->
           <label for="abonnementen" class="filter__label">
-            <input class="filter__input" type="checkbox" id="abonnementen" name="categories[]" value="1"> <!-- categories[] -->
+            <input class="filter__input" type="checkbox" id="abonnementen" name="categories[]" value="1">
             <span class="checkbox__mark"></span>
             Abonnementen
           </label>

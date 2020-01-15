@@ -1,5 +1,4 @@
 .account {
-  margin-top: calc(var(--spacerBig) * 2);
   display: grid;
   grid-template: 1fr / 2fr 1fr;
   grid-gap: calc(var(--spacerBig) * 2);
