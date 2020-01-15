@@ -12,6 +12,18 @@
   }
 }
 
+.cart__empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(var(--spacerBig) * 3);
+
+  & .button {
+    margin-top: var(--spacerBig);
+  }
+}
+
 .cart__title {
   text-transform: uppercase;
   color: white;

@@ -105,7 +105,12 @@
         </div>
           </section>
 
-        <input class="button button--secondary" type="submit" value="Betalen">
+          <div class="button__wrapper">
+            <?php if(!empty($errorsOrder)): ?>
+              <p class="errors">Gelieve alle velden in te vullen.</p>
+            <?php endif; ?>
+            <input class="button button--secondary" type="submit" value="Betalen">
+         </div>
       </form>
       </div>
   </div>

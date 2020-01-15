@@ -2,7 +2,11 @@
   <h1 class="cart__title">Winkelmand</h1>
 
   <?php if (empty($_SESSION['cart'])) { ?>
-    <p>Winkelmand is leeg</p>
+    <article class="cart__empty">
+      <h2>Winkelmand is leeg</h2>
+      <p>Oeps! Het ziet er naar uit dat je winkelmand leeg is.</p>
+      <a class="button button--primary" href="index.php?page=webshop"><span>Bekijk webshop</span></a>
+    </article>
   <?php } else { ?>
   <form action="index.php?page=cart" method="post" class="form form--cartoverview">
 

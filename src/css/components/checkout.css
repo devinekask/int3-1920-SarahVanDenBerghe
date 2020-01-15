@@ -74,6 +74,12 @@
 
 .order__wrapper {
   margin-left: calc(var(--spacerBig) * 2);
+
+  & .button__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* .input__group {
