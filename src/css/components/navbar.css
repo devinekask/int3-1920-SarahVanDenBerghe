@@ -14,6 +14,10 @@
 .menu__item {
   transition: .2s ease-in-out color;
 
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+
   &:hover, & a:hover {
     color: var(--colorRed);
   }
@@ -50,12 +54,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  & .menu__items .menu__item {
-    padding: 0 1.25rem;
-    display: flex;
-    align-items: center;
-  }
 
   & .menu__items {
     justify-content: flex-end;
@@ -94,8 +92,8 @@
   }
 }
 
-.menu__item--cart {
-  padding-left: .8rem !important;
+.icon__wrapper .menu__item--cart {
+  padding-left: .8rem;
 
   &::before {
     height: 1.6rem;
@@ -110,8 +108,8 @@
 
 /* LOGO */
 
-.menu__item--logo {
-  padding: 0 !important;
+.menu__items .menu__item--logo {
+  padding: 0;
 }
 
 .identity__logo {

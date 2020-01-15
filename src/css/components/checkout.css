@@ -2,7 +2,6 @@
 .order {
   display: grid;
   grid-template: 1fr / 26rem auto;
-  /* grid-gap: var(--spacerRegular); */
 }
 
 .order__overview {
@@ -163,7 +162,7 @@
   background-size: 3.2rem;
 }
 
-.payment__wrapper{
+.payment__wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;

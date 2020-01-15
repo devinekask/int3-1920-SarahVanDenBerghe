@@ -35,6 +35,47 @@
   text-align: center;
 }
 
+.cart__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: .05rem solid var(--colorGreyBorder);
+  height: 9rem;
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  & .label--text {
+    width: 20rem;
+  }
+}
+
+.cart__navigate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacerRegular);
+  border-top: .05rem solid var(--colorGreyBorder);
+
+  & .navigate__checkout {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    & .totalprice {
+      font-weight: bold;
+      font-family: var(--fontTitle);
+      font-size: var(--fontBig);
+    }
+  }
+
+  & p {
+    margin-bottom: 0;
+    margin-right: var(--spacerRegular);
+  }
+}
+
 .cart__item {
   display: grid;
   grid-template-columns: 12rem 3fr 1fr 1fr 1fr 3rem;
@@ -59,11 +100,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  & .item__info p:first-child {
-    font-weight: bold;
-    padding-bottom: 1rem;
   }
 
   & .item__info--img {
@@ -91,6 +127,11 @@
     }
   }
 
+  & .item__info p:first-child {
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+
   & .item__info--subtotal {
     grid-column: 5 / 6;
   }
@@ -115,51 +156,6 @@
     font-family: var(--fontBody);
     font-size: var(--fontRegular);
     margin-bottom: calc(var(--spacerRegular) / 2);
-  }
-}
-
-.cart__info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: .05rem solid var(--colorGreyBorder);
-  height: 9rem;
-
-  & p {
-    margin-bottom: 0;
-  }
-
-  & .label--text {
-    width: 20rem;
-  }
-
-  & #promocode {
-    margin-bottom: 0;
-  }
-}
-
-.cart__navigate {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: var(--spacerRegular);
-  border-top: .05rem solid var(--colorGreyBorder);
-
-  & .navigate__checkout {
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-
-    & .totalprice {
-      font-weight: bold;
-      font-family: var(--fontTitle);
-      font-size: var(--fontBig);
-    }
-  }
-
-  & p {
-    margin-bottom: 0;
-    margin-right: var(--spacerRegular);
   }
 }
 

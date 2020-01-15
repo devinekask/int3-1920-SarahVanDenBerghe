@@ -56,7 +56,7 @@
   margin: auto;
   box-sizing: border-box;
   border: .01rem solid var(--colorGreyDark);
-  transform: translate(-.6rem,-.1rem);
+  transform: translate(-.6rem, -.1rem);
 }
 
 .checkbox__mark::before {

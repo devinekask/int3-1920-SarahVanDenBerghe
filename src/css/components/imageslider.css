@@ -30,7 +30,7 @@
   margin-bottom: var(--spacerRegular);
   display: flex; /* float: left */
   cursor: pointer;
-  opacity: 0.4;
+  opacity: .4;
 }
 
 /* Actieve kleine img */

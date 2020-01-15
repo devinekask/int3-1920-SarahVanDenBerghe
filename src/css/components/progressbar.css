@@ -25,7 +25,7 @@
 
   & .step__number {
     border: .05rem solid var(--colorRed);
-    background-color: white;;
+    background-color: white;
     color: var(--colorRed);
     font-family: var(--fontTitle);
     font-weight: bold;
