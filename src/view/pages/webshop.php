@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container--fluid">
   <article class="banner__wrapper">
     <span class="banner__label">Weekly special</span>
     <div class="banner">

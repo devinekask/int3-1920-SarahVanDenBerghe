@@ -26,6 +26,10 @@ header {
   flex-direction: column;
   justify-content: center;
   margin-bottom: var(--spacerBig);
+
+  @media (--only-medium-screen) {
+    margin-bottom: 0;
+  }
 }
 
 a {
@@ -44,6 +48,11 @@ button:hover {
 
 .container {
   width: 64rem;
+  margin: 0 auto;
+}
+
+.container--fluid {
+  max-width: 64rem;
   margin: 0 auto;
 }
 
