@@ -31,7 +31,7 @@
           <input type="radio" name="option_id" value="<?php echo $option['id']; ?>" class="shopitem__input hidden" id="<?php echo $option['id']; ?>">
           <label class="shopitem__label" for="<?php echo $option['id']; ?>">
             <?php echo $option['name']; ?>
-            <span class="price">&euro; <?php echo $option['price']; ?></span>
+            <span class="price">&euro;<?php echo $option['price']; ?></span>
           </label>
         <?php endforeach; ?>
 

@@ -43,13 +43,13 @@ class ItemDAO extends DAO {
 
 // ITEM DETAIL
   public function selectById($id){
-    $sql = "SELECT `items`.`id`, `items`.`title`, `items`.`priceinfo`, `items`.`description`,
-      `options`.`optioninfo`, `item_options`.`name`, `item_options`.`price`, `items`.`thumbnail`, `items`.`intro`
+    $sql = "SELECT `items`.`id`, `items`.`title`, `items`.`priceinfo`, `items`.`description`, `options`.`optioninfo`
       FROM `items`
       LEFT JOIN `options`
       ON `items`.`option_id` = `options`.`id`
       LEFT JOIN `item_options`
-      ON `item_options`.`option_id` = `options`.`id` WHERE `items`.`id` = :id";
+      ON `item_options`.`option_id` = `options`.`id` WHERE `items`.`id` = :id
+      LIMIT 1";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id',$id);
     $stmt->execute();

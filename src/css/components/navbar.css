@@ -106,6 +106,17 @@
   }
 }
 
+.icon__wrapper .cart--filled {
+
+  &::before {
+    background-image: url(./../../assets/img/icons/cart-filled.svg);
+  }
+
+  &:hover::before {
+    background-image: url(./../../assets/img/icons/cart-filled-hover.svg);
+  }
+}
+
 /* LOGO */
 
 .menu__items .menu__item--logo {

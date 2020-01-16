@@ -25,7 +25,7 @@
             <li class="menu__item">Boeken</li>
             <div class="menu__icons">
               <li class="menu__item menu__item--icon menu__item--search"><span class="hidden">Zoek</span></li>
-              <a href="index.php?page=cart" class="icon__wrapper"><li class="menu__item menu__item--icon menu__item--cart"><span class="hidden">Winkelmand</span></li></a>
+              <a href="index.php?page=cart" class="icon__wrapper"><li class="menu__item menu__item--icon menu__item--cart <?php if(!empty ($_SESSION['cart'])) { echo 'cart--filled';} ?>"><span class="hidden">Winkelmand</span></li></a>
             </div>
           </ul>
       </nav>
@@ -89,7 +89,7 @@
 
     <footer class="footer">
       <nav class="footer__nav container">
-        <h2 class="hiddeen">Footer navigatie</h2>
+        <h2 class="hidden">Footer navigatie</h2>
         <ul class="footer__columns">
           <li class="footer__column">
             <span class="column__title">Actua</span>

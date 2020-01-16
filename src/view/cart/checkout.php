@@ -25,7 +25,7 @@
     <?php }?>
 
         <section class="overview__price">
-          <h3 class="price__title">Totaalprijs: &euro; <?php echo $total;?></h3>
+          <h3 class="price__title">Totaalprijs: &euro; <?php echo  number_format($total, 2);?></h3>
           <p>Gratis verzending</p>
         </section>
     </section>
@@ -76,7 +76,7 @@
         </label>
         </section>
 
-        <section>
+        <section class="order__payment">
         <h2>Betalingswijze</h2>
         <div class="payment__wrapper">
           <input class="hidden input input--payment" type="radio" id="paypal" name="payment" value="paypal" checked

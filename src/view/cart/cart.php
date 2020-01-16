@@ -14,7 +14,7 @@
       <?php
         $total = 0;
         foreach($_SESSION['cart'] as $item) {
-        $itemTotal = $item['item']['price'] * $item['quantity'];
+        $itemTotal = number_format($item['item']['price'] * $item['quantity'], 2);
         $total += $itemTotal;
       ?>
       <section class="cart__item">
@@ -64,7 +64,7 @@
       <h2 class="hidden">Verder met bestellen</h2>
       <a class="back" href="index.php?page=webshop">Keer terug naar de webshop</a>
       <div class="navigate__checkout">
-        <p><span class="totalprice">&euro; <?php echo $total;?></span></p>
+        <p><span class="totalprice">&euro; <?php echo  number_format($total ,2) ;?></span></p>
         <a class="button button--primary" href="index.php?page=login"><span>Bestellen</span></a>
       </div>
     </article>

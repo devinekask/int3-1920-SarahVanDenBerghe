@@ -51,10 +51,8 @@ class CartController extends Controller {
 
 
   private function _handleAdd() {
-     // zo houdt ie rekening met zowel item + option
     if (empty($_SESSION['cart'][$_POST['item_id'] . '-' . $_POST['option_id']])) {
-      // $item = $this->itemDAO->selectById($_POST['item_id']);
-      $item = $this->itemDAO->selectItemByOption($_POST['item_id'],$_POST['option_id']);   // Nieuwe DAO
+      $item = $this->itemDAO->selectItemByOption($_POST['item_id'],$_POST['option_id']);
       if (empty($item)) {
         return;
       }
@@ -64,7 +62,8 @@ class CartController extends Controller {
         'quantity' => $_POST['quantity']
       );
       } else {
-        $_SESSION['cart'][$_POST['item_id'] . '-' . $_POST['option_id']]['quantity']++;
+        $_SESSION['cart'][$_POST['item_id'] . '-' . $_POST['option_id']]['quantity'] =
+        $_SESSION['cart'][$_POST['item_id'] . '-' . $_POST['option_id']]['quantity'] + $_POST['quantity'];
       }
   }
 
@@ -75,7 +74,7 @@ class CartController extends Controller {
   }
 
   private function _handleUpdate() {
-    foreach ($_POST['quantity'] as $itemId => $quantity) { // In cart.php quantity value aangepast
+    foreach ($_POST['quantity'] as $itemId => $quantity) {
       if (!empty($_SESSION['cart'][$itemId])) {
         $_SESSION['cart'][$itemId]['quantity'] = $quantity;
       }
@@ -108,7 +107,7 @@ class CartController extends Controller {
         // ERRORS
         if (!$order){
           $errorsOrder;
-          $errorsOrder = $this->orderDAO->validateOrder($_POST); // $_POST is data
+          $errorsOrder = $this->orderDAO->validateOrder($_POST);
           $this->set('errorsOrder',$errorsOrder);
           // exit();
         } else {
@@ -129,7 +128,7 @@ class CartController extends Controller {
         array_push($data, array(
           'order_id' => $gegevensId['id'],
           'item_name' => $quantity['item']['title'],
-          'option_name' => $quantity['item']['name'],      // Extra kolom, ook bij lijn 63
+          'option_name' => $quantity['item']['name'],
           'quantity' => $quantity['quantity']
         ));
       }

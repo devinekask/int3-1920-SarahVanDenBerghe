@@ -131,6 +131,10 @@
   }
 }
 
+.order__payment {
+  margin-top: calc(var(--spacerBig) * 2);
+}
+
 .label--payment {
   width: 100%;
   height: 4.5rem;

@@ -8,6 +8,10 @@
   background-color: var(--colorGrey);
   padding: calc(var(--spacerRegular) * 2) 4rem;
 
+  & .button {
+    margin-top: var(--spacerBig);
+  }
+
   & .input--text {
     background-color: white;
   }
