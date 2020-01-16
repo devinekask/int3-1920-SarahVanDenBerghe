@@ -13,21 +13,18 @@
       ?>
 
       <section class="overview__item">
-        <!-- MOET NOG ACHTER TITLE -->
-        <img class="item__img" src="assets/img/thumbnails/<?php echo $item['item']['thumbnail'];?>" alt="<?php echo $item['item']['title'];?>">
         <div class="item__title">
-          <h3><?php echo $item['item']['title'];?></h3>
-          <p>&euro; <?php echo $item['item']['price'];?></p>
+          <h3><?php echo $item['item']['title'];?> <?php if ($item['item']['name'] != 'no option') { echo '<span class="item__option">(' . $item['item']['name'] . ')</span>';} ?></h2>
+          <p>&euro; <?php echo $item['price'];?></p>
         </div>
         <p class="item__quantity"><?php echo $item['quantity'];?></p>
       </section>
 
     <?php }?>
-
-        <section class="overview__price">
+        <article class="overview__price">
           <h3 class="price__title">Totaalprijs: &euro; <?php echo  number_format($total, 2);?></h3>
           <p>Gratis verzending</p>
-        </section>
+        </article>
     </section>
 
     <div class="order__wrapper">

@@ -76,7 +76,7 @@ class ItemDAO extends DAO {
   // ITEM & OPTION -> VOOR CART
   // PAS OP: MAAR 1 ID TEGELIJKERTIJD OPHALEN!
   public function selectItemByOption($item, $option){
-    $sql = "SELECT `items`.`title`, `items`.`intro`, `items`.`thumbnail`,`items`.`id`,`item_options`.`price`,`item_options`.`name`
+    $sql = "SELECT `items`.`title`, `items`.`intro`, `items`.`thumbnail`,`items`.`id`,`item_options`.`price`,`item_options`.`name`, `item_options`.`promocode`, `item_options`.`promoprice`
     FROM `items`
     LEFT JOIN `options`
     ON `items`.`option_id` = `options`.`id`

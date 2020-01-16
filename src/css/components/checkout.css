@@ -5,6 +5,7 @@
 }
 
 .order__overview {
+  padding-right: 5rem;
   position: relative;
   overflow: hidden;
 
@@ -13,7 +14,6 @@
     position: absolute;
     height: 100%;
     width: 1rem;
-
     transform: translateX(25rem);
     background-image: linear-gradient(to bottom, black 40%, rgba(255, 255, 255, 0) 20%);
     background-position: top;
@@ -32,30 +32,51 @@
 
 .overview__item {
   display: grid;
-  grid-template: 1fr / 5.4rem auto 1rem;
-  padding-right: var(--spacerBig);
+  grid-template: 1fr / 1fr 3rem;
   margin-bottom: var(--spacerRegular);
-  margin-right: 3rem; /* NIET ZO GOED, OVERVIEW PRICE MOET OOK NOG MARGIN RIGHT KIJKEN HERHALING */
   grid-gap: var(--spacerRegular);
   align-items: center;
 
-  & .item__img {
-    grid-column: 1 / 2;
-    width: 5.4rem;
+  &:not(:last-of-type) {
+    padding-bottom: var(--spacerRegular);
+    border-bottom: 1px dotted rgb(180, 180, 180);
   }
 
+  /* & .item__img {
+    grid-column: 1 / 2;
+    width: 5.4rem;
+  } */
+
   & .item__title {
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
 
     & h3 {
       font-size: var(--fontRegular);
       font-family: var(--fontBody);
       margin-bottom: .2rem;
     }
+
+    /* & div {
+      display: inline-flex;
+      flex-direction: column;
+    } */
+
+    & .item__option {
+      /* display: inline-block;
+      padding: .3rem .6rem 0; */
+      font-size: 14px;
+      font-weight: normal;
+      /* background-color: rgb(240, 240, 240);
+      border-radius: .2rem; */
+      color: rgb(85, 85, 85);
+      letter-spacing: .1rem;
+      /* margin-bottom: 1.2rem; */
+      text-transform: uppercase;
+    }
   }
 
   & .item__quantity {
-    grid-column: 3 / 4;
+    grid-column: 2 / 3;
     justify-self: end;
 
     &::before {
@@ -66,7 +87,7 @@
 }
 
 .overview__price {
-  margin-right: 3rem;
+  margin-top: 2rem;
   background-color: var(--colorGrey);
   padding: var(--spacerBig);
 

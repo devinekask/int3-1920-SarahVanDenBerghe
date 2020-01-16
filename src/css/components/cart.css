@@ -40,7 +40,8 @@
   justify-content: space-between;
   align-items: center;
   border-top: .05rem solid var(--colorGreyBorder);
-  height: 9rem;
+  min-height: 9rem;
+  padding: calc(var(--spacerRegular) * 2) 0;
 
   & p {
     margin-bottom: 0;
@@ -51,11 +52,53 @@
   }
 }
 
+.promocode__wrapper {
+  display: flex;
+
+  & input {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  & button {
+    background-color: var(--colorGrey);
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    transform: translateX(-1rem);
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1.25rem;
+      width: 2rem;
+      background-image: url(../../assets/img/icons/arrow.svg);
+      background-repeat: no-repeat;
+      transform: translate(-2.5rem, .1rem);
+      opacity: .2;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.addedpromo {
+  text-transform: uppercase;
+  font-size: var(--fontExtraSmall);
+  letter-spacing: .1rem;
+}
+
 .cart__navigate {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--spacerRegular);
+  padding-top: var(--spacerBig);
   border-top: .05rem solid var(--colorGreyBorder);
 
   & .navigate__checkout {
@@ -153,9 +196,20 @@
   }
 
   & .info__title {
-    font-family: var(--fontBody);
     font-size: var(--fontRegular);
-    margin-bottom: calc(var(--spacerRegular) / 2);
+    font-size: 1.2rem;
+    margin-bottom: .2rem;
+  }
+
+  & .info__option {
+    padding: .3rem .6rem 0;
+    font-size: 14px;
+    background-color: rgb(240, 240, 240);
+    border-radius: .2rem;
+    color: rgb(85, 85, 85);
+    letter-spacing: .1rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
   }
 }
 
@@ -174,6 +228,35 @@
   }
 
   & .update__text {
+    font-size: var(--fontRegular);
+    font-weight: bold;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: .8rem;
+      width: .8rem;
+      background-image: url(../../assets/img/icons/refresh.svg);
+      transform: translate(-1.5rem, .2rem);
+    }
+  }
+}
+
+.promo {
+  margin-top: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+
+  &:hover {
+    color: red;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  & .promo__text {
     font-size: var(--fontRegular);
     font-weight: bold;
 

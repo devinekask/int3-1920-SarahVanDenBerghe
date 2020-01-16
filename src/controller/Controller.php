@@ -33,8 +33,8 @@ class Controller {
     }
     $this->createViewVarWithContent();
     $this->renderInLayout();
-    if (!empty($_SESSION['info'])) {
-      unset($_SESSION['info']);
+    if (!empty($_SESSION['promo'])) {
+      unset($_SESSION['promo']);
     }
     if (!empty($_SESSION['add'])) {
     unset($_SESSION['add']);

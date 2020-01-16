@@ -27,8 +27,10 @@
       <?php if(!empty($item['optioninfo'])) { ?>
       <p><?php echo $item['optioninfo']; ?></p>
       <div class="shopitem__options">
-        <?php foreach($options as $option): ?>
-          <input type="radio" name="option_id" value="<?php echo $option['id']; ?>" class="shopitem__input hidden" id="<?php echo $option['id']; ?>">
+        <?php foreach($options as $index => $option): ?>
+          <input type="radio" name="option_id" value="<?php echo $option['id']; ?>" class="shopitem__input hidden" id="<?php echo $option['id']; ?>"
+          <?php if ($index === 0) { echo 'checked';} ?>
+          >
           <label class="shopitem__label" for="<?php echo $option['id']; ?>">
             <?php echo $option['name']; ?>
             <span class="price">&euro;<?php echo $option['price']; ?></span>
@@ -47,13 +49,16 @@
         <input class="input input--number" id="quantity" name="quantity" type="number" min="1" max="99" value="1" required>
         <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;" class="plus"></button>
       </label>
-      <button class="button button--secondary button--addtocart" type="submit" name="action" value="add">Voeg toe aan winkelmand</button>
+      <button class="button button--secondary button--addtocart <?php if (!empty($_SESSION['add'])) { echo 'addedtocart';}?>" type="submit" name="action" value="add">
+        <?php if (!empty($_SESSION['add'])) { ?>
+	          <span><?php echo $_SESSION['add']; ?></span>
+        <?php } else { ?>
+            Voeg toe aan winkelmand
+        <?php } ?>
+
+      </button>
       </div>
     </form>
-
-    <?php if (!empty($_SESSION['add'])): ?>
-	    <p class="addedtocart"><?php echo $_SESSION['add']; ?></p>
-    <?php endif; ?>
 
   </section>
 

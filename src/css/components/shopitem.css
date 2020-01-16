@@ -51,9 +51,5 @@
 }
 
 .addedtocart {
-  margin-top: var(--spacerBig);
-  font-size: var(--fontSmall);
-  text-transform: uppercase;
-  letter-spacing: .15rem;
-  /* margin-left: 5.2rem; */
+  background-color: var(--colorGreen);
 }

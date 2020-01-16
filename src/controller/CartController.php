@@ -36,6 +36,12 @@ class CartController extends Controller {
       if ($_POST['action'] == 'update') {
         $this->_handleUpdate();
       }
+
+      // PROMO
+      if ($_POST['action'] == 'promo') {
+        $this->_handlePromo();
+      }
+
       header('Location: index.php?page=cart');
       exit();
     }
@@ -57,8 +63,9 @@ class CartController extends Controller {
         return;
       }
       $_SESSION['cart'][$_POST['item_id'] . '-' . $_POST['option_id']] = array(
-        'item' => $item,
+        'item' => $item,                    // prijs binnen hier blijft onveranderd
         'option' => $_POST['option_id'],
+        'price' => $item['price'],          // nog eens hier zodat dit aangepast kan worden met promocode
         'quantity' => $_POST['quantity']
       );
       } else {
@@ -83,9 +90,20 @@ class CartController extends Controller {
   }
 
   private function _removeWhereQuantityIsZero() {
-    foreach($_SESSION['cart'] as $itemId => $info) {
+    foreach($_SESSION['cart'] as $item => $info) {
       if ($info['quantity'] <= 0) {
-        unset($_SESSION['cart'][$itemId]);
+        unset($_SESSION['cart'][$item]);
+      }
+    }
+  }
+
+  private function _handlePromo() {
+    foreach($_SESSION['cart'] as $item => $info) {
+      if ($info['item']['promocode'] === $_POST['promocode']) {
+        $_SESSION['cart'][$item]['price'] = $info['item']['promoprice'];
+        $_SESSION['promo'] = 'Promocode werd toegepast!';
+      } else {
+        $_SESSION['promo'] = 'De promocode is ongeldig.';
       }
     }
   }
@@ -109,7 +127,6 @@ class CartController extends Controller {
           $errorsOrder;
           $errorsOrder = $this->orderDAO->validateOrder($_POST);
           $this->set('errorsOrder',$errorsOrder);
-          // exit();
         } else {
           header('location: index.php?page=confirmation');
           exit();
