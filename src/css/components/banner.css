@@ -8,7 +8,12 @@
 
 .banner {
   padding: var(--spacerBig);
-  width: 25rem;
+  width: 40%;
+
+  @media (--only-medium-screen) {
+    margin-top: 12rem;
+    width: 100%;
+  }
 }
 
 .banner__info {
@@ -25,5 +30,10 @@
   color: white;
   padding: .2rem .5rem .1rem;
   margin: 1rem;
-  text-transform: uppercase;
+
+  @media (--only-medium-screen) {
+    top: auto;
+    text-transform: uppercase;
+    transform: translate(.8rem, -3rem);
+  }
 }

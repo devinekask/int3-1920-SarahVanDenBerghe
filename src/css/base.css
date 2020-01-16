@@ -47,6 +47,15 @@ button:hover {
 }
 
 .container {
+  max-width: 66.5rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  margin: 0 auto;
+  padding: var(--spacerRegular);
+}
+
+.container--fixed {
   width: 64rem;
   margin: 0 auto;
 }
@@ -54,6 +63,7 @@ button:hover {
 .container--fluid {
   max-width: 64rem;
   margin: 0 auto;
+
 }
 
 footer {

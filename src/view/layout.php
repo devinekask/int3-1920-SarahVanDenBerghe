@@ -14,7 +14,7 @@
       <div class="menu__wrapper menu__wrapper--desktop">
       <nav class="menu menu--primary">
         <h2 class="hidden">Hoofdnavigatie</h2>
-          <ul class="menu__items container">
+          <ul class="menu__items container--fixed">
             <li class="menu__item">Home</li>
             <li class="menu__item">Actua</li>
             <li class="menu__item">Humor</li>
@@ -31,7 +31,7 @@
             </div>
           </ul>
       </nav>
-      <nav class="menu menu--secondary container">
+      <nav class="menu menu--secondary container--fixed">
         <h2 class="hidden">Subnavigatie</h2>
           <ul class="menu__items">
             <li class="menu__item">Video</li>
@@ -106,6 +106,7 @@
     </main>
 
     <footer class="footer">
+      <div class="footer--desktop">
       <nav class="footer__nav container">
         <h2 class="hidden">Footer navigatie</h2>
         <ul class="footer__columns">
@@ -197,6 +198,7 @@
           </ul>
       </div>
       </section>
+      </div>
     </footer>
 
     <?php echo $js; ?>

@@ -7,14 +7,16 @@
       <a class="button button--primary button--inline" href="#"><span>Ontdek</span></a>
     </div>
   </article>
+</div>
 
-  <div>
+  <div class="container">
     <section class="form__wrapper">
       <h2 class="hidden">Filter webshop items</h2>
       <form action="index.php?page=webshop" method="get">
         <input type="hidden" name="page" value="webshop" />
         <div class="filter">
           <p class="filter__title">Categorieën</p> <!-- nog foreach doen! -->
+          <div class="filter__inputs__wrapper">
           <label for="abonnementen" class="filter__label">
             <input class="filter__input" type="checkbox" id="abonnementen" name="categories[]" value="1">
             <span class="checkbox__mark"></span>
@@ -30,6 +32,7 @@
             <span class="checkbox__mark"></span>
             Boeken
           </label>
+          </div>
           <button type="submit" class="button button--filter" value="filter">Filter</button>
           <a class="filter__delete" href="index.php?page=webshop">Filter wissen</a>
         </div>
@@ -51,5 +54,4 @@
         <?php endforeach; ?>
       </ul>
     </section>
-  </div>
 </div>

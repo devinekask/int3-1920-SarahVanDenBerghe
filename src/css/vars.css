@@ -18,4 +18,5 @@
 }
 
 @custom-media --only-medium-screen (width < 1120px);
+@custom-media --only-inbetween-screen (width < 700px);
 @custom-media --only-small-screen (width < 350px);

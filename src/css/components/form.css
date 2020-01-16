@@ -140,6 +140,11 @@ input::-webkit-inner-spin-button {
   letter-spacing: .1rem;
   border: 1px solid var(--colorGreyDark);
   border-radius: .3rem;
+
+  @media (--only-medium-screen) {
+    margin-top: var(--spacerRegular);
+    width: 5rem;
+  }
 }
 
 .back {

@@ -1,5 +1,8 @@
 .filter {
-  display: flex;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: 10rem auto 5rem 1fr;
   margin-top: 4rem;
   background-image: linear-gradient(to right, black 40%, rgba(255, 255, 255, 0) 20%);
   background-position: bottom;
@@ -7,6 +10,11 @@
   background-repeat: repeat-x;
   align-items: center;
   padding-bottom: calc(var(--spacerRegular) / 2);
+
+  @media (--only-medium-screen) {
+    margin-top: 1rem;
+    grid-template-columns: auto;
+  }
 }
 
 .filter__title {
@@ -23,6 +31,10 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (--only-medium-screen) {
+    margin-top: .5rem;
   }
 }
 
@@ -42,6 +54,20 @@
   &:hover {
     color: var(--colorRed);
     cursor: pointer;
+  }
+
+  @media (--only-medium-screen) {
+    margin: 1rem 0 0 1.8rem;
+  }
+}
+
+.filter__inputs__wrapper {
+  display: flex;
+
+  @media (--only-medium-screen) {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

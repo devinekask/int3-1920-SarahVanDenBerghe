@@ -3,6 +3,18 @@
   display: grid;
   grid-template: auto / repeat(4, 1fr);
   grid-gap: var(--spacerBig);
+
+  @media (--only-medium-screen) {
+    grid-template: auto / repeat(3, 1fr);
+  }
+
+  @media (--only-inbetween-screen) {
+    grid-template: auto / repeat(2, 1fr);
+  }
+
+  @media (--only-small-screen) {
+    grid-template: auto / repeat(1, 1fr);
+  }
 }
 
 .webshop__item {

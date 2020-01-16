@@ -4,7 +4,7 @@
   font-size: var(--fontSmall);
 }
 
-footer::before {
+.footer::before {
   background-color: black;
   content: '';
   display: block;
@@ -13,6 +13,12 @@ footer::before {
   position: relative;
   bottom: .5rem;
   width: 100%;
+}
+
+.footer--desktop {
+  @media (--only-medium-screen) {
+    display: none;
+  }
 }
 
 /* FOOTER NAVIGATION */
