@@ -7,7 +7,7 @@ class ItemDAO extends DAO {
 
   // ALL ITEMS
   public function selectAllItems(){
-    $sql = "SELECT * FROM `items`";
+    $sql = "SELECT * FROM `int3_items`";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -16,10 +16,10 @@ class ItemDAO extends DAO {
 
   // ITEMS FILTEREN
   public function selectAllItemsByCategory($categories = false){
-    $sql = "SELECT `items`.`id`, `items`.`title`, `items`.`priceinfo`, `items`.`intro`, `items`.`thumbnail`
-    FROM `items`
-    INNER JOIN `categories`
-    ON `items`.`category_id` = `categories`.`id`
+    $sql = "SELECT `int3_items`.`id`, `int3_items`.`title`, `int3_items`.`priceinfo`, `int3_items`.`intro`, `int3_items`.`thumbnail`
+    FROM `int3_items`
+    INNER JOIN `int3_categories`
+    ON `int3_items`.`category_id` = `int3_categories`.`id`
     WHERE 1";
 
     $bindValues = array();
@@ -32,7 +32,7 @@ class ItemDAO extends DAO {
           $bindValues[":category_id_".$index] = $value;
       }
       $categoryParams = rtrim($categoryParams,",");
-      $sql .= " AND `items`.`category_id` IN ($categoryParams)";
+      $sql .= " AND `int3_items`.`category_id` IN ($categoryParams)";
 
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute($bindValues);
@@ -43,12 +43,12 @@ class ItemDAO extends DAO {
 
 // ITEM DETAIL
   public function selectById($id){
-    $sql = "SELECT `items`.`id`, `items`.`title`, `items`.`priceinfo`, `items`.`description`, `options`.`optioninfo`
-      FROM `items`
-      LEFT JOIN `options`
-      ON `items`.`option_id` = `options`.`id`
-      LEFT JOIN `item_options`
-      ON `item_options`.`option_id` = `options`.`id` WHERE `items`.`id` = :id
+    $sql = "SELECT `int3_items`.`id`, `int3_items`.`title`, `int3_items`.`priceinfo`, `int3_items`.`description`, `int3_options`.`optioninfo`
+      FROM `int3_items`
+      LEFT JOIN `int3_options`
+      ON `int3_items`.`option_id` = `int3_options`.`id`
+      LEFT JOIN `int3_item_options`
+      ON `int3_item_options`.`option_id` = `int3_options`.`id` WHERE `int3_items`.`id` = :id
       LIMIT 1";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id',$id);
@@ -59,13 +59,13 @@ class ItemDAO extends DAO {
 
   // OPTIES VOOR ITEM
   public function selectOptionsById($id){
-    $sql = "SELECT `item_options`.`name`,`item_options`.`price`, `item_options`.`id`
-    FROM `items`
-    LEFT JOIN `options`
-    ON `items`.`option_id` = `options`.`id`
-    LEFT JOIN `item_options`
-    ON `item_options`.`option_id` = `options`.`id`
-    WHERE `items`.`id` = :id";
+    $sql = "SELECT `int3_item_options`.`name`,`int3_item_options`.`price`, `int3_item_options`.`id`
+    FROM `int3_items`
+    LEFT JOIN `int3_options`
+    ON `int3_items`.`option_id` = `int3_options`.`id`
+    LEFT JOIN `int3_item_options`
+    ON `int3_item_options`.`option_id` = `int3_options`.`id`
+    WHERE `int3_items`.`id` = :id";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':id',$id);
     $stmt->execute();
@@ -76,14 +76,14 @@ class ItemDAO extends DAO {
   // ITEM & OPTION -> VOOR CART
   // PAS OP: MAAR 1 ID TEGELIJKERTIJD OPHALEN!
   public function selectItemByOption($item, $option){
-    $sql = "SELECT `items`.`title`, `items`.`intro`, `items`.`thumbnail`,`items`.`id`,`item_options`.`price`,`item_options`.`name`, `item_options`.`promocode`, `item_options`.`promoprice`
-    FROM `items`
-    LEFT JOIN `options`
-    ON `items`.`option_id` = `options`.`id`
-    LEFT JOIN `item_options`
-    ON `item_options`.`option_id` = `options`.`id`
-    WHERE `items`.`id` = :item
-    AND `item_options`.`id` = :option";
+    $sql = "SELECT `int3_items`.`title`, `int3_items`.`intro`, `int3_items`.`thumbnail`,`int3_items`.`id`,`int3_item_options`.`price`,`int3_item_options`.`name`, `int3_item_options`.`promocode`, `int3_item_options`.`promoprice`
+    FROM `int3_items`
+    LEFT JOIN `int3_options`
+    ON `int3_items`.`option_id` = `int3_options`.`id`
+    LEFT JOIN `int3_item_options`
+    ON `int3_item_options`.`option_id` = `int3_options`.`id`
+    WHERE `int3_items`.`id` = :item
+    AND `int3_item_options`.`id` = :option";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':item',$item);
     $stmt->bindValue(':option',$option);

@@ -5,7 +5,7 @@ require_once( __DIR__ . '/DAO.php');
 class OrderDAO extends DAO {
 
 public function selectOrderById($id){
-  $sql = "SELECT * FROM `orders` WHERE `id` =:id";
+  $sql = "SELECT * FROM `int3_orders` WHERE `id` =:id";
   $stmt = $this->pdo->prepare($sql);
   $stmt->bindValue(':id',$id);
   $stmt->execute();
@@ -13,7 +13,7 @@ public function selectOrderById($id){
 }
 
 public function selectOrderItemsById($id){
-  $sql = "SELECT * FROM `order_items` WHERE `id` =:id";
+  $sql = "SELECT * FROM `int3_order_items` WHERE `id` =:id";
   $stmt = $this->pdo->prepare($sql);
   $stmt->bindValue(':id',$id);
   $stmt->execute();
@@ -23,7 +23,7 @@ public function selectOrderItemsById($id){
   public function insertUser($data) {
   $errorsOrder = $this->validateOrder($data);
     if(empty($errorsOrder)){
-    $sql = "INSERT INTO `orders` (`firstname`,`lastname`,`email`, `street`, `number`, `city`, `postalcode`)
+    $sql = "INSERT INTO `int3_orders` (`firstname`,`lastname`,`email`, `street`, `number`, `city`, `postalcode`)
       VALUES(:firstname,:lastname,:email,:street,:number,:city,:postalcode)";
     $stmt = $this->pdo->prepare($sql);
     $stmt->bindValue(':firstname',$data['firstname']);
@@ -41,7 +41,7 @@ public function selectOrderItemsById($id){
 }
 
 public function insertOrder($data) {
-  $sql = "INSERT INTO `order_items` (`order_id`,`item_name`,`option_name`,`quantity`)
+  $sql = "INSERT INTO `int3_order_items` (`order_id`,`item_name`,`option_name`,`quantity`)
   VALUES(:order_id,:item_name,:option_name,:quantity)";
   $stmt = $this->pdo->prepare($sql);
   $stmt->bindValue(':order_id',$data['order_id']);
