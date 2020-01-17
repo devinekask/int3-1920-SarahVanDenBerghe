@@ -4,7 +4,6 @@
     const $items = document.querySelectorAll(`.cart__item`);
     console.log($items);
     if ($items) {
-
       $items.forEach($item => {
         const $buttonMinus = $item.querySelector(`.min`);
         $buttonMinus.addEventListener(`click`, handleClickMinus);

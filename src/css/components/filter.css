@@ -1,6 +1,4 @@
 .filter {
-  /* display: flex;
-  flex-wrap: wrap; */
   display: grid;
   grid-template-columns: 10rem auto 5rem 1fr;
   margin-top: 4rem;

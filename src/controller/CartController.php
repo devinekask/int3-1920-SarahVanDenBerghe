@@ -4,16 +4,22 @@ require_once __DIR__ . '/Controller.php';
 require_once __DIR__ . '/../dao/ItemDAO.php';
 require_once __DIR__ . '/../dao/ImageDAO.php';
 require_once __DIR__ . '/../dao/OrderDAO.php';
+require_once __DIR__ . '/../dao/CategoryDAO.php';
+require_once __DIR__ . '/../dao/OptionDAO.php';
 
 class CartController extends Controller {
   private $itemDAO;
   private $imageDAO;
   private $orderDAO;
+  private $categoryDAO;
+  private $optionDAO;
 
   function __construct() {
     $this->itemDAO = new ItemDAO();
     $this->imageDAO = new ImageDAO();
     $this->orderDAO = new OrderDAO();
+    $this->categoryDAO = new CategoryDAO();
+    $this->optionDAO = new OptionDAO();
   }
 
   public function cart() {

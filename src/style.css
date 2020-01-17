@@ -8,11 +8,13 @@
 @import './css/components/banner.css';
 @import './css/components/form.css';
 @import './css/components/filter.css';
+@import './css/components/webshop.css';
 @import './css/components/shopitem.css';
-@import './css/components/imageslider.css';
-@import './css/components/iteminfo.css';
 @import './css/components/progressbar.css';
 @import './css/components/login.css';
 @import './css/components/cart.css';
 @import './css/components/checkout.css';
 @import './css/helpers.css';
+
+/* longread */
+@import './css/longread/base.css';

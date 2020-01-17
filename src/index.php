@@ -25,6 +25,10 @@ $routes = array(
     'controller' => 'Pages',
     'action' => 'shopitem'
   ),
+  'longread' => array(
+    'controller' => 'Pages',
+    'action' => 'longread'
+  ),
   'cart' => array(
     'controller' => 'Cart',
     'action' => 'cart'

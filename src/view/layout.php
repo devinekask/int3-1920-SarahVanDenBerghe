@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0" width=device width” />
     <link rel="shortcut icon" href="assets/img/favicon.jpg"/>
+    <link rel="stylesheet" href="https://use.typekit.net/giv5uan.css">
     <title><?php echo $title; ?></title>
     <?php echo $css;?>
   </head>
-  <body>
+  <body <?php if($title === 'Fahrenheit 451') { echo 'class="longread"';} ?>>
+    <?php if($title != 'Fahrenheit 451') { ?>
     <h1 class="hidden"><?php echo $title ?></h1>
     <header>
       <!-- DESKTOP MENU -->
@@ -64,47 +66,37 @@
         </nav>
       </div>
     </header>
-
+    <?php } ?>
+    <?php if($title != 'Fahrenheit 451') { ?>
     <main>
-    <?php if($title === 'Login' || $title === 'Gegevens' || $title === 'Bevestiging'): ?>
-    <section class="steps__wrapper container">
-      <h1 class="hidden">Progress</h1>
-      <div class="steps">
-        <div class="step__item">
-          <p class="step__title">Inloggen</p>
-          <p class="step__number <?php if($title === 'Login') echo 'step__number--active' ?>">1</p>
+      <?php if($title === 'Login' || $title === 'Gegevens' || $title === 'Bevestiging'): ?>
+      <section class="steps__wrapper container">
+        <h1 class="hidden">Progress</h1>
+        <div class="steps">
+          <div class="step__item">
+            <p class="step__title">Inloggen</p>
+            <p class="step__number <?php if($title === 'Login') echo 'step__number--active' ?>">1</p>
+          </div>
+          <div class="step__item">
+            <p class="step__title">Gegevens</p>
+            <p class="step__number <?php if($title === 'Gegevens') echo 'step__number--active' ?>">2</p>
+          </div>
+          <div class="step__item">
+            <p class="step__title">Betalen</p>
+            <p class="step__number">3</p>
+          </div>
+          <div class="step__item">
+            <p class="step__title">Afronden</p>
+            <p class="step__number <?php if($title === 'Bevestiging') echo 'step__number--active' ?>">4</p>
+          </div>
         </div>
-        <div class="step__item">
-          <p class="step__title">Gegevens</p>
-          <p class="step__number <?php if($title === 'Gegevens') echo 'step__number--active' ?>">2</p>
-        </div>
-        <div class="step__item">
-          <p class="step__title">Betalen</p>
-          <p class="step__number">3</p>
-        </div>
-        <div class="step__item">
-          <p class="step__title">Afronden</p>
-          <p class="step__number <?php if($title === 'Bevestiging') echo 'step__number--active' ?>">4</p>
-        </div>
-      </div>
-    </section>
-    <?php endif; ?>
-
-
-      <!-- weg? -->
-      <?php
-        if(!empty($_SESSION['error'])) {
-          echo '<div class="error box">' . $_SESSION['error'] . '</div>';
-        }
-        if(!empty($_SESSION['info'])) {
-          echo '<div class="info box">' . $_SESSION['info'] . '</div>';
-        }
-      ?>
-
-
+      </section>
+      <?php endif; ?>
+      <?php } ?>
       <?php echo $content;?>
     </main>
 
+    <?php if($title != 'Fahrenheit 451') { ?>
     <footer class="footer">
       <div class="footer--desktop">
       <nav class="footer__nav container">
@@ -208,6 +200,7 @@
           </ul>
       </div>
     </footer>
+    <?php } ?>
 
     <?php echo $js; ?>
 

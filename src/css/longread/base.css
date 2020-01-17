@@ -1,0 +1,12 @@
+.longread {
+  justify-content: flex-start;
+  background-color: #0f0f0f;
+  color: white;
+  font-family: Yrsa, sans-serif;
+}
+
+.title--longread {
+  font-family: Essonnes;
+  font-weight: normal;
+  font-size: 4.4rem;
+}
