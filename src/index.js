@@ -2,6 +2,7 @@ require('./style.css');
 // IMPORTEN
 import Item from './js/model/Item.js';
 import './js/validate.js';
+import './js/cart.js';
 
 {
   const $filterForm = document.querySelector(`.filter__form`);

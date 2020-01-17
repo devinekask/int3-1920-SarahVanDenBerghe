@@ -29,15 +29,16 @@
         <div class="item__info item__info--quantity">
           <!--<p>Aantal</p>-->
           <label class="label label--quantity" for="<?php echo $item['item']['id'] . '-' . $item['option'];?>"><span class="hidden">Aantal</span>
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;"></button>
+            <button type="button" class="min"></button>
             <input class="input input--number" name="quantity[<?php echo $item['item']['id'] . '-' . $item['option'];?>]" id="<?php echo $item['item']['id'] . '-' . $item['option'];?>" type="number" min="0" max="99" value="<?php echo $item['quantity'];?>" required>
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;" class="plus"></button>
+            <button type="button" class="plus"></button>
           </label>
         </div>
         <div class="item__info item__info--subtotal">
           <!-- <p>Subtotaal</p> -->
           <?php if($item['item']['price'] != $item['price']) {echo '<del class="oldprice">&euro; ' . $item['item']['price'] * $item['quantity'] . '</del>';}?>
-          <p>&euro; <?php echo $itemTotal;?></p>
+          <input class="item-price" type="hidden" name="price" value="<?php echo $item['price'] ?>">
+          <p class="item-total">&euro; <?php echo $itemTotal;?></p>
         </div>
         <button class="item__info item__info--remove" type="submit" name="remove" value="<?php echo $item['item']['id'] . '-' . $item['option'];?>"><span class="hidden">Verwijder</span></button>
       </section>
