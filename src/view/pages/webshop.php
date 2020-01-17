@@ -12,7 +12,7 @@
   <div class="container">
     <section class="form__wrapper">
       <h2 class="hidden">Filter webshop items</h2>
-      <form action="index.php?page=webshop" method="get">
+      <form action="index.php?page=webshop" class="form filter__form" method="get">
         <input type="hidden" name="page" value="webshop" />
         <div class="filter">
           <p class="filter__title">Categorieën</p> <!-- nog foreach doen! -->

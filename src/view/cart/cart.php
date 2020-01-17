@@ -28,9 +28,9 @@
         </div>
         <div class="item__info item__info--quantity">
           <!--<p>Aantal</p>-->
-          <label class="label label--quantity" for="quantity"><span class="hidden">Aantal</span>
+          <label class="label label--quantity" for="<?php echo $item['item']['id'] . '-' . $item['option'];?>"><span class="hidden">Aantal</span>
             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;"></button>
-            <input class="input input--number" name="quantity[<?php echo $item['item']['id'] . '-' . $item['option'];?>]" id="quantity" type="number" min="0" max="99" value="<?php echo $item['quantity'];?>" required>
+            <input class="input input--number" name="quantity[<?php echo $item['item']['id'] . '-' . $item['option'];?>]" id="<?php echo $item['item']['id'] . '-' . $item['option'];?>" type="number" min="0" max="99" value="<?php echo $item['quantity'];?>" required>
             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;" class="plus"></button>
           </label>
         </div>
@@ -56,7 +56,7 @@
 	        <p class="addedpromo"><?php echo $_SESSION['promo']; ?></p>
         <?php endif; ?>
         <div class="promocode__wrapper">
-          <input class="input input--text" name="promocode" id="promocode" type="text" minlength="3">
+          <input class="input input--text" name="promocode" id="promocode" type="text">
           <button type="submit" name="action" value="promo" class="hidden-js">
             <span class="hidden">Invoegen</span>
           </button>

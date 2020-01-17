@@ -102,9 +102,7 @@
           </section>
 
           <div class="button__wrapper">
-            <?php if(!empty($errorsOrder)): ?>
-              <p class="errors">Gelieve alle velden in te vullen.</p>
-            <?php endif; ?>
+              <p class="errors errors--summary"><?php if(!empty($errorsOrder)): ?>Gelieve alle velden in te vullen.<?php endif; ?></p>
             <input class="button button--secondary" type="submit" value="Betalen">
          </div>
       </form>

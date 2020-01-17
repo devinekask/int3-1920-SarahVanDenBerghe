@@ -18,18 +18,26 @@ class PagesController extends Controller {
   }
 
   public function index() {
-    $items = $this->itemDAO->selectAllItems();
+    $categories = false;
+    if (!empty($_GET['categories'])) {
+      $categories = $_GET['categories'];
+    }
+
+    $items = $this->itemDAO->selectAllItemsByCategory($categories);
+    if(empty($items)){
+      $items = $this->itemDAO->selectAllItems();
+    }
+
     $this->set('items', $items);
     $this->set('title', 'Humo');
 
-    // if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-    //   header('Content-Type: application/json');
-    //   echo json_encode($items);
-    //   exit();
-    // }
+    /* DOORSTUREN NAAR JAVASCRIPT */
+    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+      header('Content-Type: application/json');
+      echo json_encode($items);
+      exit();
+    }
   }
-
-
 
   public function webshop() {
     $categories = false;
