@@ -4,15 +4,24 @@
   <h2 class="hidden"><?php echo $item['title']; ?></h2>
   <section class="shopitem__images">
     <h2 class="hidden">Afbeeldingen</h2>
+
+
     <div class="images__wrapper">
       <?php foreach($images as $index => $image): ?>
-        <input type="radio" name="slide_switch" id="<?php echo $index; ?>" <?php if ($index == 0) { echo 'checked'; }?> />
-        <label class="image__label" for="<?php echo $index; ?>">
-          <img class="image__small" src="assets/img/webshop/<?php echo $image['path']; ?>" />
-        </label>
-        <img src="assets/img/webshop/<?php echo $image['path']; ?>"/>
+        <a href="index.php?page=shopitem&<?php echo 'id=' . $_GET['id'] . '&image=' . $image['id']?>">
+          <img class="image__small <?php if(!empty($_GET['image']) && $_GET['image'] == $image['id']) {
+            echo 'image__small--active' ;
+            } elseif (empty($_GET['image']) && $index == 0) {
+              echo 'image__small--active' ;}?>"
+          src="assets/img/webshop/<?php echo $image['path']; ?>"/>
+        </a>
       <?php endforeach; ?>
     </div>
+
+    <img class="image__big" src="assets/img/webshop/<?php echo $selectedImage['path']; ?>"/>
+
+
+
   </section>
 
   <section class="shopitem__info">

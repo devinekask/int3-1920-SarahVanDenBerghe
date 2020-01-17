@@ -178,6 +178,7 @@
 
 .menu__items--mobile .menu__item--logo {
   transform: translateX(-5.7rem);
+  margin: 0 auto;
 
   &::before {
     content: '';
@@ -191,13 +192,6 @@
 
 .menu__items--right {
   display: flex;
-}
-
-.menu__items--mobile {
-
-  & .menu__item--logo {
-    margin: 0 auto;
-  }
 }
 
 /* LOGO */

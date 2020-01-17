@@ -40,6 +40,10 @@ a {
 
 main {
   margin-bottom: 7rem;
+
+  @media (--only-medium-screen) {
+    margin-bottom: 3rem;
+  }
 }
 
 button:hover {

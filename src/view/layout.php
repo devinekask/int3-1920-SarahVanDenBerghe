@@ -57,7 +57,7 @@
             <li class="menu__item menu__item--left menu__item--icon menu__item--search"><span class="hidden">Zoek</span></li>
             <a href="index.php?page=webshop" class="menu__item menu__item--logo"><li><span class="hidden">Humo</span></li></a>
             <div class="menu__items--right">
-              <a href="index.php?page=cart" class="icon__wrapper"><li class="menu__item menu__item--icon menu__item--cart"><span class="hidden">Winkelmand</span></li></a>
+              <a href="index.php?page=cart" class="icon__wrapper"><li class="menu__item menu__item--icon menu__item--cart <?php if(!empty ($_SESSION['cart'])) { echo 'cart--filled';} ?>"><span class="hidden">Winkelmand</span></li></a>
               <li class="menu__item menu__item--icon menu__item--user"><span class="hidden">Account</span></li>
             </div>
           </ul>
@@ -198,6 +198,14 @@
           </ul>
       </div>
       </section>
+      </div>
+      <div class="footer--mobile">
+          <a class="button button--secondary">Neem een Abonnement</a>
+          <ul>
+            <li>Colofon</li>
+            <li>Contact</li>
+            <li>Cookie instellingen</li>
+          </ul>
       </div>
     </footer>
 

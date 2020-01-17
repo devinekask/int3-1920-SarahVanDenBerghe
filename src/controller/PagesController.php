@@ -51,7 +51,14 @@ class PagesController extends Controller {
   if(!empty($_GET['id'])){
    $item = $this->itemDAO->selectById($_GET['id']);
    $options = $this->itemDAO->selectOptionsById($_GET['id']);
-   $images = $this->imageDAO->selectImagesById($_GET['id']);
+   $images = $this->imageDAO->selectImagesByItemId($_GET['id']);
+  }
+
+  if(!empty($_GET['id']) && !empty($_GET['image'])){
+    $selectedImage = $this->imageDAO->selectImagesById($_GET['id'], $_GET['image']);
+  }
+  if(empty($selectedImage)) {
+    $selectedImage = $this->imageDAO->selectFirstImage($_GET['id']);
   }
 
     if(empty($item)){
@@ -62,6 +69,7 @@ class PagesController extends Controller {
     $this->set('item',$item);
     $this->set('options',$options);
     $this->set('images',$images);
+    $this->set('selectedImage',$selectedImage);
     $this->set('title', 'Webshop');
   }
 }

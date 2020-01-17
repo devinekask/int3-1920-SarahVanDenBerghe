@@ -1,77 +1,47 @@
+.shopitem__images {
+  display: grid;
+  grid-gap: var(--spacerRegular);
+  grid-template-columns: 4.5rem auto;
+  grid-template-areas: 'small big';
 
-.images__wrapper {
-  position: relative;
-  height: 100%; /* 36 rem */
-  overflow: scroll;
+  @media (--only-medium-screen) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'big'
+      'small';
+  }
 
-  /* display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap: var(--spacerRegular); */
+  @media (--only-inbetween-screen) {
+    margin: 0 auto;
+    max-width: 20rem;
+  }
 
-  /* @media (--only-medium-screen) {
+  & .images__wrapper img {
+    width: 100%;
+    margin-bottom: calc(var(--spacerRegular) - .5rem);
+    padding-bottom: 0;
+    grid-area: small;
 
-  } */
+    @media (--only-medium-screen) {
+      height: 7rem;
+      width: auto;
+      margin-right: calc(var(--spacerRegular) - .5rem);
+      margin-bottom: 0;
+    }
+  }
+
+  & .image__big {
+    grid-area: big;
+    width: 100%;
+
+  }
 }
-
-/* .image__label {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-top: 150%;
-} */
 
 .image__small {
-  /* position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; */
-  width: 87px; /* 87px;  niet zo responsive*/
+  opacity: .5;
 }
 
-/* Grote img */
-
-.images__wrapper > img {
-  position: absolute;
-  left: 6.68rem;
-  top: 0;
-  width: 23.5rem;
-  /* display: block;
-  max-width: 100%;
-  height: auto; */
-}
-
-/* Hide circles */
-
-.images__wrapper input[name='slide_switch'] {
-  display: none;
-}
-
-/* Kleine img */
-
-.images__wrapper label {
-  margin-bottom: var(--spacerRegular);
-  display: flex; /* float: left */
-  cursor: pointer;
-  opacity: .4;
-}
-
-/* Actieve kleine img */
-
-.images__wrapper input[name='slide_switch']:checked + label {
+.image__small--active {
+  border: 1px solid black;
   opacity: 1;
-  /* border: .1rem solid var(--colorRed); */
-}
-
-/* Grote images hiden */
-
-.images__wrapper input[name='slide_switch'] ~ img {
-  opacity: 0;
-}
-
-/* Actieve grote image tonen */
-
-.images__wrapper input[name='slide_switch']:checked + label + img {
-  opacity: 1;
-  transform: scale(1);
 }
