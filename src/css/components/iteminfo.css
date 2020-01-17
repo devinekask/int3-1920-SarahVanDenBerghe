@@ -3,6 +3,14 @@
   grid-template: 1fr / repeat(2, 1fr);
   grid-gap: calc(var(--spacerRegular) * 3);
   margin-top: var(--spacerRegular);
+
+  /* @media (--only-medium-screen) {
+    grid-template: 1fr / 1fr;
+  } */
+}
+
+.shopitem__images {
+  justify-content: center;
 }
 
 /* Info */

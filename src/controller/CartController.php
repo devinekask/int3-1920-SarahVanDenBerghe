@@ -99,7 +99,7 @@ class CartController extends Controller {
 
   private function _handlePromo() {
     foreach($_SESSION['cart'] as $item => $info) {
-      if ($info['item']['promocode'] != $_POST['promocode']) {
+      if ($info['item']['promocode'] === $_POST['promocode']) {
         $_SESSION['cart'][$item]['price'] = $info['item']['promoprice'];
         $_SESSION['promo'] = 'Promocode werd toegepast!';
       } else {

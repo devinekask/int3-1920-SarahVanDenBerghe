@@ -1,12 +1,32 @@
 
 .images__wrapper {
   position: relative;
-  height: 36rem;
+  height: 100%; /* 36 rem */
   overflow: scroll;
+
+  /* display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: var(--spacerRegular); */
+
+  /* @media (--only-medium-screen) {
+
+  } */
 }
 
+/* .image__label {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 150%;
+} */
+
 .image__small {
-  width: 87px;
+  /* position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; */
+  width: 87px; /* 87px;  niet zo responsive*/
 }
 
 /* Grote img */
@@ -16,6 +36,9 @@
   left: 6.68rem;
   top: 0;
   width: 23.5rem;
+  /* display: block;
+  max-width: 100%;
+  height: auto; */
 }
 
 /* Hide circles */

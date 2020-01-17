@@ -24,10 +24,10 @@
         <div class="item__info item__info--item">
           <h2 class="info__title"><?php echo $item['item']['title'];?></h2>
           <?php if ($item['item']['name'] != 'no option') { echo '<p class="info__option">' . $item['item']['name'] .'</p>';} ?>
-          <p><?php echo $item['item']['intro'];?></p>
+          <!-- <p><?php echo $item['item']['intro'];?></p> -->
         </div>
         <div class="item__info item__info--quantity">
-          <p>Aantal</p>
+          <!--<p>Aantal</p>-->
           <label class="label label--quantity" for="quantity"><span class="hidden">Aantal</span>
             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;"></button>
             <input class="input input--number" name="quantity[<?php echo $item['item']['id'] . '-' . $item['option'];?>]" id="quantity" type="number" min="0" max="99" value="<?php echo $item['quantity'];?>" required>
@@ -35,7 +35,8 @@
           </label>
         </div>
         <div class="item__info item__info--subtotal">
-          <p>Subtotaal</p>
+          <!-- <p>Subtotaal</p> -->
+          <?php if($item['item']['price'] != $item['price']) {echo '<del class="oldprice">&euro; ' . $item['item']['price'] * $item['quantity'] . '</del>';}?>
           <p>&euro; <?php echo $itemTotal;?></p>
         </div>
         <button class="item__info item__info--remove" type="submit" name="remove" value="<?php echo $item['item']['id'] . '-' . $item['option'];?>"><span class="hidden">Verwijder</span></button>
@@ -48,7 +49,7 @@
 
     <article class="cart__info">
       <h2 class="hidden">Promocode</h2>
-      <p>Gratis verzending binnen<br> 3 à 4 werkdagen</p>
+      <p>Gratis verzending binnen 3 à 4 werkdagen</p>
       <div>
         <label class="label label--text" for="promocode">Promocode</label>
         <?php if (!empty($_SESSION['promo'])): ?>

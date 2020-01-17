@@ -9,6 +9,7 @@
 
 .menu__wrapper--mobile {
   display: none;
+  background-color: var(--colorGrey);
 
   & nav {
     width: 100%;
@@ -119,7 +120,7 @@
 }
 
 .menu__item--cart {
-  padding-left: 2rem;
+  padding-left: .8rem;
 
   &::before {
     height: 1.6rem;
@@ -129,6 +130,10 @@
 
   &:hover::before {
     background-image: url(./../../assets/img/icons/cart-empty-hover.svg);
+  }
+
+  @media (--only-medium-screen) {
+    padding-left: 2rem;
   }
 
   @media (--only-small-screen) {

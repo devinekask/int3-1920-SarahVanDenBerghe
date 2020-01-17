@@ -7,7 +7,7 @@
     <div class="images__wrapper">
       <?php foreach($images as $index => $image): ?>
         <input type="radio" name="slide_switch" id="<?php echo $index; ?>" <?php if ($index == 0) { echo 'checked'; }?> />
-        <label for="<?php echo $index; ?>">
+        <label class="image__label" for="<?php echo $index; ?>">
           <img class="image__small" src="assets/img/webshop/<?php echo $image['path']; ?>" />
         </label>
         <img src="assets/img/webshop/<?php echo $image['path']; ?>"/>
