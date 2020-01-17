@@ -1,6 +1,10 @@
 .steps__wrapper {
   margin: var(--spacerBig) auto calc(var(--spacerBig) * 2);
 
+  @media (--only-inbetween-screen) {
+    margin-bottom: var(--spacerRegular);
+  }
+
   &::before {
     content: '';
     display: block;
