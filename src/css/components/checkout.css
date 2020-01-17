@@ -2,6 +2,10 @@
 .order {
   display: grid;
   grid-template: 1fr / 26rem auto;
+
+  @media (--only-medium-screen) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .order__overview {
@@ -19,6 +23,14 @@
     background-position: top;
     background-size: 1px 3px;
     background-repeat: repeat-y;
+
+    @media (--only-medium-screen) {
+      position: relative;
+    }
+  }
+
+  @media (--only-medium-screen) {
+    padding-right: 0;
   }
 }
 
@@ -101,6 +113,10 @@
 .order__wrapper {
   margin-left: calc(var(--spacerBig) * 2);
 
+  @media (--only-medium-screen) {
+    margin: calc(var(--spacerBig) * 2) 0 0;
+  }
+
   & .button__wrapper {
     display: flex;
     align-items: center;
@@ -117,6 +133,25 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: var(--spacerRegular);
+  grid-template-areas:
+    'title title title title'
+    'firstname firstname lastname lastname'
+    'email email email email'
+    'street street street number'
+    'postal postal city city';
+
+  @media (--only-inbetween-screen) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      'title'
+      'firstname'
+      'lastname'
+      'email'
+      'street'
+      'number'
+      'postal'
+      'city';
+  }
 
   & .label {
     display: flex;
@@ -124,31 +159,31 @@
   }
 
   & .label--firstname {
-    grid-column: 1 / span 2;
+    grid-area: firstname;
   }
 
   & .label--lastname {
-    grid-column: 3 / span 2;
+    grid-area: lastname;
   }
 
   & .label--email {
-    grid-column: 1 / span 4;
+    grid-area: email;
   }
 
   & .label--street {
-    grid-column: 1 / span 3;
+    grid-area: street;
   }
 
   & .label--housenumber {
-    grid-column: 4 / span 1;
+    grid-area: number;
   }
 
   & .label--postalcode {
-    grid-column: 1 / span 1;
+    grid-area: postal;
   }
 
   & .label--city {
-    grid-column: 2 / span 3;
+    grid-area: city;
   }
 }
 
@@ -206,6 +241,7 @@
   justify-content: center;
   align-items: center;
   margin-top: calc(var(--spacerBig) * 3);
+  text-align: center;
 
   & .button {
     margin-top: var(--spacerBig);

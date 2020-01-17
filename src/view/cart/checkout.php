@@ -1,5 +1,4 @@
 <section class="container">
-
   <h1 class="hidden">Gegevens</h1>
 
   <div class="order">
