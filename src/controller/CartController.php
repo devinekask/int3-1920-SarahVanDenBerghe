@@ -153,7 +153,8 @@ class CartController extends Controller {
           'order_id' => $gegevensId['id'],
           'item_name' => $quantity['item']['title'],
           'option_name' => $quantity['item']['name'],
-          'quantity' => $quantity['quantity']
+          'quantity' => $quantity['quantity'],
+          'subtotal' => $quantity['price'] * $quantity['quantity']
         ));
       }
 

@@ -3,6 +3,7 @@
 <article class="intro">
   <img src="../../assets/img/longread/header_820x820.png" alt="">
   <div>
+    <p class="intro__humo">Humo presents</p>
     <h1 class="intro__title">Fahrenheit 451</h1>
     <p class="intro__author">Ray Bradbury</p>
     <a class="intro__button">Bestel boek</a>

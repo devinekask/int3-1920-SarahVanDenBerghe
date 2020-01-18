@@ -41,13 +41,14 @@ public function selectOrderItemsById($id){
 }
 
 public function insertOrder($data) {
-  $sql = "INSERT INTO `int3_order_items` (`order_id`,`item_name`,`option_name`,`quantity`)
-  VALUES(:order_id,:item_name,:option_name,:quantity)";
+  $sql = "INSERT INTO `int3_order_items` (`order_id`,`item_name`,`option_name`,`quantity`,`subtotal`)
+  VALUES(:order_id,:item_name,:option_name,:quantity,:subtotal)";
   $stmt = $this->pdo->prepare($sql);
   $stmt->bindValue(':order_id',$data['order_id']);
   $stmt->bindValue(':item_name',$data['item_name']);
   $stmt->bindValue(':option_name',$data['option_name']);
   $stmt->bindValue(':quantity',$data['quantity']);
+  $stmt->bindValue(':subtotal',$data['subtotal']);
   if($stmt->execute()){
      return $this->selectOrderItemsById($this->pdo->lastInsertId());
   }
