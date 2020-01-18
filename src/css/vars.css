@@ -16,6 +16,7 @@
   --fontBig: 1.5rem;
   --fontBody: 'News Gothic', sans-serif;
   --fontTitle: 'Swiss Condensed', sans-serif;
+  --container: calc((100vw - 60rem) / 2);
 }
 
 @custom-media --only-medium-screen (width < 1120px);

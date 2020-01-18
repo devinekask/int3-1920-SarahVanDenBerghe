@@ -9,10 +9,8 @@
   flex-wrap: wrap;
 
   @media (--only-medium-screen) {
-    /* height: 100%; */
     margin-top: 0;
     text-align: center;
-    /* padding: 1rem; */
   }
 
   & img {
@@ -32,9 +30,14 @@
     content: '';
     background-image: url(../../assets/img/longread/line_header.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 85%; /* bij 100% is right: 0 niet mogelijk */
-    height: 110%;
+
+    /* Lijn zelf */
+    background-size: contain; /* 100% auto */
+
+    /* Grote van canvas */
+    width: 80vw;
+    height: 60vw;
+
     position: absolute;
     top: 0;
     right: 0;
@@ -96,31 +99,43 @@
 }
 
 .wrapper {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
-  /* 28 rem = (60rem (container) - 4 rem (margin)) / 2 */
+  grid-template-columns: repeat(2, minmax(28rem, 1fr));
+  grid-template-areas: 'text img';
 
-  & .summary__history {
-    /* width: 30rem; */
+  @media (--only-small-screen) {
+    grid-template: repeat(2, auto) / 1fr;
+    grid-template-areas:
+      'img'
+      'text';
   }
 }
 
-.img__wrapper {
-
+.summary__history {
+  grid-area: text;
 }
 
 .summary__img {
-  &::after {
+  grid-area: img;
+  height: 366px; /* ander is height 0, bij mobile en komt tekst erboven op */
+  margin-bottom: 2rem; /* nodig voor mobile */
+
+  &::before {
     content: '';
     position: absolute;
     background-image: url(../../assets/img/longread/televisie_860x366.png);
-    /* background-size: 50%; */
-    width: 100%; /* width van img */
-    height: 100%;
-    left: 55vw;
     background-repeat: no-repeat;
+    right: 0; /* helemaal rechts positioneren */
+
+    /* Image size */
+    background-size: auto 366px;
+
+    /* Canvas size */
+    width: 46vw; /* 50vw - maar met beetje margin links */
+    height: 100%;
+
+    @media (--only-small-screen) {
+      width: calc(100vw - 2rem);
+    }
   }
 }
