@@ -114,7 +114,7 @@
     padding-left: .8rem;
   }
 
-  @media (--only-small-screen) {
+  @media (--only-mobile-screen) {
     display: none;
   }
 }
@@ -136,7 +136,7 @@
     padding-left: 2rem;
   }
 
-  @media (--only-small-screen) {
+  @media (--only-mobile-screen) {
     padding-right: 1rem;
   }
 }

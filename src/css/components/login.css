@@ -3,7 +3,7 @@
   grid-template: 1fr / 2fr 1fr;
   grid-gap: calc(var(--spacerBig) * 2);
 
-  @media (--only-inbetween-screen) {
+  @media (--only-extrasmall-screen) {
     grid-gap: var(--spacerRegular);
     grid-template-columns: 1fr;
   }
@@ -13,7 +13,7 @@
   background-color: var(--colorGrey);
   padding: calc(var(--spacerRegular) * 2) 4rem;
 
-  @media (--only-small-screen) {
+  @media (--only-mobile-screen) {
     padding: var(--spacerBig);
   }
 
@@ -36,7 +36,7 @@
   & .button {
     margin-top: var(--spacerBig);
 
-    @media (--only-inbetween-screen) {
+    @media (--only-extrasmall-screen) {
       margin: var(--spacerBig) auto 0;
     }
   }
@@ -51,7 +51,7 @@
     }
   }
 
-  @media (--only-inbetween-screen) {
+  @media (--only-extrasmall-screen) {
     text-align: center;
   }
 }

@@ -8,11 +8,11 @@
     grid-template: auto / repeat(3, 1fr);
   }
 
-  @media (--only-inbetween-screen) {
+  @media (--only-extrasmall-screen) {
     grid-template: auto / repeat(2, 1fr);
   }
 
-  @media (--only-small-screen) {
+  @media (--only-mobile-screen) {
     grid-template: auto / repeat(1, 1fr);
   }
 }

@@ -1,7 +1,7 @@
 .steps__wrapper {
   margin: var(--spacerBig) auto calc(var(--spacerBig) * 2);
 
-  @media (--only-inbetween-screen) {
+  @media (--only-extrasmall-screen) {
     margin-bottom: var(--spacerRegular);
   }
 

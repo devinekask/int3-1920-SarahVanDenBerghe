@@ -8,7 +8,7 @@
     grid-template-columns: 40% auto;
   }
 
-  @media (--only-inbetween-screen) {
+  @media (--only-extrasmall-screen) {
     grid-template-columns: 1fr;
   }
 }
@@ -67,7 +67,7 @@
   & .info__cart {
     display: flex;
 
-    @media (--only-inbetween-screen) {
+    @media (--only-extrasmall-screen) {
       flex-direction: column;
     }
   }
@@ -98,7 +98,7 @@
 .button--addtocart {
   margin-left: var(--spacerRegular);
 
-  @media (--only-inbetween-screen) {
+  @media (--only-extrasmall-screen) {
     margin: var(--spacerRegular) 0;
   }
 }
@@ -116,7 +116,7 @@
       'small';
   }
 
-  @media (--only-inbetween-screen) {
+  @media (--only-extrasmall-screen) {
     margin: 0 auto;
     max-width: 20rem;
   }

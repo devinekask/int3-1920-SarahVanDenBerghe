@@ -3,6 +3,7 @@
   --colorYellow: #ffe408;
   --colorGrey: #f8f8f4;
   --colorGreyDark: #c2c2c2;
+  --colorLongread: #b42d2d;
   --colorGreen: rgb(69, 173, 113);
   --colorGreyBorder: rgb(197, 197, 197);
   --spacerRegular: 1.25rem;
@@ -18,5 +19,6 @@
 }
 
 @custom-media --only-medium-screen (width < 1120px);
-@custom-media --only-inbetween-screen (width < 700px);
-@custom-media --only-small-screen (width < 350px);
+@custom-media --only-small-screen (width < 960px);
+@custom-media --only-extrasmall-screen (width < 700px);
+@custom-media --only-mobile-screen (width < 350px);

@@ -1,0 +1,126 @@
+
+.intro {
+  margin-top: 5rem;
+  text-align: right;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (--only-medium-screen) {
+    /* height: 100%; */
+    margin-top: 0;
+    text-align: center;
+    /* padding: 1rem; */
+  }
+
+  & img {
+    width: 100%;
+    max-width: 53rem;
+    padding-right: 5rem;
+
+    @media (--only-medium-screen) {
+      padding: .5rem;
+    }
+  }
+}
+
+.line--intro {
+
+  &::before {
+    content: '';
+    background-image: url(../../assets/img/longread/line_header.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 85%; /* bij 100% is right: 0 niet mogelijk */
+    height: 110%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.intro__title {
+  margin-bottom: 0;
+  font-family: Essonnes, sans-serif;
+  font-weight: normal;
+  font-size: 4.4rem;
+
+  @media (--only-medium-screen) {
+    font-size: 3rem;
+  }
+}
+
+.intro__author {
+  margin-bottom: 2.5rem;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.9rem;
+}
+
+.quote {
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: Essonnes, sans-serif;
+  font-style: italic;
+  width: 15.5rem;
+  position: relative;
+  /* transform: translateY(-3rem); */
+  margin-bottom: 15rem;
+
+  @media (--only-medium-screen) {
+    margin-top: 6rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    top: 7rem;
+    width: 1px;
+    height: 7rem;
+
+    @media (--only-medium-screen) {
+      top: 5.5rem;
+    }
+  }
+}
+
+.summary {
+
+  & p {
+    margin-bottom: 2rem;
+  }
+}
+
+.wrapper {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  /* 28 rem = (60rem (container) - 4 rem (margin)) / 2 */
+
+  & .summary__history {
+    /* width: 30rem; */
+  }
+}
+
+.img__wrapper {
+
+}
+
+.summary__img {
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../../assets/img/longread/televisie_860x366.png);
+    /* background-size: 50%; */
+    width: 100%; /* width van img */
+    height: 100%;
+    left: 55vw;
+    background-repeat: no-repeat;
+  }
+}

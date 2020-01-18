@@ -120,7 +120,7 @@
     'street street street number'
     'postal postal city city';
 
-  @media (--only-inbetween-screen) {
+  @media (--only-extrasmall-screen) {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
       'title'
