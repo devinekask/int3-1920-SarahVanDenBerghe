@@ -168,7 +168,7 @@ class CartController extends Controller {
     }
   }
 
-    public function confirmation() {
+  public function confirmation() {
     $this->set('title', 'Bevestiging');
   }
 

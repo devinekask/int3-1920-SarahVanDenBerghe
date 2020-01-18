@@ -2,17 +2,16 @@
   justify-content: flex-start;
   background-color: #0f0f0f;
   color: white;
-  font-family: Yrsa, sans-serif;
+  font-family: var(--fontBodyLongread);
   overflow-x: hidden;
   width: 100vw;
 
   & p {
-    font-size: 1.2rem;
     line-height: 1.75;
 
-    @media (--only-extrasmall-screen) {
+    /* @media (--only-extrasmall-screen) {
       font-size: 1rem;
-    }
+    } */
   }
 
 }
@@ -27,15 +26,16 @@
   /* container op die manier opbouwen, zo blijft container full width en kunnen img nog
   responsive gepositioneerd worden, maximum width is 60rem adhv padding */
   padding: 0 calc((100vw - 60rem) / 2); /* 60 rem = container width + margin */
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 
-.intro__button {
+.button--longread {
   display: inline-block;
-  font-family: Montserrat, sans-serif;
+  font-family: var(--fontSubtitleLongread);
   text-transform: uppercase;
-  font-size: 1.2;
+  font-size: var(--fontRegularLongread);
   color: white;
   background-color: var(--colorLongread);
-  padding: .2rem 1rem;
+  padding: .3rem 1.5rem;
+  letter-spacing: 2px;
 }

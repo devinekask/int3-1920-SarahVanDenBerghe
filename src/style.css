@@ -18,4 +18,6 @@
 
 /* longread */
 @import './css/longread/base.css';
+@import './css/longread/navbar.css';
 @import './css/longread/intro.css';
+@import './css/longread/summary.css';

@@ -92,6 +92,16 @@
         </div>
       </section>
       <?php endif; ?>
+      <?php } else { ?>
+        <nav class="menu--longread">
+          <ul>
+            <li>Over het boek</li>
+            <li>Auteur</li>
+            <li>Backstory</li>
+            <li>Boekbranding</li>
+            <li>Meer boeken</li>
+          </ul>
+        </nav>
       <?php } ?>
       <?php echo $content;?>
     </main>

@@ -1,0 +1,60 @@
+.summary {
+  font-size: var(--fontRegularLongread);
+
+  & p {
+    margin-bottom: 2.5rem;
+  }
+
+  & .summary__opening {
+    font-family: var(--fontTitleLongread);
+    font-style: italic;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(28rem, 1fr));
+  grid-template-areas: 'text img';
+
+  @media (--only-small-screen) {
+    grid-template: repeat(2, auto) / 1fr;
+    grid-template-areas:
+      'img'
+      'text';
+  }
+}
+
+.summary__history {
+  grid-area: text;
+
+  & .calltoaction {
+    font-family: var(--fontTitleLongread);
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+}
+
+.summary__img {
+  grid-area: img;
+  height: 366px; /* ander is height 0, bij mobile en komt tekst erboven op */
+  margin-bottom: 2rem; /* nodig voor mobile */
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(../../assets/img/longread/televisie_860x366.png);
+    background-repeat: no-repeat;
+    right: 0; /* helemaal rechts positioneren */
+
+    /* Image size */
+    background-size: auto 366px; /* height img */
+
+    /* Canvas size */
+    width: 45vw; /* 50vw - maar met beetje margin links */
+    height: 366px;
+
+    @media (--only-small-screen) {
+      width: 100vw /* calc(100vw - 1rem); */
+    }
+  }
+}
