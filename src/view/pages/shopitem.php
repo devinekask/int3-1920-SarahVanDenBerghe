@@ -36,12 +36,15 @@
           <p><?php echo $item['optioninfo']; ?></p>
           <div class="info__options">
             <?php foreach($options as $index => $option): ?>
-              <input type="radio" name="option_id" value="<?php echo $option['id']; ?>" class="option__input hidden" id="<?php echo $option['id']; ?>"
+
+            <input type="radio" name="option_id" value="<?php echo $option['id']; ?>" class="option__input hidden" id="<?php echo $option['id']; ?>"
               <?php if ($index === 0) { echo 'checked';} ?>>
-              <label class="option__label" for="<?php echo $option['id']; ?>">
-                <?php echo $option['name']; ?>
-                <span class="price">&euro;<?php echo $option['price']; ?></span>
-              </label>
+             <div>
+                <label class="option__label" for="<?php echo $option['id']; ?>">
+                  <?php echo $option['name']; ?><br>
+                  <span class="price">&euro;<?php echo $option['price']; ?></span>
+                </label>
+              </div>
             <?php endforeach; ?>
 
           </div>

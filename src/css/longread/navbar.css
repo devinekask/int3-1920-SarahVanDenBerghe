@@ -6,4 +6,8 @@
   position: fixed;
   justify-content: center;
   margin-left: 5rem;
+
+  @media (--only-medium-screen) {
+    display: none;
+  }
 }
