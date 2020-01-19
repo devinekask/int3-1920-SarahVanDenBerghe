@@ -1,9 +1,10 @@
 <div class="container--fluid">
   <article class="banner__wrapper">
+    <img src="assets/img/webshop/header_1024x310.jpg" alt="">
     <span class="banner__label">Weekly special</span>
     <div class="banner">
       <h2 class="banner__title">Fahrenheit 451</h2>
-      <p class="banner__info">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+      <p class="banner__info">Ontdek het verhaal van Fahrenheit 451, een dystopische wereld waar boeken verbrand worden.</p>
       <a class="button button--primary button--inline" href="index.php?page=longread"><span>Ontdek</span></a>
     </div>
   </article>

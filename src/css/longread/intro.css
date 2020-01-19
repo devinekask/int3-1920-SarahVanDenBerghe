@@ -1,6 +1,8 @@
 /* LIJN */
 
 .line--intro {
+  overflow-x: hidden;
+
   &::before {
     filter: invert(10%) sepia(20%) saturate(1500%) hue-rotate(315deg) brightness(80%) contrast(100%);
     content: '';
@@ -18,6 +20,12 @@
     top: 0;
     right: 0;
     z-index: -1;
+
+    @media (--only-small-screen) {
+      background-size: auto 100%;
+      width: 90vw;
+      height: 90vw;
+    }
   }
 }
 
@@ -50,6 +58,10 @@
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
+
+    & .button--longread {
+      margin-left: auto;
+    }
   }
 }
 
@@ -94,21 +106,12 @@
   }
 }
 
-.button--longread {
-  margin-left: auto;
-  margin-bottom: 5rem;
-
-  @media (--only-medium-screen) {
-    margin: 0 auto;
-  }
-}
-
 .catchphrase {
   margin: 2rem auto 11rem;
   text-align: center;
   font-family: var(--fontTitleLongread);
   font-style: italic;
-  width: 15.5rem;
+  max-width: 15.5rem;
   position: relative;
 
   & p {

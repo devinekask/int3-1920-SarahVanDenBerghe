@@ -1,6 +1,5 @@
 <!-- INTRO -->
-<span class="line line--intro"></span>
-<div class="intro">
+<div class="intro line--intro">
   <img class="intro__img" src="../../assets/img/longread/header_820x820.png" alt="">
   <div class="intro__text">
     <a href="index.php?page=index"><img class="intro__logo" src="../../assets/img/logo.svg" alt="" width="120px"></a>
@@ -26,5 +25,20 @@
       <a class="button--longread">Bestel boek</a>
     </div>
     <div class="summary__img"></div>
+  </div>
+</article>
+
+<!-- AUTHOR -->
+<article class="author line--author">
+  <div class="author__quote subtitle">
+    <p>You must stay drunk on writing so reality cannot destroy you.</p>
+  </div>
+  <div class="author__introduction container--small">
+    <img class="author__image" src="../../assets/img/longread/auteur_620x528.png" alt="">
+    <div class="author__info">
+      <p class="subtitle">Auteur</p>
+      <p class="title">Ray Bradbury</p>
+      <p>Ray Douglas Bradbury (Waukegan (Illinois), 22 augustus 1920 – Los Angeles, 5 juni 2012) was een Amerikaanse sciencefiction- en fantasyschrijver. Zijn eerste boek, de bundel Dark Carnival, werd in 1947 uitgebracht. Fahrenheit 451 en The Martian Chronicles worden tot zijn belangrijkste werken gerekend. [Inspiratie schrijven van boek] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam.</p>
+    </div>
   </div>
 </article>

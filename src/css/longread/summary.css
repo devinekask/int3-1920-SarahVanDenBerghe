@@ -26,11 +26,21 @@
 
 .summary__history {
   grid-area: text;
+  display: flex;
+  flex-direction: column;
 
   & .calltoaction {
     font-family: var(--fontTitleLongread);
     font-style: italic;
     margin-bottom: 1rem;
+
+    @media (--only-small-screen) {
+      text-align: center;
+    }
+  }
+
+  & .button--longread {
+    margin-right: auto;
   }
 }
 

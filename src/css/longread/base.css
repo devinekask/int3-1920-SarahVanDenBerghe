@@ -25,7 +25,7 @@
 .container--small {
   /* container op die manier opbouwen, zo blijft container full width en kunnen img nog
   responsive gepositioneerd worden, maximum width is 60rem adhv padding */
-  padding: 0 calc((100vw - 60rem) / 2); /* 60 rem = container width + margin */
+  padding: 0 var(--container); /* 60 rem = container width + margin */
   margin: 0 1rem;
 }
 
@@ -38,4 +38,23 @@
   background-color: var(--colorLongread);
   padding: .3rem 1.5rem;
   letter-spacing: 2px;
+
+  @media (width < 1304px) {
+    margin: 0 auto;
+  }
+}
+
+.subtitle {
+  color: var(--colorLongread);
+  font-family: var(--fontSubtitleLongread);
+  font-size: var(--fontRegularLongread);
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.title {
+  transform: translateY(-.8rem);
+  font-family: var(--fontTitleLongread);
+  font-size: 2.5rem;
+  margin-bottom: .8rem;
 }

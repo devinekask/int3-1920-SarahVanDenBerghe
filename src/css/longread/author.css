@@ -1,0 +1,147 @@
+.author__quote {
+  max-width: 22rem;
+  margin: 6rem auto 7rem;
+  background-image: url(../../assets/img/longread/quote.svg);
+  height: 13rem;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 10rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  @media (--only-small-screen) {
+    margin: 6rem auto;
+    height: 10.5rem;
+    background-size: 8rem;
+  }
+
+  & p {
+    text-align: center;
+    line-height: 2;
+  }
+}
+
+.author__introduction {
+  /* transform: translateY(-10rem); */
+  /* height: calc(auto + 10rem); */
+  height: 30rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(28rem, 1fr));
+  /* grid-template-rows: 30rem; */
+  position: relative;
+
+  @media (--only-small-screen) {
+    height: auto;
+    grid-template: repeat(2, auto) / 1fr;
+    margin-top: 8rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (--only-extrasmall-screen) {
+    height: auto;
+    grid-template: repeat(2, auto) / 1fr;
+    margin-top: 8rem;
+    padding: 0 1rem 2rem;
+  }
+
+  &::before {
+    background-image: url(../../assets/img/longread/rechthoek_1180x500.png);
+    z-index: -1;
+    content: '';
+    position: absolute;
+    height: 100%;
+
+    /* Image size */
+    /* DEEL 1 t.e.m. -1rem berekend puur de container width (zonder margin RECHTS -1rem) */
+    /* DEEL 2 -7rem is voor meer naar rechts te positioneren (14/2)*/
+    right: calc(var(--container) - 7rem);
+    background-size: cover;
+
+    /* Canvas size */
+    /* DEEL 1 t.e.m. -2rem berekend puur de container width (zonder margin -2rem) */
+    /* DEEL 2 14rem is de extra padding */
+
+    width: calc(100vw - (var(--container) * 2) - 2rem + 14rem);
+
+    @media (--only-medium-screen) {
+      left: -1rem; /* container margin negeren */
+      width: 100vw;
+    }
+  }
+}
+
+.author__image {
+  height: 100%;
+  transform: scale(1.1) translateX(-8rem);
+
+  @media (--only-small-screen) {
+    margin: 0 auto;
+    width: 80vw;
+    max-width: 500px;
+    height: auto;
+    transform: scale(1) translate(0, -2rem);
+  }
+}
+
+
+.author__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+
+  @media (--only-extrasmall-screen) {
+    padding: 0;
+  }
+}
+
+.line--author {
+  position: relative;
+
+  @media (--only-medium-screen) {
+    overflow-x: hidden;
+  }
+
+
+  &::before {
+    content: '';
+    background-image: url(../../assets/img/longread/line_auteur.svg);
+    background-repeat: no-repeat;
+
+    /* Lijn zelf */
+    background-size: 100% auto;
+
+    /* Grote van canvas */
+    width: calc(50vw - 15rem);
+    height: calc(50vw - 15rem);
+
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    z-index: -1;
+
+    @media (width < 1440px) {
+      width: 45vw;
+      height: 45vw;
+    }
+
+    @media (--only-medium-screen) {
+      bottom: -8rem;
+    }
+
+    @media (--only-small-screen) {
+      width: 110vw;
+      height: 50vw;
+      bottom: 10rem;
+    }
+
+    @media (--only-extrasmall-screen) {
+      bottom: 25rem;
+    }
+
+    @media (--only-mobile-screen) {
+      bottom: 35rem;
+    }
+  }
+}

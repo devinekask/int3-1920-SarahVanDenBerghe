@@ -1,19 +1,18 @@
 .banner__wrapper {
   background-color: var(--colorGrey);
-  display: flex;
+  /* display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: center; */
   position: relative;
 }
 
 .banner {
-  padding: var(--spacerBig);
-  width: 40%;
-
-  @media (--only-medium-screen) {
-    margin-top: 12rem;
-    width: 100%;
-  }
+  width: 30%;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: white;
+  transform: translateY(-25%);
 }
 
 .banner__info {
