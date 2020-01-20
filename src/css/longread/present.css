@@ -24,10 +24,11 @@
       auto 200px,
       auto 568px;
     background-position:
-      0% 100%,
-      0% 0%;
+      17% 100%,
+      14% 0%;
 
-    transform: translateX(-33%);
+    /* transform: translateX(-33%); */
+    left: -3rem;
 
     /* Grote van canvas */
     width: 100vw;
@@ -37,6 +38,8 @@
 
     @media (--only-medium-screen) {
       content: none;
+      width: 0;
+      height: 0;
     }
   }
 }

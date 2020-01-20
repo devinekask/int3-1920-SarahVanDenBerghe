@@ -118,7 +118,7 @@
   }
 
   &::before {
-    background-image: url(../../assets/img/longread/rechthoek_1180x500.png);
+    background-image: url(../../assets/img/longread/history_bg_375x770.png);
     z-index: -1;
     content: '';
     position: absolute;

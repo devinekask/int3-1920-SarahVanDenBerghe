@@ -109,13 +109,9 @@
   <article class="end__books container--small">
     <div class="info">
       <h2 class="title">Meer lezen</h2>
-      <p> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+      <p>Elke week zetten wij een nieuwe boek in de kijker! Duik mee in onze 10 week speciaal waar er telkens een nieuwe boek in de spotlight gezet wordt.</p>
     </div>
     <ul class="booklist">
-      <li>
-        <p class="subtitle">Do androids dream of electric sheep</p>
-        <p>Philip k. Dick</p>
-      </li>
       <li>
         <p class="subtitle">The Handsmaid’s Tale</p>
         <p>Margaret Atwood</p>
@@ -136,17 +132,21 @@
         <p class="subtitle">Wool</p>
         <p>Hugh Howey</p>
       </li>
-      <li>
+      <li class="locked">
         <p class="subtitle">Snow Crash</p>
         <p>Neal Stephenson</p>
       </li>
-      <li>
+      <li class="locked">
         <p class="subtitle">Neuromancer</p>
         <p>William Gibson</p>
       </li>
-      <li>
+      <li class="locked">
         <p class="subtitle">Ready player one</p>
         <p>Ernest Cline</p>
+      </li>
+      <li class="locked">
+        <p class="subtitle">Do androids dream of electric sheep</p>
+        <p>Philip k. Dick</p>
       </li>
     </ul>
     <a class="button--longread" href="index.php?page=index">Terug naar Humo</a>
