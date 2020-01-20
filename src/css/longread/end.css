@@ -1,0 +1,92 @@
+.end {
+  margin-bottom: 8rem;
+}
+
+.end__image {
+  margin-top: 10rem;
+  height: 700px;
+  position: relative;
+
+  &::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    background-image:
+      /*url(../../assets/img/longread/lucifer.png),*/
+      url(../../assets/img/longread/end_1016x732.png);
+    background-repeat: no-repeat;
+    background-position:
+     /* 30% 0%,*/
+      58% 100%;
+
+    /* Image size */
+    background-size:
+      auto 700px;
+
+    /* Canvas size */
+    width: 100vw;
+    height: 700px;
+  }
+}
+
+.end__books {
+  margin-top: 10rem;
+  text-align: center;
+
+  & p {
+    font-size: var(--fontRegularLongread);
+  }
+
+  & .info {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  & .button--longread {
+    margin-top: 4rem;
+  }
+}
+
+.booklist {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  position: relative;
+
+  @media (--only-small-screen) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  & li {
+    /* max-width: 15rem; */
+  }
+
+  &::before {
+    background-image: url(../../assets/img/longread/rechthoek_1180x500.png);
+    z-index: -1;
+    content: '';
+    position: absolute;
+
+    /* Image size */
+    /* DEEL 1 t.e.m. -1rem berekend puur de container width (zonder margin RECHTS -1rem) */
+    /* DEEL 2 -7rem is voor meer naar rechts te positioneren (14/2)*/
+    /* left: -30rem; */
+    background-size: cover;
+
+    /* Canvas size */
+    /* DEEL 1 t.e.m. -6rem berekend puur de container width (zonder margin -2rem) */
+    /* DEEL 2 14rem is de extra padding */
+
+    width: calc(100vw - var(--container) + 6rem);
+    top: -5rem;
+    left: -6rem;
+    height: 146%;
+
+    @media (--only-medium-screen) {
+      width: 100vw;
+      left: calc(var(--container) - 4rem);
+      /* left: -5rem; */
+    }
+  }
+}

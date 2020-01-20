@@ -140,6 +140,7 @@
   height: 650px;
 
   &::before {
+    z-index: 1;
     content: '';
     position: absolute;
     background-image:

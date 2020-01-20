@@ -59,6 +59,12 @@
 
   & .label--text {
     width: 20rem;
+
+    @media (--only-extrasmall-screen) {
+      padding-left: 0;
+      margin: 0 auto;
+      width: calc(100vw - 2rem);
+    }
   }
 }
 
@@ -283,7 +289,6 @@
     border-radius: .2rem;
     color: rgb(85, 85, 85);
     letter-spacing: .1rem;
-    margin-bottom: 1.2rem;
     text-transform: uppercase;
 
     @media (--only-extrasmall-screen) {

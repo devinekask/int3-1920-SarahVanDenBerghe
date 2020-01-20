@@ -102,3 +102,53 @@
   <h2 class="title">Een hedendaags probleem</h2>
   <p>Het verbranden van boeken beperkt zich niet in onze geschiedenis. In de moderne tijd zijn andere vormen van media, zoals grammofoonplaten, videobanden en cd ’s ook gebrand, versnipperd of verpletterd. Het verbranden van boeken was een hulpmiddel dat werd gebruikt voor religieuze of autoritaire redenen zodat tegenstrijdige opvattingen onderdrukt worden. Alhoewel we het verbranden van boeken in de 21ste eeuw in vele democratische landen niet snel tegenkomen, speelt censuur en onderdrukking op de dag van vandaag nog steeds een grote rol. Dit gebeurt via andere media en beperkt zich niet tot boeken. Het verbannen van websites, stopzetten van televisiezenders en andere mediakanalen gebeurt nog steeds in landen zoals China, Rusland, Pakistan, enzovoort. Het ‘verbranden’ van informatie en vrije meningsuiten wordt op de dag vandaag, bij wijze van spreken, nog steeds voortgezet. </p>
 </article>
+
+<!-- END -->
+<div class="end">
+  <div class="end__image"></div>
+  <article class="end__books container--small">
+    <div class="info">
+      <h2 class="title">Meer lezen</h2>
+      <p> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+    </div>
+    <ul class="booklist">
+      <li>
+        <p class="subtitle">Do androids dream of electric sheep</p>
+        <p>Philip k. Dick</p>
+      </li>
+      <li>
+        <p class="subtitle">The Handsmaid’s Tale</p>
+        <p>Margaret Atwood</p>
+      </li>
+      <li>
+        <p class="subtitle">Enders Game</p>
+        <p>Orson Scott Card</p>
+      </li>
+      <li>
+        <p class="subtitle">I, Robot</p>
+        <p>Isaac Asimov</p>
+      </li>
+      <li>
+        <p class="subtitle">The Road</p>
+        <p>Cormac McCarthy</
+      </li>
+      <li>
+        <p class="subtitle">Wool</p>
+        <p>Hugh Howey</p>
+      </li>
+      <li>
+        <p class="subtitle">Snow Crash</p>
+        <p>Neal Stephenson</p>
+      </li>
+      <li>
+        <p class="subtitle">Neuromancer</p>
+        <p>William Gibson</p>
+      </li>
+      <li>
+        <p class="subtitle">Ready player one</p>
+        <p>Ernest Cline</p>
+      </li>
+    </ul>
+    <a class="button--longread" href="index.php?page=index">Terug naar Humo</a>
+  </article>
+</div>

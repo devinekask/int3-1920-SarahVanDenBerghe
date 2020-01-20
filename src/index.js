@@ -7,12 +7,19 @@ import './js/cart.js';
 {
   const $filterForm = document.querySelector(`.filter__form`);
   const $items = document.querySelector(`.webshop__items`);
+  const $hiddenJs = document.querySelectorAll(`.hidden-js`);
 
   const init = () => {
     if ($filterForm) {
       const $categories = document.querySelectorAll(`.filter__input`);
       $categories.forEach(category => {
         category.addEventListener(`change`, handleChangeCategory);
+      });
+    }
+
+    if ($hiddenJs) {
+      $hiddenJs.forEach(item => {
+        item.classList.add(`hidden`);
       });
     }
   };
@@ -27,8 +34,10 @@ import './js/cart.js';
   const submitWithJS = () => {
     const qs = new URLSearchParams([
       ...new FormData($filterForm).entries()
-    ]).toString;
-    fetch(`${$filterForm.getAttribute('action')}?${qs}`, { // action = index.php?page=webshop
+    ]).toString();
+    console.log(qs);
+    console.log(`${$filterForm.getAttribute('action')}?${qs}`);
+    fetch(`${$filterForm.getAttribute('action')}?${qs}`, {
       headers: new Headers({
         Accept: `application/json`
       }),
@@ -39,7 +48,7 @@ import './js/cart.js';
     window.history.pushState(
       {},
       '',
-      `${window.location.href.split('?')[0]}?${qs}` // ?
+      `${window.location.href.split('?')[0]}?${qs}`
     );
 
     console.log(qs);

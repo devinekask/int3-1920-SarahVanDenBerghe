@@ -14,16 +14,24 @@
 
   &::before {
     content: '';
-    z-index: -2;
-    background-image: url(../../assets/img/longread/line_hedendaags.svg);
+    background-image:
+      url(../../assets/img/longread/lucifer.png),
+      url(../../assets/img/longread/line_hedendaags.svg);
     background-repeat: no-repeat;
+
     /* Lijn zelf */
-    background-size: auto 650px;
-    transform: translateX(-35%);
+    background-size:
+      auto 200px,
+      auto 568px;
+    background-position:
+      0% 100%,
+      0% 0%;
+
+    transform: translateX(-33%);
 
     /* Grote van canvas */
     width: 100vw;
-    height: 650px;
+    height: 780px;
     position: absolute;
     top: -10rem;
 

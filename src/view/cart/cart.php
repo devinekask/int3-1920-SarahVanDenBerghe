@@ -52,7 +52,7 @@
       </div>
 
       <!-- EDIT -->
-      <button type="submit" name="action" value="update" class="update hidden-js"><span class="update__text">Bijwerken</span></button>
+      <button type="submit" name="action" value="update" class="update"><span class="update__text">Bijwerken</span></button>
 
       <!-- EXTRA -->
       <article class="cart__info">

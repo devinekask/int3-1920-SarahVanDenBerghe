@@ -35,15 +35,12 @@ class PagesController extends Controller {
       $items = $this->itemDAO->selectAllItems();
     }
 
+
+
+
     $this->set('items', $items);
     $this->set('title', 'Humo');
 
-    /* DOORSTUREN NAAR JAVASCRIPT */
-    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
-      header('Content-Type: application/json');
-      echo json_encode($items);
-      exit();
-    }
   }
 
 
@@ -61,6 +58,14 @@ class PagesController extends Controller {
     $categories = $this->categoryDAO->selectAllCategories();
 
     $this->set('categories', $categories);
+
+    /* DOORSTUREN NAAR JAVASCRIPT */
+    if (strtolower($_SERVER['HTTP_ACCEPT']) == 'application/json') {
+      header('Content-Type: application/json');
+      echo json_encode($items);
+      exit();
+    }
+
     $this->set('items', $items);
     $this->set('title', 'Webshop');
   }

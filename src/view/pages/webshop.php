@@ -14,7 +14,7 @@
   <!-- FILTER -->
   <section>
     <h2 class="hidden">Filter webshop items</h2>
-    <form action="index.php?page=webshop" class="form filter__form" method="get">
+    <form action="index.php" class="form filter__form" method="get">
       <input type="hidden" name="page" value="webshop" />
       <div class="filter">
         <p class="filter__title">Categorieën</p>
@@ -27,7 +27,7 @@
           </label>
         <?php endforeach; ?>
         </div>
-        <button type="submit" class="button button--filter" value="filter">Filter</button>
+        <button type="submit" class="button button--filter hidden-js" value="filter">Filter</button>
         <a class="filter__delete" href="index.php?page=webshop">Filter wissen</a>
       </div>
     </form>

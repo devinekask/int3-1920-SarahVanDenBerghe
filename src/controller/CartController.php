@@ -104,13 +104,12 @@ class CartController extends Controller {
   }
 
   private function _handlePromo() {
+    $_SESSION['promo'] = 'De promocode is ongeldig.';
+
     foreach($_SESSION['cart'] as $item => $info) {
-      if ($info['item']['promocode'] === $_POST['promocode']) {
+      if ($info['item']['promocode'] === strtolower($_POST['promocode'])) {
         $_SESSION['cart'][$item]['price'] = $info['item']['promoprice'];
         $_SESSION['promo'] = 'Promocode werd toegepast!';
-      } else {
-        // Enkel tonen als GEEN enkel item overeenkomt.
-        $_SESSION['promo'] = 'De promocode is ongeldig.';
       }
     }
   }

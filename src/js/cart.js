@@ -1,4 +1,3 @@
-/* hier iets */
 {
   const init = () => {
     const $items = document.querySelectorAll(`.cart__item`);
@@ -17,30 +16,29 @@
   const handleClickMinus = e => {
     const $input = e.target.parentElement.querySelector(`.input--number`);
     $input.stepDown(1);
-    // changeItemPrice($input);
+    changeItemPrice($input);
   };
 
   const handleClickPlus = e => {
     const $input = e.target.parentElement.querySelector(`.input--number`);
     $input.stepUp(1);
-    // changeItemPrice($input);
+    changeItemPrice($input);
   };
 
   const changeItemPrice = input => {
-    // To check dat hij afrond op 2 getallen, anders komen er rare toestanden met komma getallen
     const $quantityValue = input.value;
     const $item = input.parentElement.parentElement.parentElement;
     const $priceValue = $item.querySelector(`.item-price`).value;
 
     const $itemTotal = $item.querySelector(`.item-total`);
-    $itemTotal.innerHTML = $quantityValue * $priceValue;
+    $itemTotal.innerHTML = Math.round($quantityValue * $priceValue * 100) / 100;
 
     changeTotalPrice();
   };
 
   const changeTotalPrice = () => {
-    const $cartTotal = document.querySelector(`.totalprice`);
-    const $allItemTotals = document.querySelectorAll(`.item-total`); // enkel value van de p nodig...
+    // const $cartTotal = document.querySelector(`.totalprice`);
+    // const $allItemTotals = document.querySelectorAll(`.item-total`);
   };
 
   init();
