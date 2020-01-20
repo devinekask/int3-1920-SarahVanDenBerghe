@@ -26,7 +26,12 @@
   /* container op die manier opbouwen, zo blijft container full width en kunnen img nog
   responsive gepositioneerd worden, maximum width is 60rem adhv padding */
   padding: 0 var(--container); /* 60 rem = container width + margin */
-  margin: 0 1rem;
+  margin: 0 3rem;
+
+  @media (--only-extrasmall-screen) {
+    padding: 0 calc(var(--container) - 2rem);
+    margin: 0 1rem;
+  }
 }
 
 .button--longread {
@@ -38,10 +43,6 @@
   background-color: var(--colorLongread);
   padding: .3rem 1.5rem;
   letter-spacing: 2px;
-
-  @media (width < 1304px) {
-    margin: 0 auto;
-  }
 }
 
 .subtitle {
@@ -57,4 +58,5 @@
   font-family: var(--fontTitleLongread);
   font-size: 2.5rem;
   margin-bottom: .8rem;
+  font-weight: normal;
 }

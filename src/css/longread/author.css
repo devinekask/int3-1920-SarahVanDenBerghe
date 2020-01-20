@@ -23,12 +23,9 @@
 }
 
 .author__introduction {
-  /* transform: translateY(-10rem); */
-  /* height: calc(auto + 10rem); */
   height: 30rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(28rem, 1fr));
-  /* grid-template-rows: 30rem; */
   position: relative;
 
   @media (--only-small-screen) {
@@ -59,37 +56,44 @@
     background-size: cover;
 
     /* Canvas size */
-    /* DEEL 1 t.e.m. -2rem berekend puur de container width (zonder margin -2rem) */
+    /* DEEL 1 t.e.m. -6rem berekend puur de container width (zonder margin -2rem) */
     /* DEEL 2 14rem is de extra padding */
 
-    width: calc(100vw - (var(--container) * 2) - 2rem + 14rem);
+    width: calc(100vw - (var(--container) * 2) - 6rem + 14rem);
 
     @media (--only-medium-screen) {
-      left: -1rem; /* container margin negeren */
+      left: -3rem; /* container margin negeren */
       width: 100vw;
+    }
+
+    @media (--only-extrasmall-screen) {
+      left: -1rem;
     }
   }
 }
 
 .author__image {
   height: 100%;
-  transform: scale(1.1) translateX(-8rem);
+  transform: translateX(-10rem);
 
   @media (--only-small-screen) {
     margin: 0 auto;
     width: 80vw;
     max-width: 500px;
     height: auto;
-    transform: scale(1) translate(0, -2rem);
+    transform: translate(0, -2rem);
   }
 }
-
 
 .author__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 2rem;
+  padding-left: 2rem;
+
+  & .info {
+    font-size: var(--fontRegularLongread);
+  }
 
   @media (--only-extrasmall-screen) {
     padding: 0;
@@ -98,11 +102,6 @@
 
 .line--author {
   position: relative;
-
-  @media (--only-medium-screen) {
-    overflow-x: hidden;
-  }
-
 
   &::before {
     content: '';
@@ -131,7 +130,8 @@
     }
 
     @media (--only-small-screen) {
-      width: 110vw;
+      background-size: 105% auto;
+      width: 100vw;
       height: 50vw;
       bottom: 10rem;
     }

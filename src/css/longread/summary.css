@@ -41,12 +41,16 @@
 
   & .button--longread {
     margin-right: auto;
+
+    @media (--only-small-screen) {
+      margin: 0 auto;
+    }
   }
 }
 
 .summary__img {
   grid-area: img;
-  height: 366px; /* ander is height 0, bij mobile en komt tekst erboven op */
+  height: 366px; /* anders is height 0, bij mobile en komt tekst erboven op */
   margin-bottom: 2rem; /* nodig voor mobile */
 
   &::before {

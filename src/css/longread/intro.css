@@ -61,6 +61,10 @@
 
     & .button--longread {
       margin-left: auto;
+
+      @media (--only-extrasmall-screen) {
+        margin: 0 auto;
+      }
     }
   }
 }

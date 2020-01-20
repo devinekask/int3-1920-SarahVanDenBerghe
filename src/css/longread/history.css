@@ -1,0 +1,188 @@
+.timeline {
+  /* padding: 0 calc((100vw - 80rem) / 2); */
+  position: relative;
+
+  @media (--only-medium-screen) {
+    display: none;
+  }
+
+  & .items__wrapper {
+    max-width: 80rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: 7rem auto;
+  }
+
+  &::after {
+    content: '';
+    background-image: url(../../assets/img/longread/line_tijdlijn.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+
+    /* Lijn zelf, fixed width van 2000px */
+    background-size: 2000px auto;
+    background-position: 50% 50%;
+
+    /* Grote van canvas */
+    width: 100vw;
+    height: 100%;
+
+    top: 10rem;
+    z-index: -1;
+  }
+}
+
+.timeline__item {
+  max-width: 17rem;
+  padding: 1rem;
+
+  & p {
+    font-size: .95rem;
+  }
+
+  & span {
+    margin-top: 1rem;
+    display: block;
+    font-family: var(--fontSubtitleLongread);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 1px;
+    height: 3rem;
+    transform: translateY(1rem);
+  }
+
+  &:nth-of-type(1) {
+    transform: translateY(6.6rem);
+  }
+
+  &:nth-of-type(2) {
+    transform: translateY(4.2rem);
+  }
+
+  &:nth-of-type(3) {
+    transform: translateY(.1rem);
+  }
+
+  &:nth-of-type(4) {
+    transform: translateY(-.5rem);
+  }
+}
+
+.history {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 6rem;
+  margin-top: 18rem;
+
+  @media (--only-medium-screen) {
+    grid-gap: 3rem;
+    margin-top: 8rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (--only-small-screen) {
+    margin-top: 4rem;
+  }
+}
+
+.history__text {
+  font-size: var(--fontRegularLongread);
+
+  & p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.history__examples {
+  display: grid;
+  transform: translateX(2rem);
+  grid-gap: 2rem;
+  position: relative;
+
+  & li {
+    font-size: var(--fontRegularLongread);
+  }
+
+  @media (--only-medium-screen) {
+    grid-template: 1fr / repeat(2, 1fr);
+    transform: translateX(0);
+  }
+
+  @media (width < 400px) {
+    grid-template: 1fr / 1fr;
+  }
+
+  &::before {
+    background-image: url(../../assets/img/longread/rechthoek_1180x500.png);
+    z-index: -1;
+    content: '';
+    position: absolute;
+    background-size: contain;
+
+    height: calc(100% + 6rem);
+    width: calc(100% + 6rem);
+    top: -3rem;
+    left: -3rem;
+
+    @media (--only-medium-screen) {
+      content: none;
+    }
+  }
+}
+
+.bookburning {
+  margin-top: 8rem;
+  height: 650px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image:
+      url(../../assets/img/longread/bookburning_765x650.png),
+      url(../../assets/img/longread/bookburning_quote_300x313.png),
+      url(../../assets/img/longread/bookburning_books_620x657.png),
+      url(../../assets/img/longread/bookburning_bg_1380x490.png);
+    background-repeat: no-repeat;
+    background-position:
+      30% 80%,
+      54% 37%,
+      95% 50%,
+      0% 100%;
+
+    /* Image size */
+    background-size:
+      auto 650px,
+      auto 313px,
+      auto 530px,
+      1380px 490px;
+
+    /* Canvas size */
+    width: 100vw;
+    height: 650px;
+  }
+}
+
+.line--bookburning {
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: url(../../assets/img/longread/line_bookburning.svg);
+    background-repeat: no-repeat;
+    /* Lijn zelf */
+    background-size: auto 70px;
+    background-position: 30% 0%;
+    left: -26rem;
+    /* Grote van canvas */
+    width: 100vw;
+    height: 650px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}

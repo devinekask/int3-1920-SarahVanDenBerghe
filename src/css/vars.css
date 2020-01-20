@@ -17,7 +17,7 @@
   --fontTitle: 'Swiss Condensed', sans-serif;
 
   /* longread */
-  --container: calc((100vw - 60rem) / 2);
+  --container: calc((100vw - 64rem) / 2);
   --colorLongread: #b42d2d;
   --fontTitleLongread: essonnes-headline, serif;
   --fontSubtitleLongread: montserrat, sans-serif;

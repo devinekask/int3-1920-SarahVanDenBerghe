@@ -1,0 +1,34 @@
+.present {
+  margin-top: 8rem;
+  text-align: center;
+  position: relative;
+
+  @media (--only-small-screen) {
+    margin-top: 6rem;
+    text-align: left;
+  }
+
+  & p {
+    font-size: var(--fontRegularLongread);
+  }
+
+  &::before {
+    content: '';
+    z-index: -2;
+    background-image: url(../../assets/img/longread/line_hedendaags.svg);
+    background-repeat: no-repeat;
+    /* Lijn zelf */
+    background-size: auto 650px;
+    transform: translateX(-35%);
+
+    /* Grote van canvas */
+    width: 100vw;
+    height: 650px;
+    position: absolute;
+    top: -10rem;
+
+    @media (--only-medium-screen) {
+      content: none;
+    }
+  }
+}
