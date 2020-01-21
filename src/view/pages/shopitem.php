@@ -10,8 +10,6 @@
       <div class="image__small__wrapper">
 
 
-
-
         <?php foreach($images as $index => $image): ?>
           <a href="index.php?page=shopitem&<?php echo 'id=' . $_GET['id'] . '&image=' . $image['id']?>">
 
@@ -34,7 +32,7 @@
           </a>
         <?php endforeach; ?>
       </div>
-      <img class="images__big" src="assets/img/webshop/jpg/<?php echo $selectedImage['path']; ?>.jpg"/>
+      <img class="images__big" src="assets/img/webshop/jpg/<?php echo $selectedImage['path']; ?>.jpg" alt="<?php echo $item['title']; ?>" />
     </section>
 
     <!-- INFO -->
@@ -42,7 +40,7 @@
       <h2 class="hidden">Infosectie</h2>
       <p class="info__title"><?php echo $item['title']; ?></p>
       <p class="info__price"><?php echo $item['priceinfo']; ?></p>
-      <p class="info__description"><?php echo $item['description']; ?></p>
+      <?php echo $item['description']; ?>
 
       <form action="index.php?page=cart" method="POST" class="form form--shopitem">
         <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
@@ -71,11 +69,13 @@
           <!-- CART -->
           <p>Aantal</p>
           <div class="info__cart">
-          <label class="label label--quantity" for="quantity"><span class="hidden">Aantal</span>
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(); return false;"></button>
-            <input class="input input--number" id="quantity" name="quantity" type="number" min="1" max="99" value="1" required>
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(); return false;" class="plus"></button>
-          </label>
+          <div class="quantity__wrapper">
+            <button type="button" class="min button--quantity"></button>
+            <label class="label label--quantity" for="quantity"><span class="hidden">Aantal</span>
+              <input class="input input--number" id="quantity" name="quantity" type="number" min="1" max="99" value="1" required>
+            </label>
+             <button type="button" class="plus button--quantity"></button>
+          </div>
           <button class="button button--secondary button--addtocart <?php if (!empty($_SESSION['add'])) { echo 'addedtocart';}?>" type="submit" name="action" value="add">
             <?php if (!empty($_SESSION['add'])) { ?>
                 <span><?php echo $_SESSION['add']; ?></span>

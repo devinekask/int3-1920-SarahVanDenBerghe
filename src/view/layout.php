@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0" width=device width” />
+    <meta name="viewport" content="initial-scale=1.0" />
     <link rel="shortcut icon" href="assets/img/favicon.jpg"/>
     <link rel="stylesheet" href="https://use.typekit.net/giv5uan.css">
     <title><?php echo $title; ?></title>
@@ -27,10 +27,10 @@
             <li class="menu__item">TV/Film</li>
             <li class="menu__item">Muziek</li>
             <li class="menu__item">Boeken</li>
-            <div class="menu__icons">
-              <li class="menu__item menu__item--icon menu__item--search"><span class="hidden">Zoek</span></li>
-              <a href="index.php?page=cart" class="icon__wrapper"><li class="menu__item menu__item--icon menu__item--cart <?php if(!empty ($_SESSION['cart'])) { echo 'cart--filled';} ?>"><span class="hidden">Winkelmand</span></li></a>
-            </div>
+            <li class="menu__icons">
+              <div class="menu__item menu__item--icon menu__item--search"><span class="hidden">Zoek</span></div>
+              <a href="index.php?page=cart" class="icon__wrapper"><div class="menu__item menu__item--icon menu__item--cart <?php if(!empty ($_SESSION['cart'])) { echo 'cart--filled';} ?>"><span class="hidden">Winkelmand</span></div></a>
+           </li>
           </ul>
       </nav>
       <nav class="menu menu--secondary container--fixed">
@@ -57,11 +57,11 @@
           <ul class="menu__items menu__items--mobile">
             <li class="menu__item menu__item--left menu__item--icon menu__item--hamburger"><span class="hidden">Menu</span></li>
             <li class="menu__item menu__item--left menu__item--icon menu__item--search"><span class="hidden">Zoek</span></li>
-            <a href="index.php?page=webshop" class="menu__item menu__item--logo"><li><span class="hidden">Humo</span></li></a>
-            <div class="menu__items--right">
-              <a href="index.php?page=cart" class="icon__wrapper"><li class="menu__item menu__item--icon menu__item--cart <?php if(!empty ($_SESSION['cart'])) { echo 'cart--filled';} ?>"><span class="hidden">Winkelmand</span></li></a>
-              <li class="menu__item menu__item--icon menu__item--user"><span class="hidden">Account</span></li>
-            </div>
+            <li class="menu__item menu__item--logo"><a href="index.php?page=webshop"><span class="hidden">Humo</span></a></li>
+            <li class="menu__items--right">
+              <a href="index.php?page=cart" class="icon__wrapper"><div class="menu__item menu__item--icon menu__item--cart <?php if(!empty ($_SESSION['cart'])) { echo 'cart--filled';} ?>"><span class="hidden">Winkelmand</span></div></a>
+              <div class="menu__item menu__item--icon menu__item--user"><span class="hidden">Account</span></div>
+            </li>
           </ul>
         </nav>
       </div>
@@ -71,7 +71,7 @@
     <main>
       <?php if($title === 'Login' || $title === 'Gegevens' || $title === 'Bevestiging'): ?>
       <section class="steps__wrapper container">
-        <h1 class="hidden">Progress</h1>
+        <h2 class="hidden">Progress</h2>
         <div class="steps">
           <div class="step__item">
             <p class="step__title">Inloggen</p>
@@ -103,6 +103,7 @@
           </ul>
         </nav>
       <?php } ?>
+      <?php if($title === 'Fahrenheit 451') { echo '<main>';} ?>
       <?php echo $content;?>
     </main>
 

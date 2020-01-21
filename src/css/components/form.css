@@ -22,6 +22,10 @@
 
 /* INPUT NUMBER */
 
+.quantity__wrapper {
+  display: flex;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   /* stylelint-disable */
@@ -34,8 +38,8 @@ input::-webkit-inner-spin-button {
   display: flex;
 }
 
-.label--quantity button::before,
-.label--quantity button::after {
+.button--quantity::before,
+.button--quantity::after {
   display: inline-block;
   position: absolute;
   content: '';
@@ -45,7 +49,7 @@ input::-webkit-inner-spin-button {
   transform: translate(-50%, -50%);
 }
 
-.label--quantity button {
+.button--quantity {
   outline: none;
   border: none;
   align-items: center;
@@ -61,7 +65,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.label--quantity .plus::after {
+.plus::after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 

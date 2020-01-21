@@ -2,9 +2,9 @@
   <h2 class="hidden">Account</h2>
     <article class="login">
     <h3>Bestaand gebruiker</h3>
-      <form action="">
+      <form action="login">
         <label class="label">E-mail
-          <input type="e-mail" class="input input--text">
+          <input type="email" class="input input--text">
         </label>
         <label class="label">Wachtwoord
           <input type="password" class="input input--text">

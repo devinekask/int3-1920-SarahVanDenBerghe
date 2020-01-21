@@ -2,7 +2,7 @@
 <div class="intro line--intro">
   <img class="intro__img" src="../../assets/img/longread/header_820x820.png" alt="">
   <div class="intro__text">
-    <a href="index.php?page=index"><img class="intro__logo" src="../../assets/img/logo.svg" alt="" width="120px"></a>
+    <a href="index.php?page=index"><img class="intro__logo" src="../../assets/img/logo.svg" alt="Humo" /></a>
     <h2 class="intro__title">Fahrenheit 451</h2>
     <p class="intro__author">Ray Bradbury</p>
     <a class="button--longread">Bestel boek</a>
@@ -47,26 +47,26 @@
 <!-- HISTORY -->
 <article>
   <h2 class="hidden"> Geschiedenis</h2>
-  <ul class="timeline">
-    <div class="items__wrapper">
-    <li class="timeline__item">
-    <p class="subtitle">Library of Ashurbanipal</p>
-    <span>612 BC</span>
-    </li>
-    <li class="timeline__item">
-      <p class="subtitle">Varianten van de koran</p>
-      <span>650</span>
-    </li>
-    <li class="timeline__item">
-      <p class="subtitle">Luther’s duitse bijbel Vertaling</p>
-      <span>1534</span>
-    </li>
-    <li class="timeline__item">
-      <p class="subtitle">Bibliotheek Universiteit Leuven</p>
-      <span>1944</span>
-    </li>
-    </div>
-  </ul>
+  <div class="timeline">
+    <ul class="items__wrapper">
+      <li class="timeline__item">
+      <p class="subtitle">Library of Ashurbanipal</p>
+      <span>612 BC</span>
+      </li>
+      <li class="timeline__item">
+        <p class="subtitle">Varianten van de koran</p>
+        <span>650</span>
+      </li>
+      <li class="timeline__item">
+        <p class="subtitle">Luther’s duitse bijbel Vertaling</p>
+        <span>1534</span>
+      </li>
+      <li class="timeline__item">
+        <p class="subtitle">Bibliotheek Universiteit Leuven</p>
+        <span>1944</span>
+      </li>
+    </ul>
+  </div>
   <section class="history container--small">
     <div class="history__text">
       <h3 class="title">De harde realiteit</h3>
@@ -126,7 +126,7 @@
       </li>
       <li>
         <p class="subtitle">The Road</p>
-        <p>Cormac McCarthy</
+        <p>Cormac McCarthy</p>
       </li>
       <li>
         <p class="subtitle">Wool</p>

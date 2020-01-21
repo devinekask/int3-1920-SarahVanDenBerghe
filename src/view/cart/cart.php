@@ -32,12 +32,12 @@
             <img class="item__img" src="assets/img/thumbnails/jpg/<?php echo $item['item']['thumbnail'];?>.jpg" alt="<?php echo $item['item']['title'];?>">
 
             <!-- QUANTITY -->
-            <div class="item__quantity">
+            <div class="item__quantity quantity__wrapper">
+              <button type="button" class="min button--quantity"></button>
               <label class="label label--quantity" for="<?php echo $item['item']['id'] . '-' . $item['option'];?>"><span class="hidden">Aantal</span>
-                <button type="button" class="min"></button>
                 <input class="input input--number" name="quantity[<?php echo $item['item']['id'] . '-' . $item['option'];?>]" id="<?php echo $item['item']['id'] . '-' . $item['option'];?>" type="number" min="0" max="99" value="<?php echo $item['quantity'];?>" required>
-                <button type="button" class="plus"></button>
               </label>
+              <button type="button" class="plus button--quantity"></button>
             </div>
 
             <!-- SUBTOTAL -->
