@@ -13,7 +13,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(2, minmax(28rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas: 'text img';
 
   @media (--only-small-screen) {
@@ -50,25 +50,47 @@
 
 .summary__img {
   grid-area: img;
-  height: 366px; /* anders is height 0, bij mobile en komt tekst erboven op */
+  height: 280px;
   margin-bottom: 2rem; /* nodig voor mobile */
+  position: relative;
+
+  @media (--only-small-screen) {
+    height: 408px;
+  }
+
+  @media (--only-extrasmall-screen) {
+    height: 220px;
+  }
 
   &::before {
     content: '';
+    z-index: -1;
     position: absolute;
-    background-image: url(../../assets/img/longread/televisie_860x366.png);
+    background-image: url(../../assets/img/longread/intro_1000x633.jpg);
     background-repeat: no-repeat;
     right: 0; /* helemaal rechts positioneren */
 
     /* Image size */
-    background-size: auto 366px; /* height img */
+    background-size: auto 633px;
 
     /* Canvas size */
-    width: 45vw; /* 50vw - maar met beetje margin links */
-    height: 366px;
+    width: 50vw;
+    height: 633px;
+    top: -240px;
+    left: 0;
 
     @media (--only-small-screen) {
-      width: 100vw /* calc(100vw - 1rem); */
+      background-image: url(../../assets/img/longread/intro_960x408.jpg);
+      width: 100vw;
+      background-size: cover;
+      height: 100%;
+      top: 0;
+      left: -3rem;
+    }
+
+    @media (--only-extrasmall-screen) {
+      height: 100%;
+      left: -1rem;
     }
   }
 }

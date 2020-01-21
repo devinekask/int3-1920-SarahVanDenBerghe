@@ -29,7 +29,7 @@
             </div>
 
             <!-- IMG -->
-            <img class="item__img" src="assets/img/thumbnails/<?php echo $item['item']['thumbnail'];?>" alt="<?php echo $item['item']['title'];?>">
+            <img class="item__img" src="assets/img/thumbnails/jpg/<?php echo $item['item']['thumbnail'];?>.jpg" alt="<?php echo $item['item']['title'];?>">
 
             <!-- QUANTITY -->
             <div class="item__quantity">

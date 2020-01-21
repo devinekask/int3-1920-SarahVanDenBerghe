@@ -147,13 +147,13 @@ class CartController extends Controller {
   private function _handleCheckout($gegevensId) {
     $data = array();
     if(!empty($_SESSION['cart'])){
-      foreach ($_SESSION['cart'] as $itemId => $quantity) {
+      foreach ($_SESSION['cart'] as $itemId => $item) {
         array_push($data, array(
           'order_id' => $gegevensId['id'],
-          'item_name' => $quantity['item']['title'],
-          'option_name' => $quantity['item']['name'],
-          'quantity' => $quantity['quantity'],
-          'subtotal' => $quantity['price'] * $quantity['quantity']
+          'item_name' => $item['item']['title'],
+          'option_name' => $item['item']['name'],
+          'quantity' => $item['quantity'],
+          'subtotal' => $item['price'] * $item['quantity']
         ));
       }
 

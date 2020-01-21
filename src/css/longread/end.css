@@ -7,6 +7,17 @@
   height: 700px;
   position: relative;
 
+  @media (--only-small-screen) {
+    margin-top: 4rem;
+    height: 350px;
+  }
+
+  @media (width < 450px) {
+    margin: 3rem auto 0;
+    /* margin-top: 0; */
+    height: 200px;
+  }
+
   &::before {
     z-index: -1;
     content: '';
@@ -20,13 +31,33 @@
 
     /* Canvas size */
     width: 100vw;
+    /* max-width: 900px; */
     height: 700px;
+
+    @media (--only-small-screen) {
+      height: 350px;
+      background-size: contain;
+    }
+
+    @media (width < 450px) {
+      height: 100%;
+      width: 90vw;
+      /* margin: 0 auto; */
+      background-size: contain;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
   }
 }
 
 .end__books {
   margin-top: 10rem;
   text-align: center;
+
+  @media (width < 500px) {
+    margin-top: 4rem;
+  }
 
   & p {
     font-size: var(--fontRegularLongread);
@@ -54,7 +85,7 @@
   }
 
   @media (width < 500px) {
-    margin-top: 7rem;
+    margin-top: 10rem;
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -86,19 +117,14 @@
   }
 
   &::before {
-    background-image: url(../../assets/img/longread/end_bg_1180x500.png);
+    background-image: url(../../assets/img/longread/end_bg_1460x605.jpg);
     z-index: -1;
     content: '';
     position: absolute;
 
-    /* Image size */
-    /* DEEL 1 t.e.m. -1rem berekend puur de container width (zonder margin RECHTS -1rem) */
-    /* DEEL 2 -7rem is voor meer naar rechts te positioneren (14/2)*/
-    /* left: -30rem; */
-    background-size: cover;
+    /* ../../assets/img/longread/history_bg_375x770.png */
 
-    /* Canvas size */
-    /* 100vw - (var(--container) * 2) - 6rem */
+    background-size: 100%;
     width: calc(100vw - var(--container) + 3rem);
     top: -6.5rem;
     left: -6rem;
@@ -107,6 +133,10 @@
     @media (--only-medium-screen) {
       width: 100vw;
       left: -3rem;
+    }
+
+    @media (--only-extrasmall-screen) {
+      background-image: url(../../assets/img/longread/end_bg_375x1640.jpg);
     }
 
     @media (--only-extrasmall-screen) {

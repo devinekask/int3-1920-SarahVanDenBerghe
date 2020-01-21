@@ -8,17 +8,33 @@
     <section class="shopitem__images">
       <h2 class="hidden">Afbeeldingen</h2>
       <div class="image__small__wrapper">
+
+
+
+
         <?php foreach($images as $index => $image): ?>
           <a href="index.php?page=shopitem&<?php echo 'id=' . $_GET['id'] . '&image=' . $image['id']?>">
+
+            <picture class="image__small <?php if(!empty($_GET['image']) && $_GET['image'] == $image['id']) {
+                echo 'image__small--active' ;
+                } elseif (empty($_GET['image']) && $index == 0) {
+                  echo 'image__small--active' ;}?>">
+              <source type="image/webp" srcset="assets/img/webshop/webp/<?php echo $image['path'] ?>.webp">
+              <img src="assets/img/webshop/jpg/<?php echo $image['path'] ?>.jpg"	alt="<?php echo $item['title'] ?>">
+            </picture>
+
+            <!--
             <img class="image__small <?php if(!empty($_GET['image']) && $_GET['image'] == $image['id']) {
               echo 'image__small--active' ;
               } elseif (empty($_GET['image']) && $index == 0) {
                 echo 'image__small--active' ;}?>"
-            src="assets/img/webshop/<?php echo $image['path']; ?>"/>
+            src="assets/img/webshop/jpg/<?php echo $image['path']; ?>.jpg"/>
+
+              -->
           </a>
         <?php endforeach; ?>
       </div>
-      <img class="images__big" src="assets/img/webshop/<?php echo $selectedImage['path']; ?>"/>
+      <img class="images__big" src="assets/img/webshop/jpg/<?php echo $selectedImage['path']; ?>.jpg"/>
     </section>
 
     <!-- INFO -->

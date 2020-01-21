@@ -43,7 +43,7 @@
   }
 
   &::before {
-    background-image: url(../../assets/img/longread/auteur_bg_1150x480.png);
+    background-image: url(../../assets/img/longread/auteur_bg_1150x480.jpg);
     z-index: -1;
     content: '';
     position: absolute;

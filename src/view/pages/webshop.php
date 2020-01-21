@@ -1,6 +1,6 @@
 <div class="container--fluid">
   <article class="banner__wrapper">
-    <img src="assets/img/webshop/header_1024x310.jpg" alt="">
+    <img src="assets/img/webshop/jpg/header_1024x310.jpg" alt="Fahrenheit 451">
     <span class="banner__label">Weekly special</span>
     <div class="banner">
       <h2 class="banner__title">Fahrenheit 451</h2>
@@ -43,7 +43,11 @@
           <h3 class="item__title"><?php echo $item['title'] ?></h3>
           <span class="item__price"><?php echo $item['priceinfo'] ?></span>
           <p class="item__info"><?php echo $item['intro'] ?></p>
-          <img class="item__img" src="assets/img/thumbnails/<?php echo $item['thumbnail'] ?>" alt="<?php echo $item['title'] ?>">
+          <picture class="item__img">
+            <source type="image/webp" srcset="assets/img/thumbnails/webp/<?php echo $item['thumbnail'] ?>.webp">
+            <img src="assets/img/thumbnails/jpg/<?php echo $item['thumbnail'] ?>.jpg"	alt="<?php echo $item['title'] ?>">
+          </picture>
+          <!-- <img class="item__img" src="assets/img/thumbnails/<?php echo $item['thumbnail'] ?>" alt="<?php echo $item['title'] ?>"> -->
         </a>
       </li>
       <?php endforeach; ?>

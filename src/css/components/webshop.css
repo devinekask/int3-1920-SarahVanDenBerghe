@@ -27,7 +27,12 @@
     width: 100%;
     background-color: var(--colorGrey);
     margin-bottom: var(--spacerRegular);
-    object-fit: cover;
+
+    & img, & source {
+      width: 100%;
+      height: 10.6rem;
+      object-fit: cover;
+    }
   }
 
   & .item__price {

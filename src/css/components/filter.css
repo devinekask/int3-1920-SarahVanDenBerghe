@@ -39,6 +39,7 @@
 .filter__delete {
   margin-left: auto;
   font-weight: bold;
+  grid-column: 4/5;
 
   &::before {
     position: absolute;
@@ -56,6 +57,7 @@
 
   @media (--only-medium-screen) {
     margin: 1rem 0 0 1.8rem;
+    grid-column: 1/2;
   }
 }
 

@@ -1,11 +1,5 @@
 class Item {
   constructor(itemObject) {
-    // this.name = playerObject['Name'];
-    // this.image = playerObject['Photo'];
-    // this.age = playerObject['Age'];
-    // this.nationality = playerObject['Nationality'];
-    // this.club = playerObject['Club'];
-
     this._id = itemObject['id'];
     this._title = itemObject['title'];
     this._priceinfo = itemObject['priceinfo'];
@@ -20,7 +14,10 @@ class Item {
         <h3 class="item__title">${this._title}</h3>
           <span class="item__price">${this._priceinfo}</span>
           <p class="item__info">${this._intro}</p>
-          <img class="item__img" src="assets/img/thumbnails/${this._thumbnail}" alt="${this._title}">
+          <picture class="item__img">
+            <source type="image/webp" srcset="assets/img/thumbnails/webp/${this._thumbnail}.webp">
+            <img src="assets/img/thumbnails/jpg/${this._thumbnail}.jpg"	alt="${this._title}">
+          </picture>
       </a>
     </li>`;
   }
