@@ -23,7 +23,7 @@ module.exports = (env, {mode}) => {
           }
         },
         {
-          test: /\.(jpe?g|png|svg|webp|woff|woff2)$/,
+          test: /\.(jpe?g|png|svg|webp|gif|woff|woff2)$/,
           use: {
             loader: 'url-loader',
             options: {

@@ -3,9 +3,14 @@
 }
 
 .end__image {
-  margin-top: 10rem;
+  margin-top: -8rem;
   height: 700px;
   position: relative;
+
+  @media (--only-medium-screen) {
+    margin-top: 7rem;
+    height: 600px;
+  }
 
   @media (--only-small-screen) {
     margin-top: 4rem;
@@ -14,7 +19,6 @@
 
   @media (width < 450px) {
     margin: 3rem auto 0;
-    /* margin-top: 0; */
     height: 200px;
   }
 
@@ -22,17 +26,17 @@
     z-index: -1;
     content: '';
     position: absolute;
-    background-image: url(../../assets/img/longread/end_1016x732.png);
+    background-image: url(../../assets/img/longread/end_1125x732.png);
     background-repeat: no-repeat;
-    background-position: 58% 100%;
-
-    /* Image size */
+    background-position: 47% 100%;
     background-size: auto 700px;
-
-    /* Canvas size */
     width: 100vw;
-    /* max-width: 900px; */
     height: 700px;
+
+    @media (--only-medium-screen) {
+      height: 600px;
+      background-size: contain;
+    }
 
     @media (--only-small-screen) {
       height: 350px;
@@ -42,11 +46,10 @@
     @media (width < 450px) {
       height: 100%;
       width: 90vw;
-      /* margin: 0 auto; */
       background-size: contain;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
   }
 }
@@ -54,6 +57,14 @@
 .end__books {
   margin-top: 10rem;
   text-align: center;
+
+  @media (--only-medium-screen) {
+    margin-top: 7rem;
+  }
+
+  @media (--only-small-screen) {
+    margin-top: 4rem;
+  }
 
   @media (width < 500px) {
     margin-top: 4rem;
@@ -122,8 +133,6 @@
     content: '';
     position: absolute;
 
-    /* ../../assets/img/longread/history_bg_375x770.png */
-
     background-size: 100%;
     width: calc(100vw - var(--container) + 3rem);
     top: -6.5rem;
@@ -131,15 +140,16 @@
     height: calc(100% + 11.7rem);
 
     @media (--only-medium-screen) {
+      background-size: cover;
       width: 100vw;
-      left: -3rem;
+    }
+
+    @media (--only-small-screen) {
+      left: -6rem;
     }
 
     @media (--only-extrasmall-screen) {
       background-image: url(../../assets/img/longread/end_bg_375x1640.jpg);
-    }
-
-    @media (--only-extrasmall-screen) {
       left: -1rem;
     }
   }

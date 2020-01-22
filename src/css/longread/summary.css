@@ -66,14 +66,21 @@
     content: '';
     z-index: -1;
     position: absolute;
-    background-image: url(../../assets/img/longread/intro_1000x633.jpg);
+    background-image:
+      url(../../assets/img/longread/salamander_465x465.gif),
+      url(../../assets/img/longread/intro_1000x388.jpg);
     background-repeat: no-repeat;
-    right: 0; /* helemaal rechts positioneren */
+    right: 0;
 
-    /* Image size */
-    background-size: auto 633px;
 
-    /* Canvas size */
+    background-position:
+      35rem 0%,
+      bottom left;
+
+    background-size:
+      auto 450px,
+      auto 388px;
+
     width: 50vw;
     height: 633px;
     top: -240px;
@@ -81,6 +88,7 @@
 
     @media (--only-small-screen) {
       background-image: url(../../assets/img/longread/intro_960x408.jpg);
+      background-position: bottom left;
       width: 100vw;
       background-size: cover;
       height: 100%;

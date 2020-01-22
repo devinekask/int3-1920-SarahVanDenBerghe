@@ -1,63 +1,63 @@
-/* LIJN */
 
 .line--intro {
-  overflow-x: hidden;
+  width: 85%;
+  right: 0;
+  height: 900px;
 
-  &::before {
-    filter: invert(10%) sepia(20%) saturate(1500%) hue-rotate(315deg) brightness(80%) contrast(100%);
-    content: '';
-    background-image: url(../../assets/img/longread/line_header.svg);
-    background-repeat: no-repeat;
+  @media (width < 1270px) {
+    width: 85%;
+    height: 700px;
+  }
 
-    /* Lijn zelf */
-    background-size: contain; /* 100% auto */
+  @media (--only-small-screen) {
+    height: 600px;
+  }
 
-    /* Grote van canvas */
-    width: 80vw;
-    height: 60vw;
+  @media (--only-extrasmall-screen) {
+    height: 400px;
+  }
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-
-    @media (--only-small-screen) {
-      background-size: auto 100%;
-      width: 90vw;
-      height: 90vw;
-    }
+  @media (--only-mobile-screen) {
+    height: 320px;
   }
 }
-
-/* INTRO LAYOUT */
 
 .intro {
   margin-top: 5rem;
   width: 100%;
-  display: flex;
-  justify-content: center;
+
+  display: grid;
+  grid-template-columns: auto 41rem;
+  grid-gap: 2rem;
+  justify-items: flex-end;
   align-items: center;
-  flex-wrap: wrap;
+
+  @media (width < 1270px) {
+    grid-template-columns: 1fr;
+  }
 
   @media (--only-medium-screen) {
     margin-top: 0;
     text-align: center;
   }
 
-  & .intro__img {
-    width: 100%;
-    max-width: 53rem;
-    padding-right: 5rem;
-
-    @media (--only-medium-screen) {
-      padding: .5rem;
-    }
-  }
-
   & .intro__text {
     margin-top: 3rem;
+    margin-right: 12rem;
     display: flex;
     flex-direction: column;
+
+    @media (width < 1380px) {
+      margin-right: 8rem;
+    }
+
+    @media (width < 1270px) {
+      margin: 3rem auto;
+    }
+
+    @media (--only-small-screen) {
+      margin: 0 auto;
+    }
 
     & .button--longread {
       margin-left: auto;
@@ -66,6 +66,84 @@
         margin: 0 auto;
       }
     }
+  }
+}
+
+.intro__img {
+  background-image:
+    url(../../assets/img/longread/header_book_750x750.png),
+    url(../../assets/img/longread/header_fireman_750x750.png),
+    url(../../assets/img/longread/header_eyes_258x84.gif),
+    url(../../assets/img/longread/header_bg_750x750.png);
+
+  background-size:
+    76%,
+    contain,
+    30%,
+    contain;
+
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 0;
+  padding-top: 65%;
+
+  animation: MoveUpDown 3s linear infinite;
+
+  @media (width < 1380px) {
+    padding-top: 90%;
+    width: 90%;
+    padding-left: 3rem;
+
+    background-size:
+      90%,
+      contain,
+      30%,
+      contain;
+  }
+
+  @media (width < 1270px) {
+    width: 100%;
+    padding-top: 50%;
+    padding-left: 0;
+
+    background-size:
+      48%,
+      contain,
+      20%,
+      contain;
+  }
+
+  @media (--only-small-screen) {
+    margin-top: 1.5rem;
+    padding-top: 70%;
+
+    background-size:
+      67%,
+      contain,
+      30%,
+      contain;
+
+    background-position:
+      center,
+      center,
+      70% 12%,
+      center;
+  }
+
+  @media (--only-extrasmall-screen) {
+    padding-top: 90%;
+
+    background-image:
+      url(../../assets/img/longread/header_book_750x750.png),
+      url(../../assets/img/longread/header_fireman_425x425.png),
+      url(../../assets/img/longread/header_eyes_165x54.gif),
+      url(../../assets/img/longread/header_bg_425x425.png);
+
+    background-size:
+      84%,
+      contain,
+      30%,
+      contain;
   }
 }
 
@@ -146,5 +224,24 @@
       top: 7rem;
       height: 4.5rem;
     }
+  }
+}
+
+@keyframes MoveUpDown {
+
+  0%, 100% {
+    background-position:
+      50% 50%,
+      center,
+      70% 11%,
+      center;
+  }
+
+  50% {
+    background-position:
+      50% 70%,
+      center,
+      70% 11%,
+      center;
   }
 }

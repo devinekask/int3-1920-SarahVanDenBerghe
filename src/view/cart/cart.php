@@ -11,7 +11,7 @@
 
   <!-- FILLED -->
   <?php } else { ?>
-    <form action="index.php?page=cart" method="post" class="form form--cartoverview"
+    <form e method="post" class="form form--cartoverview"
     onkeydown="return event.key != 'Enter';"> <!-- Geen submit form bij ENTER -->
 
       <div class="cart__items">

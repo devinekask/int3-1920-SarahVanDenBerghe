@@ -3,6 +3,8 @@ require('./style.css');
 import Item from './js/model/Item.js';
 import './js/validate.js';
 import './js/cart.js';
+import './js/line.js';
+import './js/drag.js';
 
 {
   const $filterForm = document.querySelector(`.filter__form`);
@@ -25,9 +27,6 @@ import './js/cart.js';
   };
 
   const handleChangeCategory = () => {
-    // e.preventDefault();
-    /* $filterForm.preventDefault is not a function
-    at HTMLInputElement.handleChangeFilter */
     submitWithJS();
   };
 
@@ -50,18 +49,16 @@ import './js/cart.js';
       '',
       `${window.location.href.split('?')[0]}?${qs}`
     );
-
     console.log(qs);
 
   };
 
-  /* O2. DATA OPHALEN VOOR ELKE ITEM */
   const handleLoadItems = data => {
     $items.innerHTML = data
       .map(item => createItem(item))
       .join(``);
   };
-    /* 03. OBJECT MAKEN VAN DATA & IN HTML PLAATSEN */
+
   const createItem = itemObj => {
     const item = new Item(itemObj);
     return item.createHTML();

@@ -11,35 +11,47 @@
   & p {
     font-size: var(--fontRegularLongread);
   }
+}
 
-  &::before {
-    content: '';
-    background-image:
-      url(../../assets/img/longread/lucifer.png),
-      url(../../assets/img/longread/line_hedendaags.svg);
-    background-repeat: no-repeat;
+.line__wrapper--present {
+  position: relative;
+}
 
-    /* Lijn zelf */
-    background-size:
-      auto 200px,
-      auto 568px;
-    background-position:
-      17% 100%,
-      14% 0%;
+.line--present {
+  position: absolute;
+  left: 17rem;
+  top: -3rem;
 
-    /* transform: translateX(-33%); */
-    left: -3rem;
-
-    /* Grote van canvas */
-    width: 100vw;
-    height: 780px;
-    position: absolute;
-    top: -10rem;
-
-    @media (--only-medium-screen) {
-      content: none;
-      width: 0;
-      height: 0;
-    }
+  @media (width < 1530px) {
+    left: 12rem;
   }
+
+  @media (width < 1350px) {
+    left: 5rem;
+  }
+
+  @media (--only-medium-screen) {
+    display: none;
+  }
+}
+
+.lucifer {
+  z-index: 50;
+  margin-left: 16rem;
+  margin-top: 7rem;
+
+  @media (width < 1530px) {
+    margin-left: 11rem;
+    margin-top: 3rem;
+  }
+
+  @media (width < 1350px) {
+    margin-top: 7rem;
+    margin-left: 3rem;
+  }
+
+  @media (--only-medium-screen) {
+    display: none;
+  }
+
 }
