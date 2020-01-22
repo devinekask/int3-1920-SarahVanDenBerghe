@@ -4,8 +4,8 @@
       d="M17087.475,1227.524s91.684,179.947,361.668,244.326,275.33,269.547,380.645,425.72,312.078,218.881,461.395,203.371"
       transform="translate(-17087.029 -1227.297)"
       fill="none"/>
-      <use xlink:href="#Path_1" id="white" stroke="grey" stroke-width="1"/>
-      <use xlink:href="#Path_1" id="red" stroke="#B42D2D" stroke-width="1"/>
+      <use xlink:href="#Path_1" class="white" stroke="grey" stroke-width="1"/>
+      <use xlink:href="#Path_1" class="red" stroke="#B42D2D" stroke-width="1"/>
   </svg>
 </div>
 
@@ -47,8 +47,8 @@
       d="M3307.5,3337.817s124.088-94.161,271.845-5.922,219.957,60.627,306.269,127.824,136.955,204.9-6.492,325.975-571.622,90.173-571.622,90.173"
       transform="translate(-3307.382 -3293.921)"
       fill="none" />
-      <use xlink:href="#Path_2" id="white" stroke="grey" stroke-width="1"/>
-      <use xlink:href="#Path_2" id="red" stroke="#B42D2D" stroke-width="1"/>
+      <use xlink:href="#Path_2" class="white" stroke="grey" stroke-width="1"/>
+      <use xlink:href="#Path_2" class="red" stroke="#B42D2D" stroke-width="1"/>
     </svg>
   </div>
 
@@ -76,8 +76,8 @@
           d="M175.144,150.858c292.6,38.994,426.7,111.986,921.261-57.407s1000.56-55.657,1000.56-55.657"
           transform="matrix(0.996, 0.087, -0.087, 0.996, -156.971, -15.472)"
           fill="none" />
-      <use xlink:href="#Path_3" id="white" stroke="grey" stroke-width="1"/>
-      <use xlink:href="#Path_3" id="red" stroke="#B42D2D" stroke-width="1"/>
+      <use xlink:href="#Path_3" class="white" stroke="grey" stroke-width="1"/>
+      <use xlink:href="#Path_3" class="red" stroke="#B42D2D" stroke-width="1"/>
     </svg>
   </div>
 
@@ -134,8 +134,8 @@
           <path class="path" id="Path_4" data-name="Path 4"
            d="M16477.566,5470.341s254.576,8.727,401.033,70.209"
            transform="translate(-16477.559 -5470.142)" fill="none" />
-        <use xlink:href="#Path_4" id="white" stroke="grey" stroke-width="1"/>
-        <use xlink:href="#Path_4" id="red" stroke="#B42D2D" stroke-width="1"/>
+        <use xlink:href="#Path_4" class="white" stroke="grey" stroke-width="1"/>
+        <use xlink:href="#Path_4" class="red" stroke="#B42D2D" stroke-width="1"/>
       </svg>
     </div>
 
@@ -148,8 +148,8 @@
       <path class="path" id="Path_5" data-name="Path 5"
        d="M16998.105,6081.67s-206.361,158.421-203.875,366.756,153.918,324.191,153.918,324.191"
        transform="translate(-16794.021 -6081.511)" fill="none" />
-    <use xlink:href="#Path_5" id="white" stroke="grey" stroke-width="1"/>
-    <use xlink:href="#Path_5" id="red" stroke="#B42D2D" stroke-width="1"/>
+    <use xlink:href="#Path_5" class="white" stroke="grey" stroke-width="1"/>
+    <use xlink:href="#Path_5" class="red" stroke="#B42D2D" stroke-width="1"/>
   </svg>
 </div>
 <article class="present container--small">
