@@ -1,5 +1,4 @@
 {
-  // 03. Form
   const handleSubmitForm = e => {
     const $form = e.currentTarget;
     console.log($form);
@@ -46,10 +45,8 @@
   };
 
   const addValidationListeners = fields => {
-    // 03. Alle inputs overlopen, functie aan toekennen.
     fields.forEach($field => {
       $field.addEventListener(`input`, handleInputField);
-      // Focus weg van element.
       $field.addEventListener(`blur`, handleBlurField);
     });
   };
@@ -57,13 +54,10 @@
   const init = () => {
     const $forms = document.querySelectorAll(`.form`);
 
-    // 01. Browser validatie afzetten.
     $forms.forEach($form => {
       $form.noValidate = true;
       $form.addEventListener(`submit`, handleSubmitForm);
 
-
-      // 02. Alle inputs selecteren.
       const fields = $form.querySelectorAll(`.input`);
       if (fields) {
         addValidationListeners(fields);
