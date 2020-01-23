@@ -15,19 +15,6 @@
     font-size: .9rem;
   }
 
-  & li:first-child::before {
-    content: '';
-    border: 1px solid white;
-    background-color: black;
-    border-radius: 50%;
-    height: 12px;
-    width: 12px;
-    position: absolute;
-    z-index: 0;
-    left: -38px;
-    transform: translateY(6px);
-  }
-
   & li::after {
     content: '';
     background-color: white;
@@ -50,7 +37,24 @@
     left: -2rem;
   }
 
+  & a {
+    color: white;
+  }
+
   @media (width < 1380px) {
     display: none;
   }
+}
+
+.current::before {
+  content: '';
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  z-index: 0;
+  left: -38px;
+  transform: translateY(6px);
 }

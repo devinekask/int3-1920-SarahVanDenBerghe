@@ -25,22 +25,9 @@ class PagesController extends Controller {
 
 
   public function index() {
-    $categories = false;
-    if (!empty($_GET['categories'])) {
-      $categories = $_GET['categories'];
-    }
-
-    $items = $this->itemDAO->selectAllItemsByCategory($categories);
-    if(empty($items)){
-      $items = $this->itemDAO->selectAllItems();
-    }
-
-
-
-
-    $this->set('items', $items);
     $this->set('title', 'Humo');
-
+    header('Location:index.php?page=webshop'); ;
+    exit();
   }
 
 

@@ -95,11 +95,11 @@
       <?php } else { ?>
         <nav class="menu--longread">
           <ul>
-            <li>Over het boek</li>
-            <li>Auteur</li>
-            <li>Backstory</li>
-            <li>Boekbranding</li>
-            <li>Meer boeken</li>
+            <li><a href="#boek">Over het boek</a></li>
+            <li><a href="#auteur">Auteur</a></li>
+            <li><a href="#backstory">Backstory</a></li>
+            <li><a href="#problematiek">Problematiek</a></li>
+            <li><a href="#meer">Meer boeken</a></li>
           </ul>
         </nav>
       <?php } ?>

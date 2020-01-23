@@ -47,7 +47,6 @@
             <source type="image/webp" srcset="assets/img/thumbnails/webp/<?php echo $item['thumbnail'] ?>.webp">
             <img src="assets/img/thumbnails/jpg/<?php echo $item['thumbnail'] ?>.jpg"	alt="<?php echo $item['title'] ?>">
           </picture>
-          <!-- <img class="item__img" src="assets/img/thumbnails/<?php echo $item['thumbnail'] ?>" alt="<?php echo $item['title'] ?>"> -->
         </a>
       </li>
       <?php endforeach; ?>

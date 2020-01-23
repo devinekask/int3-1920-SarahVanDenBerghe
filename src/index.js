@@ -5,6 +5,7 @@ import './js/validate.js';
 import './js/cart.js';
 import './js/line.js';
 import './js/drag.js';
+import './js/scroll.js';
 
 {
   const $filterForm = document.querySelector(`.filter__form`);
