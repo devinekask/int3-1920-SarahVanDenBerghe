@@ -1,8 +1,8 @@
 /* imports */
 @import './css/reset.css';
 @import './css/vars.css';
-@import './css/base.css';
 @import './css/typography.css';
+@import './css/base.css';
 @import './css/components/navbar.css';
 @import './css/components/footer.css';
 @import './css/components/banner.css';

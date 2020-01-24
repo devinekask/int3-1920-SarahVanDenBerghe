@@ -10,38 +10,3 @@
 .input--error {
   border-bottom: 1px solid var(--colorRed);
 }
-
-@font-face {
-  font-family: 'Swiss Condensed';
-  src: url(./../assets/fonts/Swiss/Swiss-Condensed.woff2) format('woff2'), url(./../assets/fonts/Swiss/Swiss-Condensed.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Swiss;
-  src: url(./../assets/fonts/Swiss/Swiss.woff2) format('woff2'), url(./../assets/fonts/Swiss/Swiss.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'News Gothic';
-  src: url(./../assets/fonts/NewsGothic/NewsGothic.woff2) format('woff2'), url(./../assets/fonts/NewsGothic/NewsGothic.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'News Gothic';
-  src: url(./../assets/fonts/NewsGothic/NewsGothic-Bold.woff2) format('woff2'), url(./../assets/fonts/NewsGothic/NewsGothic-Bold.woff) format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'News Gothic';
-  src: url(./../assets/fonts/NewsGothic/NewsGothic-Oblique.woff2) format('woff2'), url(./../assets/fonts/NewsGothic/NewsGothic-Oblique.woff) format('woff');
-  font-weight: normal;
-  font-style: oblique;
-}

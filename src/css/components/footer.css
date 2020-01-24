@@ -50,8 +50,6 @@
   }
 }
 
-/* FOOTER NAVIGATION */
-
 .footer__nav {
   margin-top: var(--spacerRegular);
 
@@ -91,8 +89,6 @@
     margin-bottom: var(--spacerRegular);
   }
 }
-
-/* FOOTER INFO */
 
 .footer__info {
   background-color: black;

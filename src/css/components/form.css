@@ -6,10 +6,6 @@
   }
 }
 
-/* .label:last-of-type .input--text{
-  margin-bottom: var(--spacerBig);
-} */
-
 .input {
   background-color: var(--colorGrey);
   border: none;

@@ -16,7 +16,7 @@
     <a href="index.php?page=index"><img class="intro__logo" src="../../assets/img/logo.svg" alt="Humo" width="120" /></a>
     <h2 class="intro__title">Fahrenheit 451</h2>
     <p class="intro__author">Ray Bradbury</p>
-    <a class="button--longread">Bestel boek</a>
+    <a class="button--longread" href="index.php?page=shopitem&id=19" target="_blank">Bestel boek</a>
   </div>
 </div>
 
@@ -33,7 +33,7 @@
     <div class="summary__history">
       <p>Fahrenheit 451 is geïnspireerd door de vele <span class="highlight">boekbranding doorheen de Verenigde Staten</span>. De titel ‘Fahrenheit 451’ was dan ook niet willekeurig gekozen, deze verwijst naar de temperatuur waar een boek in brand schiet. Ray Bradbury, de schrijver van dit boek, was ongerust door de boekbranding tijdens de WOII en <span class="highlight">de censuur van vrije ideeën</span>. Hij zag hoe de opkomst van media de interesse in lezen verminderde en besloot op basis hiervan de internationale bestseller Fahrenheit 451 te schrijven.</p>
       <p class="calltoaction">Duik mee in verhaal van Fahrenheit 451</p>
-      <a class="button--longread">Bestel boek</a>
+      <a class="button--longread" href="index.php?page=shopitem&id=19" target="_blank">Bestel boek</a>
     </div>
     <div class="summary__img"></div>
   </div>

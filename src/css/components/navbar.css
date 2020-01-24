@@ -177,10 +177,13 @@
 }
 
 .menu__items--mobile .menu__item--logo {
-  transform: translateX(-5.7rem);
   margin: 0 auto;
 
-  &::before {
+  & a {
+    transform: translate(-5.7rem, -1.75rem);
+  }
+
+  & a::before {
     content: '';
     position: absolute;
     background-repeat: no-repeat;

@@ -51,7 +51,7 @@
 .summary__img {
   grid-area: img;
   height: 280px;
-  margin-bottom: 2rem; /* nodig voor mobile */
+  margin-bottom: 2rem;
   position: relative;
 
   @media (--only-small-screen) {
@@ -71,7 +71,6 @@
       url(../../assets/img/longread/intro_1000x388.jpg);
     background-repeat: no-repeat;
     right: 0;
-
 
     background-position:
       35rem 0%,

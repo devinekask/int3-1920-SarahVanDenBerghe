@@ -12,7 +12,7 @@
   <!-- FILLED -->
   <?php } else { ?>
     <form e method="post" class="form form--cartoverview"
-    onkeydown="return event.key != 'Enter';"> <!-- Geen submit form bij ENTER -->
+    onkeydown="return event.key != 'Enter';">
 
       <div class="cart__items">
         <?php

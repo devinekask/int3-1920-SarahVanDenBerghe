@@ -112,7 +112,7 @@
 .order__information {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: var(--spacerRegular);
+  grid-gap: 2rem var(--spacerRegular);
   grid-template-areas:
     'title title title title'
     'firstname firstname lastname lastname'

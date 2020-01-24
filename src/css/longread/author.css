@@ -61,20 +61,13 @@
     position: absolute;
     height: 100%;
 
-    /* Image size */
-    /* DEEL 1 t.e.m. -1rem berekend puur de container width (zonder margin RECHTS -1rem) */
-    /* DEEL 2 -7rem is voor meer naar rechts te positioneren (14/2)*/
     right: calc(var(--container) - 7rem);
     background-size: cover;
-
-    /* Canvas size */
-    /* DEEL 1 t.e.m. -6rem berekend puur de container width (zonder margin -2rem) */
-    /* DEEL 2 14rem is de extra padding */
 
     width: calc(100vw - (var(--container) * 2) - 6rem + 14rem);
 
     @media (--only-medium-screen) {
-      left: -3rem; /* container margin negeren */
+      left: -3rem;
       width: 100vw;
     }
 
@@ -112,47 +105,3 @@
     padding: 0;
   }
 }
-
-/* .line--author {
-  position: relative;
-
-  &::before {
-    content: '';
-    background-image: url(../../assets/img/longread/line_auteur.svg);
-    background-repeat: no-repeat;
-
-    background-size: 100% auto;
-
-    width: calc(50vw - 15rem);
-    height: calc(50vw - 15rem);
-
-    position: absolute;
-    bottom: -10rem;
-    left: 0;
-    z-index: -1;
-
-    @media (width < 1440px) {
-      width: 45vw;
-      height: 45vw;
-    }
-
-    @media (--only-medium-screen) {
-      bottom: -8rem;
-    }
-
-    @media (--only-small-screen) {
-      background-size: 105% auto;
-      width: 100vw;
-      height: 50vw;
-      bottom: 10rem;
-    }
-
-    @media (--only-extrasmall-screen) {
-      bottom: 25rem;
-    }
-
-    @media (--only-mobile-screen) {
-      bottom: 35rem;
-    }
-  }
-} */

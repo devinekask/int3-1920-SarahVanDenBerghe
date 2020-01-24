@@ -75,13 +75,14 @@
 
 .info__options {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   grid-gap: var(--spacerRegular);
   text-align: center;
   margin-top: 0;
 
   & div {
     border: 1px solid rgb(226, 226, 226);
+    border-radius: .2rem;
 
     &:hover {
       cursor: pointer;
@@ -91,14 +92,18 @@
 
 .option__input:checked + div {
   background-color: var(--colorGrey);
-  border: 1px solid rgb(117, 117, 117);
+  border: 1px solid rgb(180, 180, 180);
   font-weight: bold;
 }
 
 .option__label {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   padding: .7rem 0;
   display: block;
-  min-width: 6rem;
+  min-width: 8rem;
+  color: var(--colorRed);
 
   &:hover {
     cursor: pointer;
@@ -107,6 +112,7 @@
   & .price {
     font-size: var(--fontSmall);
     font-family: var(--fontTitle);
+    color: black;
   }
 }
 
