@@ -36,7 +36,8 @@
 }
 
 .lucifer {
-  z-index: 50;
+  position: relative;
+  z-index: 10;
   margin-left: 16rem;
   margin-top: 7rem;
 

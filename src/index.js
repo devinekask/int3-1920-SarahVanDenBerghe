@@ -35,8 +35,6 @@ import './js/scroll.js';
     const qs = new URLSearchParams([
       ...new FormData($filterForm).entries()
     ]).toString();
-    console.log(qs);
-    console.log(`${$filterForm.getAttribute('action')}?${qs}`);
     fetch(`${$filterForm.getAttribute('action')}?${qs}`, {
       headers: new Headers({
         Accept: `application/json`
@@ -50,7 +48,6 @@ import './js/scroll.js';
       '',
       `${window.location.href.split('?')[0]}?${qs}`
     );
-    console.log(qs);
 
   };
 

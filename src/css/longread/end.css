@@ -3,9 +3,85 @@
 }
 
 .end__image {
-  margin-top: -8rem;
-  height: 700px;
+  height: 770px;
+  max-width: 1125px;
+  margin: -10rem auto 0;
   position: relative;
+
+  & div::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  & .image-cta::after {
+    background-image: url(../../assets/img/longread/end_cta_497x328.png);
+    background-position: 43% 18%;
+    background-size: 13rem;
+  }
+
+  & .image-1::after {
+    background-image: url(../../assets/img/longread/end1_1125x719.png);
+    animation: MoveEnd-1 3s linear infinite;
+    z-index: 7;
+  }
+
+  & .image-2::after {
+    background-image: url(../../assets/img/longread/end2_1125x719.png);
+    animation: MoveEnd-2 3s linear infinite;
+    z-index: 6;
+  }
+
+  & .image-3::after {
+    background-image: url(../../assets/img/longread/end3_1125x719.png);
+    animation: MoveEnd-3 3s linear infinite;
+    z-index: 5;
+  }
+
+  & .image-4::after {
+    background-image: url(../../assets/img/longread/end4_1125x719.png);
+    animation: MoveEnd-4-6 3s linear infinite;
+    z-index: 4;
+  }
+
+  & .image-5::after {
+    background-image: url(../../assets/img/longread/end5_1125x719.png);
+    z-index: 3;
+  }
+
+  & .image-6::after {
+    background-image: url(../../assets/img/longread/end6_1125x719.png);
+    animation: MoveEnd-4-6 3s linear infinite;
+    z-index: 2;
+  }
+
+  & .image-7::after {
+    background-image: url(../../assets/img/longread/end7_1125x719.png);
+    animation: MoveEnd-7 3s linear infinite;
+    z-index: 1;
+  }
+
+  & .image-8::after {
+    background-image: url(../../assets/img/longread/end8_1125x719.png);
+    animation: MoveEnd-8 3s linear infinite;
+    z-index: 0;
+  }
+
+  & .image-9::after {
+    background-image: url(../../assets/img/longread/end9_1125x719.jpg);
+    z-index: -1;
+  }
+
+  & .image-final {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: url(../../assets/img/longread/end_finalstate_1125x719.jpg);
+    z-index: 8;
+  }
 
   @media (--only-medium-screen) {
     margin-top: 7rem;
@@ -21,41 +97,10 @@
     margin: 3rem auto 0;
     height: 200px;
   }
-
-  &::before {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    background-image: url(../../assets/img/longread/end_1125x732.png);
-    background-repeat: no-repeat;
-    background-position: 47% 100%;
-    background-size: auto 700px;
-    width: 100vw;
-    height: 700px;
-
-    @media (--only-medium-screen) {
-      height: 600px;
-      background-size: contain;
-    }
-
-    @media (--only-small-screen) {
-      height: 350px;
-      background-size: contain;
-    }
-
-    @media (width < 450px) {
-      height: 100%;
-      width: 90vw;
-      background-size: contain;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
 }
 
 .end__books {
-  margin-top: 10rem;
+  margin-top: 7.5rem;
   text-align: center;
 
   @media (--only-medium-screen) {
@@ -152,5 +197,71 @@
       background-image: url(../../assets/img/longread/end_bg_375x1640.jpg);
       left: -1rem;
     }
+  }
+}
+
+@keyframes MoveEnd-1 {
+
+  0%, 100% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 50% 70%;
+  }
+}
+
+@keyframes MoveEnd-2 {
+
+  0%, 100% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 50% 20%;
+  }
+}
+
+@keyframes MoveEnd-3 {
+
+  0%, 100% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 50% 65%;
+  }
+}
+
+@keyframes MoveEnd-4-6 {
+
+  0%, 100% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 50% 30%;
+  }
+}
+
+@keyframes MoveEnd-7 {
+
+  0%, 100% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 50% 80%;
+  }
+}
+
+@keyframes MoveEnd-8 {
+
+  0%, 100% {
+    background-position: 50% 50%;
+  }
+
+  50% {
+    background-position: 50% 42%;
   }
 }

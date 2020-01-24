@@ -54,6 +54,15 @@
   margin-bottom: 2rem;
   position: relative;
 
+  @media (width > 960px) {
+
+    &:hover::before {
+      background-image:
+        url(../../assets/img/longread/salamander_465x465.gif),
+        url(../../assets/img/longread/intro2_1000x388.jpg);
+    }
+  }
+
   @media (--only-small-screen) {
     height: 408px;
   }

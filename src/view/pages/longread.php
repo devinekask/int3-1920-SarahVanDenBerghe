@@ -154,15 +154,28 @@
   <h2 class="title">Een hedendaags probleem</h2>
   <p>Het verbranden van boeken beperkt zich niet in onze geschiedenis. In de moderne tijd zijn<span class="highlight"> andere vormen van media, zoals grammofoonplaten, videobanden en cd ’s ook gebrand, versnipperd of verpletterd</span>. Het verbranden van boeken was een hulpmiddel dat werd gebruikt voor religieuze of autoritaire redenen zodat tegenstrijdige opvattingen onderdrukt worden. Alhoewel we het verbranden van boeken in de 21ste eeuw in vele democratische landen niet snel tegenkomen, speelt <span class="highlight">censuur en onderdrukking op de dag van vandaag nog steeds een grote rol</span>. Dit gebeurt via andere media en beperkt zich niet tot boeken. Het verbannen van websites, stopzetten van televisiezenders en andere mediakanalen gebeurt nog steeds in landen zoals China, Rusland, Pakistan, enzovoort. Het ‘verbranden’ van informatie en vrije meningsuiten wordt op de dag vandaag, bij wijze van spreken, nog steeds voortgezet. </p>
 </article>
-<img class="lucifer" src="../../assets/img/longread/lucifer.png" alt="lucifer" draggable="true" />
 
 <!-- END -->
+<img class="lucifer" src="../../assets/img/longread/lucifer.png" alt="lucifer" draggable="true" />
 <div class="end" id="meer">
-  <div class="end__image"></div>
+  <div class="end__image">
+    <!-- Nodig voor JS -->
+    <div class="image image-cta"></div>
+    <div class="image image-1"></div>
+    <div class="image image-2"></div>
+    <div class="image image-3"></div>
+    <div class="image image-4"></div>
+    <div class="image image-5"></div>
+    <div class="image image-6"></div>
+    <div class="image image-7"></div>
+    <div class="image image-8"></div>
+    <div class="image image-9"></div>
+    <div class="image image-final"></div>
+  </div>
   <article class="end__books container--small part">
     <div class="info">
       <h2 class="title">Meer lezen</h2>
-      <p>Elke week zetten wij een nieuwe boek in de kijker! Duik mee in onze 10 week speciaal waar er telkens een nieuwe boek in de spotlight gezet wordt.</p>
+      <p>Elke week zetten wij een nieuwe boek in de kijker! Duik mee in onze 10-week-special waar er telkens een nieuwe boek in de spotlight gezet wordt.</p>
     </div>
     <ul class="booklist">
       <li>

@@ -1,8 +1,6 @@
 {
   const handleSubmitForm = e => {
     const $form = e.currentTarget;
-    console.log($form);
-    console.log($form.querySelector(`.errors--summary`));
 
     if (!$form.checkValidity()) {
       e.preventDefault();

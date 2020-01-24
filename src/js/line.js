@@ -11,9 +11,7 @@
   };
 
   const handleScrollLine = () => {
-
     const $svgLines = document.querySelectorAll(`.line`);
-
     if ($svgLines) {
       $svgLines.forEach(svg => {
         const canvasHeight = svg.clientHeight;

@@ -52,8 +52,7 @@
 
       <!-- MOBILE MENU -->
       <div class="menu__wrapper menu__wrapper--mobile">
-        <nav>
-          <h2 class="hidden">Navigatie</h2>
+        <div>
           <ul class="menu__items menu__items--mobile">
             <li class="menu__item menu__item--left menu__item--icon menu__item--hamburger"><span class="hidden">Menu</span></li>
             <li class="menu__item menu__item--left menu__item--icon menu__item--search"><span class="hidden">Zoek</span></li>
@@ -63,7 +62,7 @@
               <div class="menu__item menu__item--icon menu__item--user"><span class="hidden">Account</span></div>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
     </header>
     <?php } ?>
@@ -93,7 +92,9 @@
       </section>
       <?php endif; ?>
       <?php } else { ?>
+        <h1 class="hidden">Boek van de week</h1>
         <nav class="menu--longread">
+          <h2 class="hidden">Navigatie</h2>
           <ul>
             <li><a href="#boek">Over het boek</a></li>
             <li><a href="#auteur">Auteur</a></li>
