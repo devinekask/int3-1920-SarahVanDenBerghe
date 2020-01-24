@@ -1,11 +1,11 @@
 <div class="container--fluid">
   <article class="banner__wrapper">
-    <img src="assets/img/webshop/jpg/header_1024x310.jpg" alt="Fahrenheit 451">
+    <!--<img src="assets/img/webshop/jpg/header_1024x310.jpg" alt="Fahrenheit 451">-->
     <span class="banner__label">Weekly special</span>
     <div class="banner">
       <h2 class="banner__title">Fahrenheit 451</h2>
       <p class="banner__info">Ontdek het verhaal van Fahrenheit 451, een dystopische wereld waar boeken verbrand worden.</p>
-      <a class="button button--primary button--inline" href="index.php?page=longread"><span>Ontdek</span></a>
+      <a class="button button--secondary button--inline" href="index.php?page=longread"><span>Ontdek</span></a>
     </div>
   </article>
 </div>

@@ -1,18 +1,40 @@
 .banner__wrapper {
   background-color: var(--colorGrey);
-  /* display: flex;
+  display: flex;
   justify-content: flex-end;
-  align-items: center; */
+  align-items: center;
   position: relative;
+  height: 21rem;
+  padding: var(--spacerBig);
+  background-image: url(../../assets/img/longread/banner_1024x350.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (width < 900px) {
+    background-position: 0 0;
+    background-image: url(../../assets/img/longread/banner_900x350.jpg);
+  }
+
+  @media (--only-extrasmall-screen) {
+    height: 28rem;
+    background-image: url(../../assets/img/longread/banner_700x450.jpg);
+    background-position: 100% 100%;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  @media (width < 500px) {
+    background-image: url(../../assets/img/longread/banner_500x450.jpg);
+  }
 }
 
 .banner {
   width: 30%;
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
   color: white;
-  transform: translateY(-25%);
+
+  @media (--only-extrasmall-screen) {
+    width: 100%;
+  }
 }
 
 .banner__info {
@@ -30,9 +52,7 @@
   padding: .2rem .5rem .1rem;
   margin: 1rem;
 
-  @media (--only-medium-screen) {
-    top: auto;
-    text-transform: uppercase;
-    transform: translate(.8rem, -3rem);
+  @media (--only-extrasmall-screen) {
+    display: none;
   }
 }
