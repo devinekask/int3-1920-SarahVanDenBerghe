@@ -110,6 +110,11 @@
 }
 
 .order__information {
+
+  & h2 {
+    margin-bottom: 0;
+  }
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem var(--spacerRegular);
