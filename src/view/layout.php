@@ -52,17 +52,15 @@
 
       <!-- MOBILE MENU -->
       <div class="menu__wrapper menu__wrapper--mobile">
-        <div>
-          <ul class="menu__items menu__items--mobile">
-            <li class="menu__item menu__item--left menu__item--icon menu__item--hamburger"><span class="hidden">Menu</span></li>
-            <li class="menu__item menu__item--left menu__item--icon menu__item--search"><span class="hidden">Zoek</span></li>
-            <li class="menu__item menu__item--logo"><a href="index.php?page=webshop"><span class="hidden">Humo</span></a></li>
-            <li class="menu__items--right">
-              <a href="index.php?page=cart" class="icon__wrapper"><div class="menu__item menu__item--icon menu__item--cart <?php if(!empty ($_SESSION['cart'])) { echo 'cart--filled';} ?>"><span class="hidden">Winkelmand</span></div></a>
-              <div class="menu__item menu__item--icon menu__item--user"><span class="hidden">Account</span></div>
-            </li>
-          </ul>
-        </div>
+        <ul class="menu__items menu__items--mobile">
+          <li class="menu__item menu__item--left menu__item--icon menu__item--hamburger"><span class="hidden">Menu</span></li>
+          <li class="menu__item menu__item--left menu__item--icon menu__item--search"><span class="hidden">Zoek</span></li>
+          <li class="menu__item menu__item--logo"><a href="index.php?page=webshop"><span class="hidden">Humo</span></a></li>
+          <li class="menu__items--right">
+            <a href="index.php?page=cart" class="icon__wrapper"><div class="menu__item menu__item--icon menu__item--cart <?php if(!empty ($_SESSION['cart'])) { echo 'cart--filled';} ?>"><span class="hidden">Winkelmand</span></div></a>
+            <div class="menu__item menu__item--icon menu__item--user"><span class="hidden">Account</span></div>
+          </li>
+        </ul>
       </div>
     </header>
     <?php } ?>

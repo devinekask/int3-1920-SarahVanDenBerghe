@@ -11,6 +11,10 @@
   display: none;
   background-color: var(--colorGrey);
 
+  & ul {
+    width: 100%;
+  }
+
   & nav {
     width: 100%;
   }
