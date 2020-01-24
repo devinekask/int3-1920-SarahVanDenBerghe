@@ -1,10 +1,10 @@
 <section class="container cart">
-  <h2 class="cart__title">Winkelmand</h2>
+  <h2 class="cart__title">Overzicht</h2>
 
   <!-- EMPTY STATE -->
   <?php if (empty($_SESSION['cart'])) { ?>
     <article class="cart__empty">
-      <h2>Winkelmand is leeg</h2>
+      <h3>Winkelmand is leeg</h3>
       <p>Oeps! Het ziet er naar uit dat je winkelmand leeg is.</p>
       <a class="button button--primary" href="index.php?page=webshop"><span>Bekijk webshop</span></a>
     </article>
