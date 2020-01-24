@@ -15,6 +15,21 @@
     width: 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+
+    @media (--only-medium-screen) {
+      content: none;
+    }
+  }
+
+  @media (--only-medium-screen) {
+    background-image: url(../../assets/img/longread/end_1120x750.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (--only-extrasmall-screen) {
+    background-image: url(../../assets/img/longread/end_700x468.jpg);
   }
 
   & .image-cta::after {
