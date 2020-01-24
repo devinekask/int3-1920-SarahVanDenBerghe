@@ -52,7 +52,7 @@
           <input class="input input--text <?php if(!empty($errorsOrder['number'])){ echo 'input--error';} ?>" type="number" name="number" id="number"
           value="<?php if(!empty($_POST['number'])){ echo $_POST['number']; } ?>" required>
         </label>
-        <label class="label label--postalcode" for="postalcode"><span>Post <span class="errors"><?php if(!empty($errorsOrder['postalcode'])){ echo $errorsOrder['postalcode'];} ?></span></span>
+        <label class="label label--postalcode" for="postalcode"><span>Postcode <span class="errors"><?php if(!empty($errorsOrder['postalcode'])){ echo $errorsOrder['postalcode'];} ?></span></span>
           <input class="input input--text <?php if(!empty($errorsOrder['postalcode'])){ echo 'input--error';} ?>" type="number" name="postalcode" id="postalcode"
           value="<?php if(!empty($_POST['postalcode'])){ echo $_POST['postalcode']; } ?>" required>
         </label>
